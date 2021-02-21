@@ -1,0 +1,24 @@
+name: "Jae-Young Son"
+output_dir: "docs"
+navbar:
+  title: "Jae-Young Son"
+  left:
+    - text: "CV"
+      href: cv.html
+    - text: "Publications"
+      href: publications.html
+    - text: "PsychBlog & Jelly"
+      href: blog.html
+    - text: "External"
+      menu:
+        - text: "Twitter"
+          href: https://twitter.com/psychNerdJae
+        - text: "GitHub"
+          href: https://github.com/psychNerdJae
+        - text: "Google Scholar"
+          href: https://scholar.google.com/citations?user=JPPuzI8AAAAJ
+        - text: "NeuroTree"
+          href: https://neurotree.org/neurotree/tree.php?pid=747308
+  search: true
+output: distill::distill_article
+css: theme.css

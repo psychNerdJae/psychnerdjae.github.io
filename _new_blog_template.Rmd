@@ -1,0 +1,13 @@
+---
+title: "Grad School Application Advice"
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    self_contained: false
+categories:
+  - psych
+  - grad school
+---
+
+This blog post was originally written on DATE. It was last updated on `r Sys.Date()` using R Markdown.

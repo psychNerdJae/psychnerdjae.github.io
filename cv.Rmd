@@ -1,0 +1,256 @@
+---
+title: "Curriculum Vitae"
+output:
+  pdf_document: default
+  distill::distill_article:
+    toc: true
+    toc_float: true
+---
+
+# Jae-Young Son
+
+**Download CV** \| **Google Scholar**
+
+**Email:** jae at brown dot edu \| **Website:** www.jaeyoungson.com
+
+This document was most recently compiled on `r Sys.Date()` using R Markdown.
+
+# Education
+
+**Ph.D.**\
+Brown University\
+Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\
+2018 - Present\
+Advisor: Oriel FeldmanHall
+
+**B.A.**\
+Stanford University\
+2012 - 2016\
+Psychology major advisor: Jamil Zaki\
+Neuroscience concentration advisor: Samuel McClure
+
+# Employment
+
+**Lab Manager**\
+2016 - 2018\
+Brown University\
+Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\
+Supervisor: Oriel FeldmanHall\
+
+**Research Assistant**\
+2013 - 2016\
+Stanford University\
+Dept. of Psychology\
+Supervisors: Jamil Zaki & W. Craig Williams
+
+# Publications
+
+1.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (revise & resubmit). Cognitive maps enable prediction of unseen relationships in social networks.
+
+2.  Heffner, J., **Son, J.**, & FeldmanHall, O. (revise & resubmit). Emotion prediction errors guide socially adaptive behavior.
+
+3.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. *Scientific Reports.* [**Online**](https://www.nature.com/articles/s41598-019-48050-2) \| [**PDF**](https://github.com/psychNerdJae/psychnerdjae.github.io/blob/main/papers/CrowdsourcingPunishment_SciRep_2019.pdf?raw=true) \| [**Data**](https://osf.io/8ka47/)
+
+4.  FeldmanHall, O., **Son, J.**, & Heffner, J. (2018). Norms and the flexibility of moral action. *Personality Neuroscience.* [**Online**](https://www.cambridge.org/core/journals/personality-neuroscience/article/norms-and-the-flexibility-of-moral-action/A8A5140A517ECEE314A21FF9FE0E9EED) \| [**PDF**](https://github.com/psychNerdJae/psychnerdjae.github.io/blob/main/papers/NormsMoralAction_PN_2018.pdf?raw=true)
+
+*Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes in which they are published. Access to these articles is provided to facilitate timely distribution of scientific knowledge, and is therefore intended for your personal use only. No commercial use may be made of these articles, nor is mass production of these articles permitted.*
+
+# Talks
+
+1.  **Son, J.** (December 2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. Presented at the Brown University Social Cognitive Seminar Series, Providence, RI.
+
+2.  **Son, J.** (October 2019). How do people use structure to learn about social networks? Presented at the Brown University First Year Presentation Colloquium, Providence, RI.
+
+3.  **Son, J.** (June 2019). Structure learning in social networks. Presented at the 3rd Annual Meeting of New England Research on Decision-Making, Cambridge MA.
+
+4.  **Son, J.** (March 2018). How groups exert influence over decision-making. Talk given at a lab meeting for the Morality Lab at Boston College, Boston, MA.
+
+5.  **Son, J.**, & FeldmanHall, O. (May 2017). A tipping-point conformity effect for justice: Group choice shifts preferences for punishment. Talk given at the 1st Annual Meeting of NERD (New England Research on Decision-Making), Providence, RI.
+
+6.  **Son, J.**, Tamir, D.I., Williams, W.C., & Zaki, J. (June 2016). Preferences for gathering and sharing social information about the self and friends: Disclosure target and directionality predict disclosure choice. Talk given at the Annual Stanford Psychology Honors Colloquium, Stanford, CA.
+
+# Posters
+
+*\* Indicates mentored student*
+
+1.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (October 2020). Structural knowledge adaptively shapes the representation of social networks. Presented at the 18th Annual Meeting of the Society for NeuroEconomics (virtual).
+
+2.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (March 2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. Poster presented at the 6th Annual Meeting of the Society for Affective Science, Boston, MA.
+
+3.  Heffner, J., **Son, J.**, & FeldmanHall, O. (March 2018). Emotion prediction errors predict decisions to punish. Poster presented at the 21st Annual Mind/Brain Research Day, Providence, RI.
+
+4.  Lee, W.\*, **Son, J.**, & FeldmanHall, O. (March 2018). Social influence increases preferences for uncertain gambles. Poster presented at the 21st Annual Mind/Brain Research Day, Providence, RI.
+
+5.  Hu, M.\*, **Son, J.**, & FeldmanHall, O. (August 2017). Acquired equivalence: Evidence for mechanisms supporting moral learning. Poster presented at the annual Brown Summer Research Symposium, Providence, RI.
+
+6.  **Son, J.**, & FeldmanHall, O. (May 2017). A tipping-point conformity effect for justice: Group choice shifts preferences for punishment. Poster presented at the 29th Annual Meeting of the Association for Psychological Science, Boston, MA.
+
+7.  **Son, J.**, & FeldmanHall, O. (March 2017). A tipping-point conformity effect for justice: Group choice shifts preferences for punishment. Poster presented at the 20th Annual Mind/Brain Research Day, Providence, RI.
+
+8.  Williams, W.C., Leong, Y.C., **Son, J.**, Alqueza, K., & Zaki, J. (April 2016). Facial expressions track brain regions associated with affective salience and theory of mind. Poster presented at the 9th Annual Meeting of the Social & Affective Neuroscience Society, New York, NY.
+
+9.  Williams, W.C., Leong, Y.C., **Son, J.**, Alqueza, K., & Zaki, J. (March 2016). Facial expressions track brain regions associated with affective salience and theory of mind. Poster presented at the 3rd Annual Meeting of the Society for Affective Science, Chicago, IL.
+
+10. Williams, W.C., Leong, Y.C., **Son, J.**, Alqueza, K., & Zaki, J. (January 2016). Facial expressions track brain regions associated with affective salience and theory of mind. Poster presented at the 17th Annual Emotion Pre-Conference to the Annual Meeting of the Society for Personality and Social Psychology, San Diego, CA.
+
+11. Williams, W.C., Nook, E., **Son, J.**, & Zaki, J. (April 2014). Audiences enhance the expression and communication but not the experience of emotion. Poster presented at the 7th Annual Meeting of the Social & Affective Neuroscience Society, Denver, CO.
+
+12. Williams, W.C., Nook, E., **Son, J.**, & Zaki, J. (February 2014). Audiences enhance the expression and communication but not the experience of emotion. Poster presented at the 9th Annual Emotion Pre-Conference to the Annual Meeting of the Society for Personality and Social Psychology, Austin, TX.
+
+13. Williams, W.C., Nook, E., **Son, J.**, & Zaki, J. (June 2013). Audiences enhance the expression and communication but not the experience of emotion. Poster presented at the Stanford PsychSummer Conference.
+
+# Grants & Fellowships
+
+-   2019-2022 - National Science Foundation Graduate Research Fellowship Program (\$138,000, award \#2040433)
+
+-   2019 - Brown University Graduate Travel Grant (\$622)
+
+-   2015 - Stanford Undergraduate Advising & Research "Small Grant" (\$1,500)
+
+-   2014 - Stanford Undergraduate Teaching Fellowship (\$1,000)
+
+-   2013 - Stanford PsychSummer Grant (\$7,500)
+
+# Awards & Honors
+
+-   2016 - B.A. Psychology with Departmental Honors
+
+-   2013 - Stanford PsychSummer "Best of Show" Poster Award
+
+# Research Training
+
+-   2019 - Methods in Neuroscience at Dartmouth (MIND)
+
+    -   Dartmouth College, Hanover, NH
+    -   "Hackathon"-style summer school for computational modeling.
+
+-   2017 - Computational Modeling Workshop, Brown Institute for Brain Science
+
+    -   Brown University, Providence, RI
+    -   "Bootcamp"-style summer course covering computational modeling techniques such as reinforcement learning, drift diffusion modeling, and hierarchical Bayesian estimation.
+
+# Teaching
+
+-   2020
+
+    -   Teaching Assistant - CLPS 0700: Social Psychology
+
+        -   Brown University, Providence, RI
+        -   Supervisor: Oriel FeldmanHall
+        -   Introductory lecture course with an enrollment of 300 students. Helped students design and analyze their own studies, and provided guidance and feedback on writing journal-style scientific reports. Delivered solo guest lecture on attribution.
+
+    -   Guest Workshop Instructor - Computational Modeling Workshop, Carney Institute for Brain Science
+
+        -   Brown University, Providence, RI
+        -   Delivered a hands-on workshop for estimating hierarchical drift diffusion models using the HDDM package in Python.
+
+-   2019
+
+    -   Teaching Assistant - CLPS 1790: Personality and Clinical Asessment
+
+        -   Brown University, Providence, RI
+        -   Supervisor: Jack Wright
+        -   Upper-level lab course with an enrollment of 24 students. Helped students design and analyze their own studies, and provided guidance and feedback on writing journal-style scientific reports.
+
+    -   Workshop Instructor - Data Science Using R
+
+        -   Brown University, Providence, RI
+        -   Weekly workshop for undergraduates. Covered data wrangling, visualization, and mixed-effects regression.
+
+    -   Guest Workshop Instructor - Computational Modeling Workshop, Carney Institute for Brain Science
+
+        -   Brown University, Providence, RI
+        -   Delivered a hands-on workshop for estimating hierarchical drift diffusion models using the HDDM package in Python.
+
+    -   Guest Lecturer - Summer \@ Brown
+
+        -   Brown University, Providence, RI
+        -   Delivered a lecture entitled "Social Preferences and the Brain" for the class "Neuroeconomics: The science of decision-making", which was part of the "Summer \@ Brown" summer school for high school students.
+
+-   2018
+
+    -   Workshop Instructor - Programming Psychology Experiments
+
+        -   Brown University, Providence, RI
+        -   Three-part workshop teaching the fundamentals of programming computerized psychology experiments using PsychToolbox.
+
+-   2014-2016
+
+    -   Teaching Fellow - Psych One: Introduction to Psychology
+
+        -   Stanford University, Stanford, CA
+        -   Supervisors: Bridgette Martin-Hard, James Gross, Jamil Zaki, & Gregory Walton
+        -   Taught weekly sections (13-15 students each)
+
+# Scientific & Community Outreach
+
+-   2021
+
+    -   Study Group Mentor - Leadership Alliance
+
+        -   Provided mentorship for undergraduate students (the Carney Brain Science cohort) participating in Leadership Alliance, an organization that provides research opportunities to students from historically underrepresented and marginalized groups.
+
+    -   Lesson Plan Designer - Brain Week Rhode Island
+
+        -   Helped design a lesson plan to introduce Rhode Island students to the brain sciences, and specifically to the science of ingroup/outgroup cognition. Created a video introducing the Robber's Cave study and encouraging students to reflect on how groups affect their own social interactions.
+
+-   2020
+
+    -   Study Group Mentor - Leadership Alliance
+
+        -   Provided mentorship for undergraduate students (the Carney Brain Science cohort) participating in Leadership Alliance, an organization that provides research opportunities to students from historically underrepresented and marginalized groups.
+
+-   2019
+
+    -   Guest Workshop Instructor - Leadership Alliance
+
+        -   Delivered workshop to students participating in Leadership Alliance, an organization that provides research opportunities to students from historically underrepresented and marginalized groups. Discussed and practiced the principles of effective scientific writing and communication.
+
+-   2016
+
+    -   Co-organizer - Stanford Undergraduate Psychology Conference
+
+        -   An entirely undergraduate-organized conference hosted at Stanford University, featuring research from undergraduates from around the U.S. and internationally.
+
+-   2014-2016
+
+    -   Organizer - Stanford Undergraduate Psychology Association
+
+        -   Generally: organized events for undergraduate students and community members to learn about (and engage in) psychological science.
+
+        -   Primary organizer for a discussion with Dr. Albert Bandura regarding his newly-published book, *Moral Disengagement*.
+
+        -   Co-organizer for a screening of the film *The Stanford Prison Experiment*, and a panel discussion with Dr. Philip Zimbardo afterwards.
+
+```{r echo=FALSE, out.height = "150px"}
+knitr::include_graphics("images/bandura.jpg")
+knitr::include_graphics("images/zimbardo.jpg")
+```
+
+# Professional & Departmental Service
+
+-   2020-present - Graduate Student Representative - Carney Institute for Brain Science
+-   2019-present - Member of Diversity & Innovation Committee - Society for Affective Science Student Committee
+-   2019-2020 - Social Media Editor - Personality Neuroscience, Cambridge University Press
+-   2019-2020 - Graduate Student Representative - Brown Dept. of Cog., Ling., & Psych. Sci.
+-   2018-2019 - Social Events Planning Co-chair - Brown Dept. of Cog., Ling., & Psych. Sci.
+-   2017 - Co-organizer - New England Research on Decision-Making
+
+# Ad Hoc Review
+
+-   Cognition
+-   Journal of Experimental Psychology: General (JEPG)
+-   Social, Cognitive, and Affective Neuroscience (SCAN)
+
+# "Popular Science" Writing
+
+-   Carney Institute for Brain Science
+
+    -   2019: [What is love? Here's what brain science can tell us.](https://www.brown.edu/carney/news/2019/02/13/what-love-here%E2%80%99s-what-brain-science-can-tell-us)
+
+# Media Coverage
+
+-   Brown Daily Herald
+
+    -   2018: [FeldmanHall Lab demystifies human behavior](https://www.browndailyherald.com/2018/09/17/feldmanhall-lab-demystifies-human-behavior/)
+    -   2017: [New lab studies emotional decision-making](https://www.browndailyherald.com/2017/02/06/new-lab-studies-emotional-decision-making/)

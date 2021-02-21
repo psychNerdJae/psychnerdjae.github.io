@@ -1,0 +1,97 @@
+---
+title: "Grad School Application Advice"
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    self_contained: false
+categories:
+  - psych
+  - grad school
+---
+
+This blog post was pulled from posts that were originally written on July 12, 2018 (timeline) and January 24, 2019 (personal statement). It was last updated on `r Sys.Date()` using R Markdown.
+
+# Application timeline
+
+This is a brief timeline to help you figure out the timeline for applying to (research psychology) PhD programs. I originally wrote this up for a friend-of-a-friend who's applying for a PhD this cycle. I'm sharing it here in the hopes that other folks might find this helpful as well!
+
+## Identifying potential programs
+
+-   Think about your favorite papers that were published the last few years: whose labs did they come from?
+
+-   What sort of research focus is essential to you? What sorts of research would you be open to exploring? What methodological skills do you want to learn?
+
+-   Where do you want to live for the next 5-6 years?
+
+-   Advisor qualities:
+
+    -   How hands-on/off do you want your advisor to be?
+    -   Do you prefer PIs from a certain career stage?
+    -   What's your potential advisor's reputation for kindness and productivity (in that order)?
+    -   This is where it's good to consult with your current mentors, who can give you an insider's perspective.
+
+## Reaching out to potential advisors
+
+-   Some people say that this is not important to do, but I personally recommend contacting potential advisors. After all, there's no point in applying to somebody who's not taking students (especially because it's time-intensive and expensive to apply!).
+-   My recommendation would be to send a short but thoughtful email that's personalized for each PI. Mention why you're interested in joining their lab, and find some way of indicating that you've done your homework (ask questions about one of their papers, suggest an idea for a research question that's relevant to their ongoing projects, etc.). A good first impression goes a long way!
+-   I would reach out to potential advisors in early/mid September. This is around when they'd have a sense for whether they'll be taking students.
+
+## GRE
+
+-   If you haven't taken it yet, you should start thinking about the timeline in which you'll be taking it.
+
+    -   According to the company that administers it, "You can take the computer-delivered GRE General Test once every 21 days, up to five times within any continuous rolling 12-month period (365 days)."
+    -   You should also check how frequently the GRE is administered in your area, as this will put limits on when you can take it.
+- Before registering, you should also think about your timeline for studying.
+    -   I felt pretty confident about the verbal and writing sections, so I focused all of my attention on the math section -- I studied something like 2-3 hours every day for a month.
+    -   As with everything, your mileage may vary! Be sure to give yourself enough time to study, sit for the test once, then study for a second sitting if you feel like you need to.
+
+## Letters of recommendation
+
+- Identify three people who can provide insightful comments about your...
+    - Scientific knowledge
+    - Research experience
+    - Work ethic
+    - Ability to succeed in a PhD program
+- Give your recommenders about two months of advance notice. Assuming that most of your apps are due in December, that means asking by October at the latest.
+    - What's really helpful for recommenders is if you can provide them with a spreadsheet listing every program they need to submit a letter to, as well as submission deadlines.
+    - Be sure to send reminder emails 1 month, 2 weeks, and 1 week before the deadline if they haven't submitted by then.
+    Find a way to express your gratitude.
+    - Writing a good rec takes a lot of time and thoughtfulness – find a meaningful way to express your gratitude, like sending a handwritten postcard in the mail or gifting a giftcard to their favorite coffee shop.
+
+## Statement of purpose
+- You should start drafting your SoP at least two months before it's due.
+    - Ask friends and mentors to provide feedback – I went through dozens of drafts based on other people's suggestions, and it made my SoP stronger.
+- Think carefully about what info you want to include. This statement is your main vehicle for expressing who you are, what you're interested in, and why you're the best candidate for your potential PI's lab!
+    - There's lots of great advice online about how to write a SoP, so I won't go into too much detail here.
+    - See if you can get current grad students' SoPs from when they applied, so that you have some templates to calibrate your expectations.
+
+## First-round interviews
+
+- You may get requests starting in mid/late December to participate in some "informal" interviews via Skype. The purpose of these interviews is to allow the PI to get a sense for who you are, and whether they ought to invite you to an in-person interview.
+- Even though they're technically informal, you should do a lot of prep work! Read up on their papers, familiarize yourself with their current lines of research, get ready to answer questions about yourself and your intellectual interests, etc.
+- Don't freak out if you don't get a first-round interview. I was invited to some in-person interviews even though I was never approached for a first-round interview. Some PIs like to do first-round interviews, and others don't.
+
+## In-person interviews
+- My earliest interview was in mid-January, but interviews typically run anywhere from late January through mid-March.
+
+## Waiting it out
+- No good advice here, other than to find ways to keep yourself from going crazy with anticipation. (:
+
+
+# Personal statements
+
+*Adapted from an email I sent to a friend who's applying to PhD programs in psychology:*
+
+When your prospective advisor reads your personal statement, they're ultimately trying to evaluate whether you'll be a successful and productive member of their lab. Before you start writing a single word of your personal statement, take some time to think deeply about the kinds of questions you'd have for an applicant if *you* were a lab director looking for a new student. The *art* of writing is telling an engaging and eloquent story about your trajectory through academia. The *science* of writing is addressing how your trajectory has prepared you to be an outstanding PhD student. Neither is sufficient; you need both!
+
+In case you're feeling stuck, here are examples of questions that you might want to answer in your personal statement:
+
+1.  What got you interested in psychology to begin with? What steps have you taken to address these interests? How have your interests evolved over time as a function of the experiences you've had?
+
+2.  What academic/research experiences have you had, and how do they qualify you to be a PhD student?
+
+3.  How deeply were you involved in research projects? How independently can you work? What skills did you learn? How comfortable are you working with data? To what extent do you understand both the theoretical reasons for doing the research, and how the design/results of the research address those theoretical questions?
+
+4.  Of all the programs/advisors you could have applied to, why this one? What does this school have that other schools don't? How deeply have you thought about your potential fit here? Are there specific research directions you might like to pursue with this particular advisor?
