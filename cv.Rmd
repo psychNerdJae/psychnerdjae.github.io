@@ -9,9 +9,9 @@ output:
 
 # Jae-Young Son
 
-**Download CV** \| **Google Scholar**
+[**Download CV**](https://github.com/psychNerdJae/psychnerdjae.github.io/blob/main/docs/cv.pdf?raw=true) \| [**Google Scholar**](https://scholar.google.com/citations?user=JPPuzI8AAAAJ)
 
-**Email:** jae at brown dot edu \| **Website:** www.jaeyoungson.com
+**Email:** jae at brown dot edu \| **Website:** [www.jaeyoungson.com](www.jaeyoungson.com)
 
 This document was most recently compiled on `r Sys.Date()` using R Markdown.
 
