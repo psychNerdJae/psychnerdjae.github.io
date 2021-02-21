@@ -222,7 +222,12 @@ Supervisors: Jamil Zaki & W. Craig Williams
 
         -   Co-organizer for a screening of the film *The Stanford Prison Experiment*, and a panel discussion with Dr. Philip Zimbardo afterwards.
 
-```{r echo=FALSE, out.height = "150px"}
+```{r eval=knitr::is_latex_output(), echo=FALSE, out.height = "150px"}
+knitr::include_graphics("images/bandura.jpg")
+knitr::include_graphics("images/zimbardo.jpg")
+```
+
+```{r eval=knitr::is_html_output(), echo=FALSE, out.width = "400px"}
 knitr::include_graphics("images/bandura.jpg")
 knitr::include_graphics("images/zimbardo.jpg")
 ```

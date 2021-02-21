@@ -3,12 +3,6 @@ title: "Jae-Young Son"
 site: distill::distill_website
 ---
 
-I study how people use mental maps to navigate complex social interactions.
-
-Misadventurer; reluctant optimist; amor fati.
-
-*"One-dimensional thought is systematically promoted by the makers of politics and their purveyors of mass information. Their universe of discourse is populated by self-validating hypotheses which, incessantly and monopolistically repeated, become hypnotic definitions or dictations."* --Herbert Marcuse.
-
-```{r echo=FALSE, out.width = "400px"}
-knitr::include_graphics("images/brain.jpg")
+```{r echo=FALSE}
+htmltools::includeHTML("home.html")
 ```

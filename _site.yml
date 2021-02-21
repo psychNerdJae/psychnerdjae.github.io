@@ -1,7 +1,9 @@
+title: "Jae-Young Son"
 name: "Jae-Young Son"
 output_dir: "docs"
+theme: theme.css
 navbar:
-  title: "Jae-Young Son"
+  search: true
   left:
     - text: "CV"
       href: cv.html
@@ -19,6 +21,4 @@ navbar:
           href: https://scholar.google.com/citations?user=JPPuzI8AAAAJ
         - text: "NeuroTree"
           href: https://neurotree.org/neurotree/tree.php?pid=747308
-  search: true
 output: distill::distill_article
-css: theme.css

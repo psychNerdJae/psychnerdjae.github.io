@@ -1,5 +1,6 @@
 ---
 title: "Grad School Application Advice"
+date: January 24, 2019
 output:
   distill::distill_article:
     toc: true

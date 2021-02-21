@@ -1,4 +1,3 @@
-
 /* base variables */
 
 /* Edit the CSS properties in this file to create a custom
@@ -15,7 +14,7 @@
 
 html {
   /*-- Main font sizes --*/
-  --title-size:      50px;
+  --title-size:      30px;
   --body-size:       1.06rem;
   --code-size:       14px;
   --aside-size:      12px;
@@ -36,9 +35,9 @@ html {
 /*-- ARTICLE METADATA --*/
 d-byline {
   --heading-size:    0.6rem;
-  --heading-color:   rgba(0, 0, 0, 0.5);
+  --heading-color:   #636363;
   --body-size:       0.8rem;
-  --body-color:      rgba(0, 0, 0, 0.8);
+  --body-color:      #636363;
 }
 
 /*-- ARTICLE TABLE OF CONTENTS --*/
@@ -50,9 +49,9 @@ d-byline {
 /*-- ARTICLE APPENDIX --*/
 d-appendix {
   --heading-size:    15px;
-  --heading-color:   rgba(0, 0, 0, 0.65);
+  --heading-color:   #636363;
   --text-size:       0.8em;
-  --text-color:      rgba(0, 0, 0, 0.5);
+  --text-color:      #636363;
 }
 
 /*-- WEBSITE HEADER + FOOTER --*/
@@ -60,17 +59,17 @@ d-appendix {
 
 .distill-site-header {
   --title-size:       18px;
-  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-color:       #636363;
   --text-size:        15px;
-  --hover-color:      white;
-  --bkgd-color:       #0F2E3D;
+  --hover-color:      black;
+  --bkgd-color:       white;
 }
 
 .distill-site-footer {
-  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-color:       #636363;
   --text-size:        15px;
-  --hover-color:      white;
-  --bkgd-color:       #0F2E3D;
+  --hover-color:      black;
+  --bkgd-color:       white;
 }
 
 /*-- Additional custom styles --*/
