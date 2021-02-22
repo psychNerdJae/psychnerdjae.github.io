@@ -1,0 +1,34 @@
+---
+title: "Into the tidyverse"
+date: February 21, 2021
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    self_contained: false
+categories:
+  - psych
+  - tutorials
+---
+
+# Skippable prelude
+
+When I started working as a full-time researcher, I didn't have a strong handle on how to programmatically work with data. This wasn't something that was unique to me (though I'm happy to admit that I'm kind of dense and took a long time to get even a little good)--it was something that was true of nearly everyone in my research "cohort."
+
+With every cohort of graduate students that's admitted into our program, I'm noticing that the standards are getting higher and higher. At the very least, it increasingly seems like new grad students walk through the door having *some* experience working with code-based data wrangling/analysis (e.g., in R or Python).
+
+I won't opine too much on whether I think this is a good thing (as always, there are good and bad things about this trend), but I *will* say that I'm concerned for budding researchers from historically underrepresented, marginalized, and excluded groups who (as usual) might be getting shut out of the scientific enterprise due to a lack of opportunity.
+
+Well, what's a grad student to do about this? I don't have the power to change systems, but I *can* potentially help level the playing field for folks who are looking for ways to self-teach, but don't know where to start.
+
+# Into the tidyverse
+
+For this reason, I started writing tutorials for data wrangling/analysis using R (via RStudio), with a very heavy emphasis on the `tidyverse` libraries. It requires people to use GitHub (via the easy-to-use GitHub Desktop interface), and encourages the practice of version control.
+
+If you're interested in using these materials, you can [**visit the startup page here**](https://psychnerdjae.github.io/into-the-tidyverse/), which contains detailed instructions on installing the requisite software. [Click here to **look at the fully-open materials** on GitHub](https://github.com/psychNerdJae/into-the-tidyverse). If you want to get infrequent notifications (new tutorials, bug fixes, revised materials), [click here to **join the Google Group**](https://groups.google.com/u/1/g/into-the-tidyverse). Everyone hates spam, so I'll keep this thing extremely low-traffic.
+
+There have been so many tutorials written about the tidyverse at this point that one could very reasonably think that I'm needlessly reinventing the wheel. And sure, that might be true. But I've noticed that novice coders (e.g., undergrad research assistants) systematically seem to struggle with certain kinds of programming ideas. Over many years of teaching programming, I think I've developed a decent sense for what people find confusing. With this experience in mind, my goal has been to develop teaching materials that not only get people working with data quickly, but also give them a solid sense for some of the underlying computing principles.
+
+At the time of this writing, the tutorials are only half-done. I've gotten through the core data wrangling tutorials, and my intent is to start writing the data analysis tutorials next (before circling back and completing some of the more "advanced topics" tutorials about the tidyverse). When I started working on these, I told myself that I'd write a new tutorial every week. [In the words of the film director Bong Joon-ho](https://news.avclub.com/bong-joon-ho-has-a-pretty-great-story-about-lying-to-ha-1838926288), "It was a fucking lie." As I should've anticipated, there are lots and lots and lots (and lots and lots...) of competing demands on my time, and it takes many, many hours to write up a single tutorial. But, I haven't forgotten about this project, and I'm committed to seeing it (eventually) through.
+
+Let me know if you find any bugs, or you have suggestions for how to make these materials easier to understand!
