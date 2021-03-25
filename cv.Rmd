@@ -1,7 +1,7 @@
 ---
 title: "Curriculum Vitae"
 output:
-  pdf_document: default
+  # pdf_document: default
   distill::distill_article:
     toc: true
     toc_float: true
@@ -9,9 +9,9 @@ output:
 
 # Jae-Young Son
 
-[**Download CV**](https://github.com/psychNerdJae/psychnerdjae.github.io/blob/main/docs/cv.pdf?raw=true) \| [**Google Scholar**](https://scholar.google.com/citations?user=JPPuzI8AAAAJ)
+[**Download CV**](https://jaeyoungson.com/cv.pdf) \| [**Google Scholar**](https://scholar.google.com/citations?user=JPPuzI8AAAAJ)
 
-**Email:** jae at brown dot edu \| **Website:** [www.jaeyoungson.com](www.jaeyoungson.com)
+**Email:** jae at brown dot edu \| **Website:** [www.jaeyoungson.com](https://jaeyoungson.com)
 
 This document was most recently compiled on `r Sys.Date()` using R Markdown.
 
@@ -45,7 +45,7 @@ Supervisors: Jamil Zaki & W. Craig Williams
 
 # Publications
 
-1.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (revise & resubmit). Cognitive maps enable prediction of unseen relationships in social networks.
+1.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (revise & resubmit). Cognitive maps of social features enable adaptive inference in social networks.
 
 2.  Heffner, J., **Son, J.**, & FeldmanHall, O. (revise & resubmit). Emotion prediction errors guide socially adaptive behavior.
 
