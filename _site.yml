@@ -3,12 +3,11 @@ name: "Jae-Young Son"
 output_dir: "docs"
 theme: theme.css
 navbar:
-  search: true
   left:
     - text: "CV"
       href: cv.html
     - text: "Publications"
-      href: publications.html
+      href: cv.html#publications
     - text: "PsychBlog & Jelly"
       href: blog.html
     - text: "External"
@@ -21,6 +20,7 @@ navbar:
           href: https://scholar.google.com/citations?user=JPPuzI8AAAAJ
         - text: "NeuroTree"
           href: https://neurotree.org/neurotree/tree.php?pid=747308
+
 collections:
   posts:
     custom: _custom.html
