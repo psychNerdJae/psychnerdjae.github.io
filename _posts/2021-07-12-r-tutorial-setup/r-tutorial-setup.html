@@ -86,376 +86,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Jae-Young Son: PsychBlog &amp; Jelly</title>
+  <title>Setup guide for R tutorials</title>
 
 
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-07-12"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-07-12"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Jae-Young Son: PsychBlog &amp; Jelly"/>
+  <meta property="og:title" content="Setup guide for R tutorials"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Jae-Young Son"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Jae-Young Son: PsychBlog &amp; Jelly"/>
+  <meta property="twitter:title" content="Setup guide for R tutorials"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["PsychBlog & Jelly"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Setup guide for R tutorials"]},{"type":"character","attributes":{},"value":["July 12, 2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["tutorials","r","coding"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["r console.png","r-tutorial-setup_files/anchor-4.2.2/anchor.min.js","r-tutorial-setup_files/bowser-1.9.3/bowser.min.js","r-tutorial-setup_files/distill-2.2.21/template.v2.js","r-tutorial-setup_files/header-attrs-2.8/header-attrs.js","r-tutorial-setup_files/jquery-1.11.3/jquery.min.js","r-tutorial-setup_files/popper-2.6.0/popper.min.js","r-tutorial-setup_files/tippy-6.2.7/tippy-bundle.umd.min.js","r-tutorial-setup_files/tippy-6.2.7/tippy-light-border.css","r-tutorial-setup_files/tippy-6.2.7/tippy.css","r-tutorial-setup_files/tippy-6.2.7/tippy.umd.min.js","r-tutorial-setup_files/webcomponents-2.0.0/webcomponents.js","rstudio annotated.png"]}
   </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1770,686 +1429,146 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-  </style>
-  <style type="text/css">/* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      30px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    open-sans;
-    --mono-font:       monospace;
-    --body-font:       open-sans;
-    --navbar-font:     open-sans;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   #636363;
-    --body-size:       0.8rem;
-    --body-color:      #636363;
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   #636363;
-    --text-size:       0.8em;
-    --text-color:      #636363;
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       #636363;
-    --text-size:        15px;
-    --hover-color:      black;
-    --bkgd-color:       white;
-  }
-
-  .distill-site-footer {
-    --text-color:       #636363;
-    --text-size:        15px;
-    --hover-color:      black;
-    --bkgd-color:       white;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-
-  d-article li {
-    margin-bottom: 0em;
-    margin-left: 0;
-    padding-left: 0;
-  }</style>
-  <style type="text/css">
-  /* base style */
-
-  /* FONT FAMILIES */
-
-  :root {
-    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-
-  body,
-  .posts-list .post-preview p,
-  .posts-list .description p {
-    font-family: var(--body-font), var(--body-default);
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .posts-list .post-preview h2,
-  .posts-list .description h2 {
-    font-family: var(--heading-font), var(--heading-default);
-  }
-
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-family: var(--mono-font), var(--mono-default);
-  }
-
-
-  /*-- TITLE --*/
-  d-title h1,
-  .posts-list > h1 {
-    color: var(--title-color, black);
-  }
-
-  d-title h1 {
-    font-size: var(--title-size, 50px);
-  }
-
-  /*-- HEADERS --*/
-  d-article h1,
-  d-article h2,
-  d-article h3,
-  d-article h4,
-  d-article h5,
-  d-article h6 {
-    color: var(--header-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- BODY --*/
-  d-article > p,  /* only text inside of <p> tags */
-  d-article > ul, /* lists */
-  d-article > ol {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-    font-size: var(--body-size, 1.06rem);
-  }
-
-
-  /*-- CODE --*/
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-size: var(--code-size, 14px);
-  }
-
-  /*-- ASIDE --*/
-  d-article aside {
-    font-size: var(--aside-size, 12px);
-    color: var(--aside-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- FIGURE CAPTIONS --*/
-  figure .caption,
-  figure figcaption,
-  .figure .caption {
-    font-size: var(--fig-cap-size, 13px);
-    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- METADATA --*/
-  d-byline h3 {
-    font-size: var(--heading-size, 0.6rem);
-    color: var(--heading-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-byline {
-    font-size: var(--body-size, 0.8rem);
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  d-byline a,
-  d-article d-byline a {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- TABLE OF CONTENTS --*/
-  .d-contents nav h3 {
-    font-size: var(--heading-size, 18px);
-  }
-
-  .d-contents nav a {
-    font-size: var(--contents-size, 13px);
-  }
-
-  /*-- APPENDIX --*/
-  d-appendix h3 {
-    font-size: var(--heading-size, 15px);
-    color: var(--heading-color, rgba(0, 0, 0, 0.65));
-  }
-
-  d-appendix {
-    font-size: var(--text-size, 0.8em);
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-appendix d-footnote-list a.footnote-backlink {
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  .distill-site-header .title {
-    font-size: var(--title-size, 18px);
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a,
-  .nav-dropdown .nav-dropbtn {
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    font-size: var(--text-size, 15px);
-  }
-
-  .distill-site-header a:hover,
-  .nav-dropdown:hover .nav-dropbtn {
-    color: var(--hover-color, white);
-  }
-
-  .distill-site-header {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer a:hover {
-    color: var(--hover-color, white);
-  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="r-tutorial-setup_files/header-attrs-2.8/header-attrs.js"></script>
+  <script src="r-tutorial-setup_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="r-tutorial-setup_files/popper-2.6.0/popper.min.js"></script>
+  <link href="r-tutorial-setup_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="r-tutorial-setup_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="r-tutorial-setup_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="r-tutorial-setup_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="r-tutorial-setup_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="r-tutorial-setup_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="r-tutorial-setup_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"PsychBlog & Jelly","authors":[]}
+{"title":"Setup guide for R tutorials","authors":[],"publishedDate":"2021-07-12T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Jae-Young Son</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Research
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="cv.pdf">CV</a>
-<a href="publications.html">Publications</a>
-</div>
-</div>
-<a href="blog.html">PsychBlog &amp; Jelly</a>
-<a href="tutorials.html">Tutorials</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-External
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="https://twitter.com/psychNerdJae">Twitter</a>
-<a href="https://github.com/psychNerdJae">GitHub</a>
-<a href="https://scholar.google.com/citations?user=JPPuzI8AAAAJ">Google Scholar</a>
-<a href="https://neurotree.org/neurotree/tree.php?pid=747308">NeuroTree</a>
-<a href="https://www.linkedin.com/in/jaeyoungson/">LinkedIn</a>
-</div>
-</div>
-</div>
-<div class="nav-right">
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="PsychBlog &amp; Jelly">PsychBlog &amp; Jelly</h1>
-<a href="posts/2021-07-12-no-code-intro-programming/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["tutorials","coding"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 12, 2021</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>No-code introduction to programming</h2>
-<div class="dt-tags">
-<div class="dt-tag">tutorials</div>
-<div class="dt-tag">coding</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2021-07-12-r-tutorial-setup/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["tutorials","r","coding"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 12, 2021</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Setup guide for R tutorials</h2>
-<div class="dt-tags">
-<div class="dt-tag">tutorials</div>
-<div class="dt-tag">r</div>
-<div class="dt-tag">coding</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2021-02-21-grad-apps/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["psych","grad school"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 24, 2019</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Grad School Application Advice</h2>
-<div class="dt-tags">
-<div class="dt-tag">psych</div>
-<div class="dt-tag">grad school</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2018-02-06-influential-women-poc/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["psych"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 6, 2018</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Influential Living Psychologists: Women &amp; POC</h2>
-<div class="dt-tags">
-<div class="dt-tag">psych</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2017-09-16-grad-app-thoughts/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["grad school"]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 16, 2017</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Thoughts as I begin the grad school application process</h2>
-<div class="dt-tags">
-<div class="dt-tag">grad school</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2017-08-16-psychblog-and-jelly/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["meta"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 16, 2017</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>PsychBlog &amp; Jelly</h2>
-<div class="dt-tags">
-<div class="dt-tag">meta</div>
-</div>
-<p></p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div><div class="sidebar-section custom">
-  <h3>Search</h3>
-  <form action="https://duckduckgo.com/">
-  <input type="text" name="q" placeholder="Search...">
-  <input type="hidden" name="sites" 
-  value="https://jaeyoungson.com">
-  </form>
-</div></div>
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:articles">articles</a>
-<span class="category-count">(6)</span>
-</li>
-<li>
-<a href="#category:coding">coding</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:grad_school">grad school</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:meta">meta</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:psych">psych</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:r">r</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:tutorials">tutorials</a>
-<span class="category-count">(2)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>PsychBlog &amp; Jelly</h1>
+<h1>Setup guide for R tutorials</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">tutorials</div>
+<div class="dt=tag">r</div>
+<div class="dt=tag">coding</div>
+</div>
 <!--/radix_placeholder_categories-->
 
 </div>
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#skippable-prelude">Skippable prelude</a></li>
+<li><a href="#setting-up-r">Setting up R</a>
+<ul>
+<li><a href="#install-r">Install R</a></li>
+<li><a href="#install-rstudio">Install RStudio</a></li>
+<li><a href="#set-up-rstudio">Set up RStudio</a></li>
+<li><a href="#download-r-libraries">Download R libraries</a></li>
+</ul></li>
+<li><a href="#setting-up-github">Setting up GitHub</a>
+<ul>
+<li><a href="#create-github-account">Create GitHub account</a></li>
+<li><a href="#install-github-desktop">Install GitHub Desktop</a></li>
+</ul></li>
+<li><a href="#file-and-folder-structure">File and folder structure</a></li>
+<li><a href="#now-what">…Now what?</a></li>
+</ul>
+</nav>
+</div>
+<h1 id="skippable-prelude">Skippable prelude</h1>
+<p>When I started working as a full-time researcher, I didn’t have a strong handle on how to programmatically work with data. This wasn’t something that was unique to me (though I’m happy to admit that I’m kind of dense and took a long time to get even a little good)–it was something that was true of nearly everyone in my research “cohort.”</p>
+<p>With every cohort of graduate students that’s admitted into our program, I’m noticing that the standards are getting higher and higher. At the very least, it increasingly seems like new grad students walk through the door having <em>some</em> experience working with code-based data wrangling/analysis (e.g., in R or Python).</p>
+<p>I won’t opine too much on whether I think this is a good thing (as always, there are good and bad things about this trend), but I <em>will</em> say that I’m concerned for budding researchers from historically underrepresented, marginalized, and excluded groups who (as usual) might be getting shut out of the scientific enterprise due to a lack of opportunity.</p>
+<p>Well, what’s a grad student to do about this? I don’t have the power to change systems, but I <em>can</em> potentially help level the playing field for folks who are looking for ways to self-teach, but don’t know where to start.</p>
+<p>For this reason, I started writing tutorials for data wrangling/analysis using R (via RStudio), with a very heavy emphasis on the <code>tidyverse</code> libraries. These are state-of-the-art tools that have always been (and always will be) free and open-source.</p>
+<p>These tutorials require you to use GitHub (via the easy-to-use GitHub Desktop interface), and encourage the practice of version control. Learning how to use GitHub is an increasingly important part of learning how to do data science. For that reason, you will be <em>required</em> to use GitHub in order to follow along with these tutorials. The learning curve is not too steep, and these skills will serve you well in the future.</p>
+<h1 id="setting-up-r">Setting up R</h1>
+<h2 id="install-r">Install R</h2>
+<p>The first thing you’ll need to do is to <a href="https://cran.r-project.org/">install R</a> from CRAN (Comprehensive R Archive Network).</p>
+<p>This will install the R programming language, some essential libraries, and a text-based console that might remind you of an old-school terminal window.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="r%20console.png" title="R console (left) compared against a macOS terminal console (right)" alt="R console (left) compared against a macOS terminal console (right)" width="576" /></p>
+</div>
+<h2 id="install-rstudio">Install RStudio</h2>
+<p>We will not be using the R console directly. Instead, we’ll be using RStudio, which builds on top of the console and gives you a lot of nice tools that help you work more efficiently. <em>Once R is installed,</em> you’ll then want to <a href="https://rstudio.com/">install RStudio</a>.</p>
+<p>You’ll immediately note that you have a lot more tools at your disposal:</p>
+<ol type="1">
+<li>R Console: Look familiar? You can use this console to type commands, just like in the “base” R console.</li>
+<li>Script Editor: Instead of using the console to type your commands one-by-one, you can write a script that contains all of your commands. That way, it’s easy to replicate an analysis because all of your code is contained within a single document, and can be run at will.</li>
+<li>Variable Viewer: When you start loading, creating, and manipulating data, you’ll see it here.</li>
+<li>Everything Else: I primarily use this panel to look at plots, or to look at the help documentation for functions I’m using.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="rstudio%20annotated.png" title="Annotated image of RStudio window, entirely redundant with in-line text descriptions" alt="Annotated image of RStudio window, entirely redundant with in-line text descriptions" width="668" /></p>
+</div>
+<h2 id="set-up-rstudio">Set up RStudio</h2>
+<p>Open up RStudio and then open up <code>Preferences</code>. Find the “Workspace” settings. Make sure the checkbox is <em>de-selected</em> for “Restore .Rdata into workspace at startup”. Specify <em>never</em> as the option for “Save workspace to .Rdata on exit”. This will ensure that every time you open up RStudio, you start out with a clean working environment. You’d be amazed at how many problems can be prevented by doing this.</p>
+<h2 id="download-r-libraries">Download R libraries</h2>
+<p>You’ll need to install the following R libraries. Copy/paste the following code into the console window, then press enter to run it. We may need to install other libraries in the future, but these ones are so useful that I use them in virtually every project.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"here"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"janitor"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h1 id="setting-up-github">Setting up GitHub</h1>
+<h2 id="create-github-account">Create GitHub account</h2>
+<p>You will need to create an account at <a href="https://github.com/">GitHub</a>.</p>
+<p><code>git</code> is a system for performing <code>version control</code>. What does that mean? Basically, it allows you to save “snapshots” of your files at any given moment. This allows you to track how your code (and data) change over time. So if you accidentally delete a lot of important code, and later realize that you need to recover it, git allows you to go back to a snapshot that contains the code you want. So you can think of it like an archiving system.</p>
+<p><code>GitHub</code> is an online data storage platform that uses git to store a full archive of changes you’ve made to a particular project. It allows you to keep a “synchronized” copy of the most up-to-date files on any computer that’s given access.</p>
+<p>Let’s walk through some of terminology, which will help you to understand how GitHub works. Let’s say you’ve got some projects on your computer’s hard drive. Each project is stored in its own <code>repository</code>. When you start using git to version control your repository, it creates some hidden folders which contain a full archive of changes you’ve made (sort of - more on this in a second). Using git, you can then specify when to create a snapshot of your repository. This snapshot is called a <code>commit</code> because you’re committing to saving a copy of your repository at this exact moment in time. Importantly, <em>you choose when to commit</em>. Different people have different preferences. Some people like to commit at set time increments, regardless of whether their changes are big or small. Some people wait to commit until they have something they feel is “worth” committing. This is entirely up to you, and you’ll develop your own preferences as you gain experience.</p>
+<p>Once you’ve committed something, you’ve saved a snapshot on your personal computer. But, that commit only lives on your computer. If you dropped your computer on the floor and destroyed its hard drive, your archive is gone forever. This is where GitHub comes in. You can save a copy of your files and your commit history onto GitHub, which allows you to <code>clone</code> a copy of your repository (and its full commit history!) onto any other computer. When you upload your commits to GitHub, it’s called a <code>push</code>. The GitHub repository contains only the “latest” versions of your files, which is dictated by when you commit and push your commits to GitHub. This can get a little more complicated when there are multiple collaborators editing files in the same respository. For simplicity, we’ll only consider two cases: 1) when a collaborator pushes a commit while you’re in the middle of changing something, and 2) how to prevent conflicting changes by working on a parallel copy of the repository.</p>
+<p>Once you’re done changing something in your code, you might create a commit and try pushing that change to GitHub. Only to find that your collaborator has also been changing things in the code, and has pushed something before you had a chance to work on the most “updated” version of your repository. Since your commit is now on an “older” version of the repository, you must first synchronize your computer’s (older) version of the repository with the (newer) GitHub version. When you check whether there’s a newer version, this is called a <code>fetch</code>. When you detect that there’s a newer version, you then <code>pull</code> the newer version on your computer. In the best-case scenario, there is no <code>merge conflict</code>, and you can then push your commit without any further action. In the worst-case scenario, there is a merge conflict that you manually have to resolve. That is a giant headache to do, and you’ll want to avoid merge conflicts as much as possible. The easiest way to do this is to work with a <code>fork</code> (you could also do this with a <code>branch</code>, but we won’t be using them in this workshop… once you understand forks, it’ll be really easy to google what branches do in the future).</p>
+<p>You might be familiar with the idea of a “multiverse” from comic books or science fiction. You’re living in the “main” timeline, but there are alternative realities that come in and out of existence at key moments in time. For example, there might be an alternative reality that’s exactly the same as this one, except that Ringo Starr never became the drummer for the Beatles. That would be an alternative universe that “forked” from our reality in 1962. That is exactly the logic of git. You could be working on a project with a collaborator who wants to try rewriting some existing code, but who wants to avoid messing up your existing data analysis pipelines. That collaborator could create a <code>fork</code> of your project, which diverges from the <code>main</code> timeline at a particular moment in time. The collaborator could then do whatever they wanted with their forked copy of the repository, without ever affecting what happens in the main copy. In principle, they could maintain a separate fork forever. Oftentimes, though, they’ll finish editing the code and will then want to <code>merge</code> it with the main timeline. This gives you a gentle way of merging the timelines together, since you can work through any would-be merge conflicts before trying to merge the two timelines back together.</p>
+<p>Power users often use text-based commands to manage their git repositories, but I prefer using GitHub Desktop, which an easy-to-use point-and-click interface.</p>
+<h2 id="install-github-desktop">Install GitHub Desktop</h2>
+<p>Install <a href="https://desktop.github.com/">GitHub Desktop</a>, then log in with your new GitHub credentials to set it up. These instructions are for the <code>into-the-tidyverse</code> tutorials, but it’s not too hard to figure out how to fork/clone other repositories using these instructions.</p>
+<p>If this is your first time ever using GitHub Desktop, click on <code>Clone a repository from the internet</code> &gt;&gt; copy/paste <code>psychNerdJae/into-the-tidyverse</code> into the textbox &gt;&gt; <code>Fetch origin</code>. This creates a cloned copy of my repository onto your hard drive (scroll back up to review terminology if you’re getting lost).</p>
+<p>If you’ve used GitHub Desktop before, you might have some git-managed repositories on your hard drive already. If that’s the case, click on <code>Add</code> &gt;&gt; <code>Clone Repository</code> &gt;&gt; <code>URL</code> &gt;&gt; copy/paste <code>psychNerdJae/into-the-tidyverse</code> into the textbox &gt;&gt; <code>Fetch origin</code>.</p>
+<p>You can now access all of the latest workshop materials. If you start creating/modifying code or data, you’ll see those changes tracked through GitHub Desktop. Remember that the only changes that are saved are the ones you take a snapshot of by committing.</p>
+<p>You’ll note that when you try to commit new changes for the first time, you’ll be prompted, “You don’t have write access to <strong>into-the-tidyverse</strong>. Want to create a fork?” Click that. When you try to push your commit, you’ll see some scary warning message that you don’t have write access to <code>psychNerdJae/into-the-tidyverse</code>. Go ahead and create a fork. In the next prompt, you’ll be asked how you’re planning on using this fork. Click on <code>For my own purposes</code>. Now, your changes are pushed to a forked copy of <code>yourUserName/into-the-tidyverse</code>, which runs in a parallel timeline to my original copy. This lets you play around with code as you’re learning to use R, without ever disturbing my original files.</p>
+<p>What if I make a change to my repository that you want to synchronize with your fork? For example, I could add more files to my repository as I develop new workshop materials, which you want to download. Since my repository is the original that your fork copies, my repository is known as the <code>upstream</code> (since it’s upstream in the timeline). You can always check to see if there are changes in the upstream by clicking on <code>Current Branch</code> and seeing whether there’s an option for <code>upstream/main</code>. If you don’t, that means there are no new commits in my version of the repository.</p>
+<p>Now that all of the materials live on your hard drive (in the cloned repository you forked from mine), you’re ready to learn!</p>
+<h1 id="file-and-folder-structure">File and folder structure</h1>
+<p>These instructions are specifically for <code>into-the-tidyverse</code>, but should apply to any other tutorials I write.</p>
+<ul>
+<li><p>Files in the parent folder: Whenever you want to engage with these workshops, remember to double-click on <code>into-the-tidyverse.Rproj</code> first. This opens up a new R session (so that work you’re doing for this project doesn’t disturb whatever work you might be doing for other R projects).</p></li>
+<li><p>Tutorials: This is where you can find the HTML files containing all tutorials. Each one features a self-contained lesson on a particular topic.</p></li>
+<li><p>Sandbox: This is the only folder you should be modifying. You should never, ever, ever modify anything that’s in any other folder. Seriously, under most circumstances, there should be no reason for you to ever navigate into these directories or open these files. If you’re wanting to save scripts, plots, whatever, you should do it in the Sandbox. Make sure to follow these three simple rules to make sure everything goes smoothly:</p>
+<ol type="1">
+<li><p>Basically, don’t touch anything in the Code and Data folders, and you’ll be alright. For those of you following along in realtime (i.e., I haven’t finished writing/developing all of the materials yet), this lets you avoid merge conflicts. In short, a merge conflict emerges when my version of the file looks different from your version of the same file. So if you take my code and you use it to play around by adding/deleting code, your file is now different from my file. When you try to “sync” new materials from my repository to your forked clone, this creates a merge conflict that you’re forced to resolve before you’re allowed to download my new materials.</p></li>
+<li><p>Any time you write new code, do it in this Sandbox folder. The point of a sandbox is that you can do anything you want, and the (potentially destructive) consequences of your actions will never leave the sandbox. This is important because I’m going to encourage you very, very, very strongly never to simply run the existing scripts in the Code folder (or equivalently, simply copy/pasting existing code). So when you’re typing code from scratch and need a place to save your scripts, save them in the Sandbox.</p></li>
+<li><p>On that note, you should be typing code from scratch. This sandbox should be full of code, whether it works or not. You learn a lot from typing things from scratch, especially when you’re a beginner. This is because you’ll inevitably type things incorrectly when you do it from scratch, and then you’ll have to self-diagnose why your code doesn’t work. That is invaluable experience for learning how to code. And it will also help with your muscle memory. It takes virtually zero time for me to write a pipe (%&gt;%) because I have typed thousands and thousands and thousands of pipes. You cannot get good at writing code quickly without building muscle memory. If you simply run existing code, or copy/paste existing code, you are hurting your own learning. There are no shortcuts to learning code. You must do it the hard way.</p></li>
+</ol></li>
+<li><p>Code: I’m providing all of the <code>R Markdown</code> code from the videos in the Code folder. These scripts are provided primarily for folks with visual impairments, who would find it useful to have the text for accessibility reasons. By and large, I do <strong>NOT</strong> want any other group of people looking at this code. Why? Because most of your learning occurs when you make (and correct) mistakes, and you can only make mistakes if you’re trying things out from scratch. You can’t make mistakes if you’re simply running someone else’s code, or just copy/pasting code.</p></li>
+<li><p>Data: We will be using a diverse range of datasets from a variety of sources. There are times when it will make sense for you to directly download the data from the source (such as timeseries data on covid19, which is updated on a daily basis), but otherwise, the datasets will be provided in the Data folder. When applicable/available, the URL to the original dataset will be documented in the relevant scripts.</p></li>
+<li><p>Output: Sometimes, there’ll be some kind of output I want to save to your hard drive (like a plot or table), so that you have a sense for what your output ought to look like. These will be saved in the Output folder. Anytime you have some output, you should save that to the Sandbox instead.</p></li>
+</ul>
+<h1 id="now-what">…Now what?</h1>
+<p>If you’re ready to get started, go to the folder you’ve just created on your hard drive. From there, click into the <code>Tutorials</code> folder, and have fun with the first session!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

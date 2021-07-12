@@ -1,0 +1,32 @@
+---
+title: "Tutorials"
+output:
+  distill::distill_article
+---
+
+This page provides a structured directory of tutorials suitable for beginner-level programmers. It is *not* a full directory of all tutorials I've ever written. To see a more comprehensive list, [check out the blog entries tagged with "tutorials"](./blog.html#category:tutorials).
+
+# Language-free introductions
+- [No-code introduction to programming](./posts/2021-07-12-no-code-intro-programming/)
+- GitHub (coming soon...)
+
+# R / tidyverse
+- [Setup guide for R tutorials](./posts/2021-07-12-r-tutorial-setup/)
+  - Installing R / RStudio
+  - Creating a GitHub account / installing GitHub Desktop
+  - How to fork/clone the tutorials
+- [into-the-tidyverse](https://github.com/psychNerdJae/into-the-tidyverse)
+  - Learn how to work with data using the `tidyverse` ecosystem
+  - Prerequisite: Setup guide
+- [learn-stats-backwards](https://github.com/psychNerdJae/learning-stats-backwards)
+  - Learn how to perform basic regression analyses using `R`
+  - Prerequisite: into-the-tidyverse
+
+# HDDM (Python)
+- coming soon...
+
+# Feature-based reinforcement learning (Python)
+- coming soon...
+
+# PsychToolbox (Matlab)
+- coming soon...

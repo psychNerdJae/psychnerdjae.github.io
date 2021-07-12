@@ -1,8 +1,63 @@
 ---
 title: "Jae-Young Son"
 site: distill::distill_website
+image: "./images/brain.jpg"
+links:
+  - label: CV
+    url: "cv.pdf"
+  - label: Publications
+    url: "publications.html"
+  - label: Email
+    url: "mailto:jae@brown.edu"
+output:
+  postcards::trestles
 ---
 
+## Research
+
+### Cognitive maps of social networks
+
+I study how we navigate the great blooming buzzing confusion of the social world.
+
+Social networks are vast, complex, and ever-evolving. Despite this, we are able to mentally represent the structure of our networks, and to draw upon this knowledge to make sophisticated social decisions. One of the major focuses of my research is therefore examining how people build cognitive maps of social environments.
+
+### Approach
+
+I use computational modeling tools to make sense of behavioral and neural data. Ongoing and past work have used:
+
+- social network analysis
+- representational similarity analysis
+- reinforcement learning
+- drift diffusion modeling
+
+
+## About me
+
+### Education and employment
+
+```{r echo=FALSE, out.width = "400px", fig.alt="I have gotten my research training at Stanford and Brown Universities."}
+knitr::include_graphics("images/education_employment.png")
+```
+
+### Footprints
+
+```{r echo=FALSE, out.width = "400px", fig.alt="I have lived in South Korea, North Carolina, Tennessee, California, and Rhode Island."}
+knitr::include_graphics("images/places_lived.png")
+```
+
+### Misc
+
+Misadventurer; reluctant optimist; amor fati.
+
+My name is 손재영. In English, I go by Jae. [Learn more about Korean naming conventions here](https://en.wikipedia.org/wiki/Korean_name"). [Hear how my full name is pronounced here](https://translate.google.com/?sl=kr&tl=en&text=%EC%86%90%EC%9E%AC%EC%98%81&op=translate).
+
 ```{r echo=FALSE}
-htmltools::includeHTML("home.html")
+htmltools::p(
+  "
+  \"One-dimensional thought is systematically promoted by the makers of politics and their purveyors of mass information.
+  Their universe of discourse is populated by self-validating hypotheses which, incessantly and monopolistically repeated,
+  become hypnotic definitions or dictations.\" -Herbert Marcuse.
+  ",
+  style = "font-size: 70%; font-style: italic"
+)
 ```

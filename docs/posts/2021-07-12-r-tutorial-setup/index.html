@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -85,34 +86,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Jae-Young Son: PsychBlog &amp; Jelly</title>
+<title>Jae-Young Son: Setup guide for R tutorials</title>
 
 
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2017-08-16"/>
-<meta property="article:created" itemprop="dateCreated" content="2017-08-16"/>
+<meta property="article:published" itemprop="datePublished" content="2021-07-12"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-07-12"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Jae-Young Son: PsychBlog &amp; Jelly"/>
+<meta property="og:title" content="Jae-Young Son: Setup guide for R tutorials"/>
 <meta property="og:type" content="article"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Jae-Young Son"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Jae-Young Son: PsychBlog &amp; Jelly"/>
+<meta property="twitter:title" content="Jae-Young Son: Setup guide for R tutorials"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["PsychBlog & Jelly"]},{"type":"character","attributes":{},"value":["August 16, 2017"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["meta"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Setup guide for R tutorials"]},{"type":"character","attributes":{},"value":["July 12, 2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["tutorials","r","coding"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["psychblog_jelly_files/anchor-4.2.2/anchor.min.js","psychblog_jelly_files/bowser-1.9.3/bowser.min.js","psychblog_jelly_files/distill-2.2.21/template.v2.js","psychblog_jelly_files/header-attrs-2.6/header-attrs.js","psychblog_jelly_files/jquery-1.11.3/jquery.min.js","psychblog_jelly_files/popper-2.6.0/popper.min.js","psychblog_jelly_files/tippy-6.2.7/tippy-bundle.umd.min.js","psychblog_jelly_files/tippy-6.2.7/tippy-light-border.css","psychblog_jelly_files/tippy-6.2.7/tippy.css","psychblog_jelly_files/tippy-6.2.7/tippy.umd.min.js","psychblog_jelly_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["r console.png","r-tutorial-setup_files/anchor-4.2.2/anchor.min.js","r-tutorial-setup_files/bowser-1.9.3/bowser.min.js","r-tutorial-setup_files/distill-2.2.21/template.v2.js","r-tutorial-setup_files/header-attrs-2.8/header-attrs.js","r-tutorial-setup_files/jquery-1.11.3/jquery.min.js","r-tutorial-setup_files/popper-2.6.0/popper.min.js","r-tutorial-setup_files/tippy-6.2.7/tippy-bundle.umd.min.js","r-tutorial-setup_files/tippy-6.2.7/tippy-light-border.css","r-tutorial-setup_files/tippy-6.2.7/tippy.css","r-tutorial-setup_files/tippy-6.2.7/tippy.umd.min.js","r-tutorial-setup_files/webcomponents-2.0.0/webcomponents.js","rstudio annotated.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2091,7 +2092,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2112,7 +2113,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"PsychBlog & Jelly","authors":[],"publishedDate":"2017-08-16T00:00:00.000+00:00"}
+{"title":"Setup guide for R tutorials","authors":[],"publishedDate":"2021-07-12T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2159,10 +2160,12 @@ External
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>PsychBlog &amp; Jelly</h1>
+<h1>Setup guide for R tutorials</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-  <a href="../../blog.html#category:meta" class="dt-tag">meta</a>
+  <a href="../../blog.html#category:tutorials" class="dt-tag">tutorials</a>
+  <a href="../../blog.html#category:r" class="dt-tag">r</a>
+  <a href="../../blog.html#category:coding" class="dt-tag">coding</a>
 </div>
 <!--/radix_placeholder_categories-->
 
@@ -2174,24 +2177,97 @@ External
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#what-is-psychblog-jelly">What is PsychBlog &amp; Jelly?</a></li>
-<li><a href="#what-can-i-expect-to-see-on-psychblog-jelly">What can I expect to see on PsychBlog &amp; Jelly?</a></li>
-<li><a href="#why-psychblog-jelly"><em>Why</em> PsychBlog &amp; Jelly?</a></li>
+<li><a href="#skippable-prelude">Skippable prelude</a></li>
+<li><a href="#setting-up-r">Setting up R</a>
+<ul>
+<li><a href="#install-r">Install R</a></li>
+<li><a href="#install-rstudio">Install RStudio</a></li>
+<li><a href="#set-up-rstudio">Set up RStudio</a></li>
+<li><a href="#download-r-libraries">Download R libraries</a></li>
+</ul></li>
+<li><a href="#setting-up-github">Setting up GitHub</a>
+<ul>
+<li><a href="#create-github-account">Create GitHub account</a></li>
+<li><a href="#install-github-desktop">Install GitHub Desktop</a></li>
+</ul></li>
+<li><a href="#file-and-folder-structure">File and folder structure</a></li>
+<li><a href="#now-what">…Now what?</a></li>
 </ul>
 </nav>
 </div>
-<p>This blog post was originally written on August 16, 2017. It was last updated on 2021-02-21 using R Markdown.</p>
-<h1 id="what-is-psychblog-jelly">What is PsychBlog &amp; Jelly?</h1>
-<p>Einstein famously quipped that nobody understands anything until they can explain it to their grandmother. Given that my Korean language skills are dreadful on a good day, I suppose that I’m doomed to a life of not understanding anything past, “I’m hungry.”</p>
-<p>Yet, in spite of myself, I’ve managed to learn a few things here and there about psychology, research, and life as an academic. My hope is to share some of the things I’ve learned, on the off chance that someone else finds it helpful.</p>
-<h1 id="what-can-i-expect-to-see-on-psychblog-jelly">What can I expect to see on PsychBlog &amp; Jelly?</h1>
-<p>Honestly, I’m not sure either, but I hope it’ll be interesting.</p>
-<h1 id="why-psychblog-jelly"><em>Why</em> PsychBlog &amp; Jelly?</h1>
+<h1 id="skippable-prelude">Skippable prelude</h1>
+<p>When I started working as a full-time researcher, I didn’t have a strong handle on how to programmatically work with data. This wasn’t something that was unique to me (though I’m happy to admit that I’m kind of dense and took a long time to get even a little good)–it was something that was true of nearly everyone in my research “cohort.”</p>
+<p>With every cohort of graduate students that’s admitted into our program, I’m noticing that the standards are getting higher and higher. At the very least, it increasingly seems like new grad students walk through the door having <em>some</em> experience working with code-based data wrangling/analysis (e.g., in R or Python).</p>
+<p>I won’t opine too much on whether I think this is a good thing (as always, there are good and bad things about this trend), but I <em>will</em> say that I’m concerned for budding researchers from historically underrepresented, marginalized, and excluded groups who (as usual) might be getting shut out of the scientific enterprise due to a lack of opportunity.</p>
+<p>Well, what’s a grad student to do about this? I don’t have the power to change systems, but I <em>can</em> potentially help level the playing field for folks who are looking for ways to self-teach, but don’t know where to start.</p>
+<p>For this reason, I started writing tutorials for data wrangling/analysis using R (via RStudio), with a very heavy emphasis on the <code>tidyverse</code> libraries. These are state-of-the-art tools that have always been (and always will be) free and open-source.</p>
+<p>These tutorials require you to use GitHub (via the easy-to-use GitHub Desktop interface), and encourage the practice of version control. Learning how to use GitHub is an increasingly important part of learning how to do data science. For that reason, you will be <em>required</em> to use GitHub in order to follow along with these tutorials. The learning curve is not too steep, and these skills will serve you well in the future.</p>
+<h1 id="setting-up-r">Setting up R</h1>
+<h2 id="install-r">Install R</h2>
+<p>The first thing you’ll need to do is to <a href="https://cran.r-project.org/">install R</a> from CRAN (Comprehensive R Archive Network).</p>
+<p>This will install the R programming language, some essential libraries, and a text-based console that might remind you of an old-school terminal window.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="r%20console.png" title="R console (left) compared against a macOS terminal console (right)" alt="R console (left) compared against a macOS terminal console (right)" width="576" /></p>
+</div>
+<h2 id="install-rstudio">Install RStudio</h2>
+<p>We will not be using the R console directly. Instead, we’ll be using RStudio, which builds on top of the console and gives you a lot of nice tools that help you work more efficiently. <em>Once R is installed,</em> you’ll then want to <a href="https://rstudio.com/">install RStudio</a>.</p>
+<p>You’ll immediately note that you have a lot more tools at your disposal:</p>
 <ol type="1">
-<li>I’m incorrigible when it comes to dumb backronyms.</li>
-<li>Peanut butter and jelly sandwiches are simple but satisfying. They don’t pretend to be anything special, but they’re a great go-to when you need a quick fix.</li>
-<li>I feel like I was trying to sketch the outlines for some quasi-deep metaphor, but now I’m just hungry.</li>
+<li>R Console: Look familiar? You can use this console to type commands, just like in the “base” R console.</li>
+<li>Script Editor: Instead of using the console to type your commands one-by-one, you can write a script that contains all of your commands. That way, it’s easy to replicate an analysis because all of your code is contained within a single document, and can be run at will.</li>
+<li>Variable Viewer: When you start loading, creating, and manipulating data, you’ll see it here.</li>
+<li>Everything Else: I primarily use this panel to look at plots, or to look at the help documentation for functions I’m using.</li>
 </ol>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="rstudio%20annotated.png" title="Annotated image of RStudio window, entirely redundant with in-line text descriptions" alt="Annotated image of RStudio window, entirely redundant with in-line text descriptions" width="668" /></p>
+</div>
+<h2 id="set-up-rstudio">Set up RStudio</h2>
+<p>Open up RStudio and then open up <code>Preferences</code>. Find the “Workspace” settings. Make sure the checkbox is <em>de-selected</em> for “Restore .Rdata into workspace at startup”. Specify <em>never</em> as the option for “Save workspace to .Rdata on exit”. This will ensure that every time you open up RStudio, you start out with a clean working environment. You’d be amazed at how many problems can be prevented by doing this.</p>
+<h2 id="download-r-libraries">Download R libraries</h2>
+<p>You’ll need to install the following R libraries. Copy/paste the following code into the console window, then press enter to run it. We may need to install other libraries in the future, but these ones are so useful that I use them in virtually every project.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"here"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"janitor"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h1 id="setting-up-github">Setting up GitHub</h1>
+<h2 id="create-github-account">Create GitHub account</h2>
+<p>You will need to create an account at <a href="https://github.com/">GitHub</a>.</p>
+<p><code>git</code> is a system for performing <code>version control</code>. What does that mean? Basically, it allows you to save “snapshots” of your files at any given moment. This allows you to track how your code (and data) change over time. So if you accidentally delete a lot of important code, and later realize that you need to recover it, git allows you to go back to a snapshot that contains the code you want. So you can think of it like an archiving system.</p>
+<p><code>GitHub</code> is an online data storage platform that uses git to store a full archive of changes you’ve made to a particular project. It allows you to keep a “synchronized” copy of the most up-to-date files on any computer that’s given access.</p>
+<p>Let’s walk through some of terminology, which will help you to understand how GitHub works. Let’s say you’ve got some projects on your computer’s hard drive. Each project is stored in its own <code>repository</code>. When you start using git to version control your repository, it creates some hidden folders which contain a full archive of changes you’ve made (sort of - more on this in a second). Using git, you can then specify when to create a snapshot of your repository. This snapshot is called a <code>commit</code> because you’re committing to saving a copy of your repository at this exact moment in time. Importantly, <em>you choose when to commit</em>. Different people have different preferences. Some people like to commit at set time increments, regardless of whether their changes are big or small. Some people wait to commit until they have something they feel is “worth” committing. This is entirely up to you, and you’ll develop your own preferences as you gain experience.</p>
+<p>Once you’ve committed something, you’ve saved a snapshot on your personal computer. But, that commit only lives on your computer. If you dropped your computer on the floor and destroyed its hard drive, your archive is gone forever. This is where GitHub comes in. You can save a copy of your files and your commit history onto GitHub, which allows you to <code>clone</code> a copy of your repository (and its full commit history!) onto any other computer. When you upload your commits to GitHub, it’s called a <code>push</code>. The GitHub repository contains only the “latest” versions of your files, which is dictated by when you commit and push your commits to GitHub. This can get a little more complicated when there are multiple collaborators editing files in the same respository. For simplicity, we’ll only consider two cases: 1) when a collaborator pushes a commit while you’re in the middle of changing something, and 2) how to prevent conflicting changes by working on a parallel copy of the repository.</p>
+<p>Once you’re done changing something in your code, you might create a commit and try pushing that change to GitHub. Only to find that your collaborator has also been changing things in the code, and has pushed something before you had a chance to work on the most “updated” version of your repository. Since your commit is now on an “older” version of the repository, you must first synchronize your computer’s (older) version of the repository with the (newer) GitHub version. When you check whether there’s a newer version, this is called a <code>fetch</code>. When you detect that there’s a newer version, you then <code>pull</code> the newer version on your computer. In the best-case scenario, there is no <code>merge conflict</code>, and you can then push your commit without any further action. In the worst-case scenario, there is a merge conflict that you manually have to resolve. That is a giant headache to do, and you’ll want to avoid merge conflicts as much as possible. The easiest way to do this is to work with a <code>fork</code> (you could also do this with a <code>branch</code>, but we won’t be using them in this workshop… once you understand forks, it’ll be really easy to google what branches do in the future).</p>
+<p>You might be familiar with the idea of a “multiverse” from comic books or science fiction. You’re living in the “main” timeline, but there are alternative realities that come in and out of existence at key moments in time. For example, there might be an alternative reality that’s exactly the same as this one, except that Ringo Starr never became the drummer for the Beatles. That would be an alternative universe that “forked” from our reality in 1962. That is exactly the logic of git. You could be working on a project with a collaborator who wants to try rewriting some existing code, but who wants to avoid messing up your existing data analysis pipelines. That collaborator could create a <code>fork</code> of your project, which diverges from the <code>main</code> timeline at a particular moment in time. The collaborator could then do whatever they wanted with their forked copy of the repository, without ever affecting what happens in the main copy. In principle, they could maintain a separate fork forever. Oftentimes, though, they’ll finish editing the code and will then want to <code>merge</code> it with the main timeline. This gives you a gentle way of merging the timelines together, since you can work through any would-be merge conflicts before trying to merge the two timelines back together.</p>
+<p>Power users often use text-based commands to manage their git repositories, but I prefer using GitHub Desktop, which an easy-to-use point-and-click interface.</p>
+<h2 id="install-github-desktop">Install GitHub Desktop</h2>
+<p>Install <a href="https://desktop.github.com/">GitHub Desktop</a>, then log in with your new GitHub credentials to set it up. These instructions are for the <code>into-the-tidyverse</code> tutorials, but it’s not too hard to figure out how to fork/clone other repositories using these instructions.</p>
+<p>If this is your first time ever using GitHub Desktop, click on <code>Clone a repository from the internet</code> &gt;&gt; copy/paste <code>psychNerdJae/into-the-tidyverse</code> into the textbox &gt;&gt; <code>Fetch origin</code>. This creates a cloned copy of my repository onto your hard drive (scroll back up to review terminology if you’re getting lost).</p>
+<p>If you’ve used GitHub Desktop before, you might have some git-managed repositories on your hard drive already. If that’s the case, click on <code>Add</code> &gt;&gt; <code>Clone Repository</code> &gt;&gt; <code>URL</code> &gt;&gt; copy/paste <code>psychNerdJae/into-the-tidyverse</code> into the textbox &gt;&gt; <code>Fetch origin</code>.</p>
+<p>You can now access all of the latest workshop materials. If you start creating/modifying code or data, you’ll see those changes tracked through GitHub Desktop. Remember that the only changes that are saved are the ones you take a snapshot of by committing.</p>
+<p>You’ll note that when you try to commit new changes for the first time, you’ll be prompted, “You don’t have write access to <strong>into-the-tidyverse</strong>. Want to create a fork?” Click that. When you try to push your commit, you’ll see some scary warning message that you don’t have write access to <code>psychNerdJae/into-the-tidyverse</code>. Go ahead and create a fork. In the next prompt, you’ll be asked how you’re planning on using this fork. Click on <code>For my own purposes</code>. Now, your changes are pushed to a forked copy of <code>yourUserName/into-the-tidyverse</code>, which runs in a parallel timeline to my original copy. This lets you play around with code as you’re learning to use R, without ever disturbing my original files.</p>
+<p>What if I make a change to my repository that you want to synchronize with your fork? For example, I could add more files to my repository as I develop new workshop materials, which you want to download. Since my repository is the original that your fork copies, my repository is known as the <code>upstream</code> (since it’s upstream in the timeline). You can always check to see if there are changes in the upstream by clicking on <code>Current Branch</code> and seeing whether there’s an option for <code>upstream/main</code>. If you don’t, that means there are no new commits in my version of the repository.</p>
+<p>Now that all of the materials live on your hard drive (in the cloned repository you forked from mine), you’re ready to learn!</p>
+<h1 id="file-and-folder-structure">File and folder structure</h1>
+<p>These instructions are specifically for <code>into-the-tidyverse</code>, but should apply to any other tutorials I write.</p>
+<ul>
+<li><p>Files in the parent folder: Whenever you want to engage with these workshops, remember to double-click on <code>into-the-tidyverse.Rproj</code> first. This opens up a new R session (so that work you’re doing for this project doesn’t disturb whatever work you might be doing for other R projects).</p></li>
+<li><p>Tutorials: This is where you can find the HTML files containing all tutorials. Each one features a self-contained lesson on a particular topic.</p></li>
+<li><p>Sandbox: This is the only folder you should be modifying. You should never, ever, ever modify anything that’s in any other folder. Seriously, under most circumstances, there should be no reason for you to ever navigate into these directories or open these files. If you’re wanting to save scripts, plots, whatever, you should do it in the Sandbox. Make sure to follow these three simple rules to make sure everything goes smoothly:</p>
+<ol type="1">
+<li><p>Basically, don’t touch anything in the Code and Data folders, and you’ll be alright. For those of you following along in realtime (i.e., I haven’t finished writing/developing all of the materials yet), this lets you avoid merge conflicts. In short, a merge conflict emerges when my version of the file looks different from your version of the same file. So if you take my code and you use it to play around by adding/deleting code, your file is now different from my file. When you try to “sync” new materials from my repository to your forked clone, this creates a merge conflict that you’re forced to resolve before you’re allowed to download my new materials.</p></li>
+<li><p>Any time you write new code, do it in this Sandbox folder. The point of a sandbox is that you can do anything you want, and the (potentially destructive) consequences of your actions will never leave the sandbox. This is important because I’m going to encourage you very, very, very strongly never to simply run the existing scripts in the Code folder (or equivalently, simply copy/pasting existing code). So when you’re typing code from scratch and need a place to save your scripts, save them in the Sandbox.</p></li>
+<li><p>On that note, you should be typing code from scratch. This sandbox should be full of code, whether it works or not. You learn a lot from typing things from scratch, especially when you’re a beginner. This is because you’ll inevitably type things incorrectly when you do it from scratch, and then you’ll have to self-diagnose why your code doesn’t work. That is invaluable experience for learning how to code. And it will also help with your muscle memory. It takes virtually zero time for me to write a pipe (%&gt;%) because I have typed thousands and thousands and thousands of pipes. You cannot get good at writing code quickly without building muscle memory. If you simply run existing code, or copy/paste existing code, you are hurting your own learning. There are no shortcuts to learning code. You must do it the hard way.</p></li>
+</ol></li>
+<li><p>Code: I’m providing all of the <code>R Markdown</code> code from the videos in the Code folder. These scripts are provided primarily for folks with visual impairments, who would find it useful to have the text for accessibility reasons. By and large, I do <strong>NOT</strong> want any other group of people looking at this code. Why? Because most of your learning occurs when you make (and correct) mistakes, and you can only make mistakes if you’re trying things out from scratch. You can’t make mistakes if you’re simply running someone else’s code, or just copy/pasting code.</p></li>
+<li><p>Data: We will be using a diverse range of datasets from a variety of sources. There are times when it will make sense for you to directly download the data from the source (such as timeseries data on covid19, which is updated on a daily basis), but otherwise, the datasets will be provided in the Data folder. When applicable/available, the URL to the original dataset will be documented in the relevant scripts.</p></li>
+<li><p>Output: Sometimes, there’ll be some kind of output I want to save to your hard drive (like a plot or table), so that you have a sense for what your output ought to look like. These will be saved in the Output folder. Anytime you have some output, you should save that to the Sandbox instead.</p></li>
+</ul>
+<h1 id="now-what">…Now what?</h1>
+<p>If you’re ready to get started, go to the folder you’ve just created on your hard drive. From there, click into the <code>Tutorials</code> folder, and have fun with the first session!</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

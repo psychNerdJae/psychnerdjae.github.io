@@ -3,13 +3,18 @@ name: "Jae-Young Son"
 output_dir: "docs"
 theme: theme.css
 navbar:
+  search: false
   left:
-    - text: "CV"
-      href: cv.html
-    - text: "Publications"
-      href: cv.html#publications
+    - text: "Research"
+      menu:
+        - text: "CV"
+          href: cv.pdf
+        - text: "Publications"
+          href: publications.html
     - text: "PsychBlog & Jelly"
       href: blog.html
+    - text: "Tutorials"
+      href: tutorials.html
     - text: "External"
       menu:
         - text: "Twitter"
@@ -20,6 +25,8 @@ navbar:
           href: https://scholar.google.com/citations?user=JPPuzI8AAAAJ
         - text: "NeuroTree"
           href: https://neurotree.org/neurotree/tree.php?pid=747308
+        - text: "LinkedIn"
+          href: https://www.linkedin.com/in/jaeyoungson/
 
 collections:
   posts:

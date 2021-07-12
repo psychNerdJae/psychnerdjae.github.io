@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -85,34 +86,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Jae-Young Son: Into the tidyverse</title>
+<title>Jae-Young Son: No-code introduction to programming</title>
 
 
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-02-21"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-02-21"/>
+<meta property="article:published" itemprop="datePublished" content="2021-07-12"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-07-12"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Jae-Young Son: Into the tidyverse"/>
+<meta property="og:title" content="Jae-Young Son: No-code introduction to programming"/>
 <meta property="og:type" content="article"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Jae-Young Son"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Jae-Young Son: Into the tidyverse"/>
+<meta property="twitter:title" content="Jae-Young Son: No-code introduction to programming"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Into the tidyverse"]},{"type":"character","attributes":{},"value":["February 21, 2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["psych","tutorials"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["No-code introduction to programming"]},{"type":"character","attributes":{},"value":["July 12, 2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["tutorials","coding"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["into_the_tidyverse_files/anchor-4.2.2/anchor.min.js","into_the_tidyverse_files/bowser-1.9.3/bowser.min.js","into_the_tidyverse_files/distill-2.2.21/template.v2.js","into_the_tidyverse_files/header-attrs-2.6/header-attrs.js","into_the_tidyverse_files/jquery-1.11.3/jquery.min.js","into_the_tidyverse_files/popper-2.6.0/popper.min.js","into_the_tidyverse_files/tippy-6.2.7/tippy-bundle.umd.min.js","into_the_tidyverse_files/tippy-6.2.7/tippy-light-border.css","into_the_tidyverse_files/tippy-6.2.7/tippy.css","into_the_tidyverse_files/tippy-6.2.7/tippy.umd.min.js","into_the_tidyverse_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["no-code-intro-programming_files/anchor-4.2.2/anchor.min.js","no-code-intro-programming_files/bowser-1.9.3/bowser.min.js","no-code-intro-programming_files/distill-2.2.21/template.v2.js","no-code-intro-programming_files/header-attrs-2.8/header-attrs.js","no-code-intro-programming_files/jquery-1.11.3/jquery.min.js","no-code-intro-programming_files/popper-2.6.0/popper.min.js","no-code-intro-programming_files/tippy-6.2.7/tippy-bundle.umd.min.js","no-code-intro-programming_files/tippy-6.2.7/tippy-light-border.css","no-code-intro-programming_files/tippy-6.2.7/tippy.css","no-code-intro-programming_files/tippy-6.2.7/tippy.umd.min.js","no-code-intro-programming_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -462,265 +463,6 @@ d-title {
 <link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
 <link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
-<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-<script type="application/javascript">
-
-function getMeta(metaName) {
-  var metas = document.getElementsByTagName('meta');
-  for (let i = 0; i < metas.length; i++) {
-    if (metas[i].getAttribute('name') === metaName) {
-      return metas[i].getAttribute('content');
-    }
-  }
-  return '';
-}
-
-function offsetURL(url) {
-  var offset = getMeta('distill:offset');
-  return offset ? offset + '/' + url : url;
-}
-
-function createFuseIndex() {
-
-  // create fuse index
-  var options = {
-    keys: [
-      { name: 'title', weight: 20 },
-      { name: 'categories', weight: 15 },
-      { name: 'description', weight: 10 },
-      { name: 'contents', weight: 5 },
-    ],
-    ignoreLocation: true,
-    threshold: 0
-  };
-  var fuse = new window.Fuse([], options);
-
-  // fetch the main search.json
-  return fetch(offsetURL('search.json'))
-    .then(function(response) {
-      if (response.status == 200) {
-        return response.json().then(function(json) {
-          // index main articles
-          json.articles.forEach(function(article) {
-            fuse.add(article);
-          });
-          // download collections and index their articles
-          return Promise.all(json.collections.map(function(collection) {
-            return fetch(offsetURL(collection)).then(function(response) {
-              if (response.status === 200) {
-                return response.json().then(function(articles) {
-                  articles.forEach(function(article) {
-                    fuse.add(article);
-                  });
-                })
-              } else {
-                return Promise.reject(
-                  new Error('Unexpected status from search index request: ' +
-                            response.status)
-                );
-              }
-            });
-          })).then(function() {
-            return fuse;
-          });
-        });
-
-      } else {
-        return Promise.reject(
-          new Error('Unexpected status from search index request: ' +
-                      response.status)
-        );
-      }
-    });
-}
-
-window.document.addEventListener("DOMContentLoaded", function (event) {
-
-  // get search element (bail if we don't have one)
-  var searchEl = window.document.getElementById('distill-search');
-  if (!searchEl)
-    return;
-
-  createFuseIndex()
-    .then(function(fuse) {
-
-      // make search box visible
-      searchEl.classList.remove('hidden');
-
-      // initialize autocomplete
-      var options = {
-        autoselect: true,
-        hint: false,
-        minLength: 2,
-      };
-      window.autocomplete(searchEl, options, [{
-        source: function(query, callback) {
-          const searchOptions = {
-            isCaseSensitive: false,
-            shouldSort: true,
-            minMatchCharLength: 2,
-            limit: 10,
-          };
-          var results = fuse.search(query, searchOptions);
-          callback(results
-            .map(function(result) { return result.item; })
-          );
-        },
-        templates: {
-          suggestion: function(suggestion) {
-            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-              : '';
-            var html = `
-              <div class="search-item">
-                <h3>${suggestion.title}</h3>
-                <div class="search-item-description">
-                  ${suggestion.description || ''}
-                </div>
-                <div class="search-item-preview">
-                  ${img}
-                </div>
-              </div>
-            `;
-            return html;
-          }
-        }
-      }]).on('autocomplete:selected', function(event, suggestion) {
-        window.location.href = offsetURL(suggestion.path);
-      });
-      // remove inline display style on autocompleter (we want to
-      // manage responsive display via css)
-      $('.algolia-autocomplete').css("display", "");
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-
-});
-
-</script>
-
-<style type="text/css">
-
-.nav-search {
-  font-size: x-small;
-}
-
-/* Algolioa Autocomplete */
-
-.algolia-autocomplete {
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: sub;
-  background-color: white;
-  color: black;
-  padding: 6px;
-  padding-top: 8px;
-  padding-bottom: 0;
-  border-radius: 6px;
-  border: 1px #0F2E3D solid;
-  width: 180px;
-}
-
-
-@media screen and (max-width: 768px) {
-  .distill-site-nav .algolia-autocomplete {
-    display: none;
-    visibility: hidden;
-  }
-  .distill-site-nav.responsive .algolia-autocomplete {
-    display: inline-block;
-    visibility: visible;
-  }
-  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-    margin-left: 0;
-    width: 400px;
-    max-height: 400px;
-  }
-}
-
-.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-  width: 90%;
-  outline: none;
-  border: none;
-}
-
-.algolia-autocomplete .aa-hint {
-  color: #999;
-}
-.algolia-autocomplete .aa-dropdown-menu {
-  width: 550px;
-  max-height: 70vh;
-  overflow-x: visible;
-  overflow-y: scroll;
-  padding: 5px;
-  margin-top: 3px;
-  margin-left: -150px;
-  background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #999;
-  border-top: none;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-  cursor: pointer;
-  padding: 5px 4px;
-  border-bottom: 1px solid #eee;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-  border-bottom: none;
-  margin-bottom: 2px;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-  overflow: hidden;
-  font-size: 0.8em;
-  line-height: 1.4em;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-  font-size: 1rem;
-  margin-block-start: 0;
-  margin-block-end: 5px;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-  display: inline-block;
-  overflow: hidden;
-  height: 2.8em;
-  width: 80%;
-  margin-right: 4%;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-  display: inline-block;
-  width: 15%;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-  height: 3em;
-  width: auto;
-  display: none;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-  display: initial;
-}
-
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-  background-color: #eee;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-  font-weight: bold;
-  font-style: normal;
-}
-
-</style>
-
-
 <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2189,7 +1931,12 @@ d-appendix {
 
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
-</style>
+
+d-article li {
+  margin-bottom: 0em;
+  margin-left: 0;
+  padding-left: 0;
+}</style>
 <style type="text/css">
 /* base style */
 
@@ -2345,7 +2092,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2366,7 +2113,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Into the tidyverse","authors":[],"publishedDate":"2021-02-21T00:00:00.000+00:00"}
+{"title":"No-code introduction to programming","authors":[],"publishedDate":"2021-07-12T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2375,9 +2122,19 @@ d-appendix d-footnote-list a.footnote-backlink {
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="../../index.html" class="title">Jae-Young Son</a>
-<a href="../../cv.html">CV</a>
-<a href="../../cv.html#publications">Publications</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Research
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="../../cv.pdf">CV</a>
+<a href="../../publications.html">Publications</a>
+</div>
+</div>
 <a href="../../blog.html">PsychBlog &amp; Jelly</a>
+<a href="../../tutorials.html">Tutorials</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
 External
@@ -2389,9 +2146,9 @@ External
 <a href="https://github.com/psychNerdJae">GitHub</a>
 <a href="https://scholar.google.com/citations?user=JPPuzI8AAAAJ">Google Scholar</a>
 <a href="https://neurotree.org/neurotree/tree.php?pid=747308">NeuroTree</a>
+<a href="https://www.linkedin.com/in/jaeyoungson/">LinkedIn</a>
 </div>
 </div>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2403,11 +2160,11 @@ External
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Into the tidyverse</h1>
+<h1>No-code introduction to programming</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-  <a href="../../blog.html#category:psych" class="dt-tag">psych</a>
   <a href="../../blog.html#category:tutorials" class="dt-tag">tutorials</a>
+  <a href="../../blog.html#category:coding" class="dt-tag">coding</a>
 </div>
 <!--/radix_placeholder_categories-->
 
@@ -2419,23 +2176,235 @@ External
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#skippable-prelude">Skippable prelude</a></li>
-<li><a href="#into-the-tidyverse">Into the tidyverse</a></li>
+<li><a href="#datatypes">Datatypes</a></li>
+<li><a href="#operators">Operators</a>
+<ul>
+<li><a href="#assignment-operators">Assignment operators</a></li>
+<li><a href="#arithmetic-operators">Arithmetic operators</a></li>
+<li><a href="#conditional-operators">Conditional operators</a></li>
+<li><a href="#logical-operators">Logical operators</a></li>
+</ul></li>
+<li><a href="#control-logic">Control logic</a></li>
+<li><a href="#iteration">Iteration</a>
+<ul>
+<li><a href="#for-loops">for loops</a></li>
+<li><a href="#while-loops">while loops</a></li>
+</ul></li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#using-functions">Using functions</a></li>
+<li><a href="#functions-are-flexible">Functions are flexible</a></li>
+<li><a href="#writing-custom-functions">Writing custom functions</a></li>
+</ul></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#next-steps">Next steps</a></li>
 </ul>
 </nav>
 </div>
-<h1 id="skippable-prelude">Skippable prelude</h1>
-<p>When I started working as a full-time researcher, I didn’t have a strong handle on how to programmatically work with data. This wasn’t something that was unique to me (though I’m happy to admit that I’m kind of dense and took a long time to get even a little good)–it was something that was true of nearly everyone in my research “cohort.”</p>
-<p>With every cohort of graduate students that’s admitted into our program, I’m noticing that the standards are getting higher and higher. At the very least, it increasingly seems like new grad students walk through the door having <em>some</em> experience working with code-based data wrangling/analysis (e.g., in R or Python).</p>
-<p>I won’t opine too much on whether I think this is a good thing (as always, there are good and bad things about this trend), but I <em>will</em> say that I’m concerned for budding researchers from historically underrepresented, marginalized, and excluded groups who (as usual) might be getting shut out of the scientific enterprise due to a lack of opportunity.</p>
-<p>Well, what’s a grad student to do about this? I don’t have the power to change systems, but I <em>can</em> potentially help level the playing field for folks who are looking for ways to self-teach, but don’t know where to start.</p>
-<h1 id="into-the-tidyverse">Into the tidyverse</h1>
-<p>For this reason, I started writing tutorials for data wrangling/analysis using R (via RStudio), with a very heavy emphasis on the <code>tidyverse</code> libraries. It requires people to use GitHub (via the easy-to-use GitHub Desktop interface), and encourages the practice of version control.</p>
-<p>If you’re interested in using these materials, you can <a href="https://psychnerdjae.github.io/into-the-tidyverse/"><strong>visit the startup page here</strong></a>, which contains detailed instructions on installing the requisite software. <a href="https://github.com/psychNerdJae/into-the-tidyverse">Click here to <strong>look at the fully-open materials</strong> on GitHub</a>. If you want to get infrequent notifications (new tutorials, bug fixes, revised materials), <a href="https://groups.google.com/u/1/g/into-the-tidyverse">click here to <strong>join the Google Group</strong></a>. Everyone hates spam, so I’ll keep this thing extremely low-traffic.</p>
-<p>There have been so many tutorials written about the tidyverse at this point that one could very reasonably think that I’m needlessly reinventing the wheel. And sure, that might be true. But I’ve noticed that novice coders (e.g., undergrad research assistants) systematically seem to struggle with certain kinds of programming ideas. Over many years of teaching programming, I think I’ve developed a decent sense for what people find confusing. With this experience in mind, my goal has been to develop teaching materials that not only get people working with data quickly, but also give them a solid sense for some of the underlying computing principles.</p>
-<p>At the time of this writing, the tutorials are only half-done. I’ve gotten through the core data wrangling tutorials, and my intent is to start writing the data analysis tutorials next (before circling back and completing some of the more “advanced topics” tutorials about the tidyverse). When I started working on these, I told myself that I’d write a new tutorial every week. <a href="https://news.avclub.com/bong-joon-ho-has-a-pretty-great-story-about-lying-to-ha-1838926288">In the words of the film director Bong Joon-ho</a>, “It was a fucking lie.” As I should’ve anticipated, there are lots and lots and lots (and lots and lots…) of competing demands on my time, and it takes many, many hours to write up a single tutorial. But, I haven’t forgotten about this project, and I’m committed to seeing it (eventually) through.</p>
-<p>Let me know if you find any bugs, or you have suggestions for how to make these materials easier to understand!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Increasingly, research in the social sciences requires some knowledge of programming and computing. For example, it is becoming increasingly common to program computerized experiments, and to perform statistical analyses using code.</p>
+<p>This came as an incredibly rude surprise when I embarked upon my first independent research project as a college senior. Through trial and error (frankly, mostly error), I’ve gone from flunking two introductory computer science classes to teaching programming. Because of this, I understand the feeling of being code-phobic, and just how much of an overwhelming task it can feel like to learn programming.</p>
+<p>So, this is my best attempt at synthesizing some of the key ideas and insights about programming without writing a single line of code. The goal is to familiarize you with some of these ideas in plain English so that when you’re learning a particular programming language, the act of writing code is just learning how to express an idea using some fancy computer syntax.</p>
+<p>The only prior knowledge I assume is a little bit of high-school level algebra. I’ll review the relevant concepts along the way, so if you feel like your math is a little shaky, you’ll still be able to follow along.</p>
+<h1 id="datatypes">Datatypes</h1>
+<p>There are different types of objects out in the world. For example, there are fruits and there are bowling balls. Obviously, these are different. But if you’re not paying attention, you might mistake one type of object for a different type of object. A big watermelon is about the same weight as a bowling ball. An orange is approximately the right shape, and many bowling balls are orange-colored. But of course, you wouldn’t want to try biting into a bowling ball, and you probably don’t want to fling a watermelon at bowling pins.</p>
+<p>The same is true for digital objects that are handled by your computer. It might seem obvious that the number <code>5</code> and the text <code>"five"</code> are different from each other. But if we aren’t paying attention, we might miss the fact that the computer is not processing the number <code>5</code>, but the text <code>"5"</code>. From the computer’s perspective, trying to add <code>5</code> and <code>"5"</code> makes about as much sense as trying to add <code>5</code> and <code>"Detroit"</code>.</p>
+<p>This is the key idea behind datatypes. There are certain types of data, and what you’re allowed to do with those data depends on what their types are.</p>
+<p>From high school math classes, you might remember that an <strong>integer</strong> is a number that doesn’t contain a fraction or a decimal point. These are all examples of integers: <code>-99</code>, <code>0</code>, <code>200</code>. On a standard number line, integers are the “tick marks.”</p>
+<p>What about numbers that <em>do</em> contain a fraction or decimal point? This datatype is called a <strong>float</strong>. You can think of it as a number that “floats” on a number line between two integers. Sometimes, the computer uses the float datatype to represent a number that looks like an integer. For example, we know that the result of <code>2.5 + 2.5 = 5</code>, which looks like an integer to the human mind. But, because the computer started off with a float datatype <code>2.5</code>, adding things to the float results in another float.</p>
+<p>Why would there be an integer datatype at all, if it seems like a float is capable of representing the same information, and more? This is a great question, and I’ll try to answer it without getting into too much technical detail. You might have heard that computers represent information in <em>binary</em>. In other words, computers only understand the values <code>0</code> and <code>1</code>. We can get more complex representations by creating longer sequences of these two values. Integers are actually pretty easy to represent using binary, so computers are able to store information about very small and very large integers with the same amount of precision. On the other hand, floats are much harder to represent precisely using binary. You might be familiar with the idea of rounding error. We know that <code>1.25 + 1.33 = 2.58</code> if we don’t round. But if we round to the first decimal point, <code>1.25 + 1.33 = 2.6</code>. Suddenly, our computation has become much less precise. Representing information in binary means that we lose precision when we’re working with complex datatypes like floats. When precision is really important, it might be better to use integers when possible.</p>
+<p>Anytime we want to work with text, the computer will represent that using the <strong>string</strong> datatype. Think about a sentence as being a string of text, and that will help you remember. Strings can get confusing if we’re not paying close attention. For example, in a psychology experiment, we might label one of our images something like <code>"stimulus_5.jpg"</code>. We later ask the computer to extract out the 10th character, which is <code>"5"</code>. Well, to the human mind, that looks like a number. But from the computer’s perspective, we started out with a string, meaning that anything we pull out from it is still a string.</p>
+<p>Finally, we have the Boolean datatype, which can only take two values: <code>true</code> and <code>false</code>. If you’re not familiar with <a href="https://www.youtube.com/watch?v=L0eeSoU35wM">Dolly Parton’s classic song Jolene</a>, consider this a cultural lesson and go listen to it now (I grew up in East Tennnessee, where Dolly Parton’s from, and she’s considered royalty around those parts). Now that you have this song stuck in your head, remember the Boolean datatype by singing, “Boolean, Boolean, Boolean, Booleeeeeean… Yes/no, are you going to take my man?” Different languages use different syntax to represent the Boolean. Some use <code>0</code>=False and <code>1</code>=True, and others simply use the words <code>True</code> and <code>False</code>.</p>
+<h1 id="operators">Operators</h1>
+<p>I’m going to provide two unsatisfying definitions of operators.</p>
+<ol type="1">
+<li><p>You have two numbers. What do you want to do with those numbers? Whatever you decide to do (add, subtract, see if one is greater than the other, etc), the thing that allows you “to do” is an <strong>operator</strong>. So the operator for “add” is <code>+</code>, and you can write the <strong>expression</strong> <code>A + B</code> to add A and B. Similarly, the operator for “greater than” is <code>&gt;</code>, and you can ask whether A is greater than B by writing <code>A &gt; B</code>.</p></li>
+<li><p>You’ll note that when we write an expression, we don’t have to use language. We can use fancy symbols like <code>+</code> and <code>&gt;</code> instead. So, if you see a fancy symbol in someone’s code, it’s likely an operator.</p></li>
+</ol>
+<p>There are four major kinds of operators: assignment, arithmetic, conditional, and logical.</p>
+<h2 id="assignment-operators">Assignment operators</h2>
+<p>In your high school math classes, you might remember using variables, like <code>A = 5</code>. The equal sign <code>=</code> is an <strong>assignment</strong> operator because you use it to assign the value <code>5</code> to the variable <code>A</code>.</p>
+<h2 id="arithmetic-operators">Arithmetic operators</h2>
+<p><strong>Arithmetic</strong> operators are pretty easy because they (mostly) look like the symbols we commonly use in math classes. We add using the plus sign <code>+</code>, subtract using the minus sign <code>-</code>, multiply using the star (also known as an asterisk) <code>*</code>, and divide using the slash <code>/</code>.</p>
+<h2 id="conditional-operators">Conditional operators</h2>
+<p><strong>Conditional</strong> operators allow you to check whether something is true or false (pop quiz: what datatype is produced when you use a conditional operator?). For example, we might want to ask, “Is A greater than B?” We could write the expression <code>A &gt; B</code>, which is either true or false.</p>
+<p>Conditional operators are a little trickier because they’re written more abstractly. For example, how would you test whether A is equal to B? Remember, we’ve already used the equal sign <code>=</code> as an assignment operator. So to get around this, we use the double-equal operator <code>==</code> to mean “is equal to”. Similarly, it’s pretty hard to type the mathematical symbol “is not equal to” <code>≠</code>, so we’ve got to find an alternative. The exact syntax is different depending on the language, but it’s common to see <code>!=</code> where the <code>!</code> operator means “not”. The operators “greater than” <code>&gt;</code> and “less than” <code>&lt;</code> are pretty easy because we use these symbols in math too. But how would we write something like “greater than or equal to” given that <code>≤</code> is also hard to type? See if you can make a guess, based on the operator used for “not equal to”. If you guessed <code>&gt;=</code> and <code>&lt;=</code>, then you’re exactly right.</p>
+<p>Why are they called conditional operators? Maybe when you were a kid, you’d ask your parents if you could go over to your friend’s house. They might have told you, “Sure, on one condition…” And then you’d groan because you knew that your ability to go to your friend’s house was conditional on you cleaning your room.</p>
+<h2 id="logical-operators">Logical operators</h2>
+<p>Sometimes, you want to check whether multiple conditions are true. Maybe your parent told you, “Sure, you can go to your friend’s house IF you clean your room AND do your homework first.” To do this, you would use <strong>logical</strong> operators. We’ve actually already seen one at work, because NOT is also logic. (For example: “Can you go to your friends house? Not if your room is dirty.”)</p>
+<p>Below, you can find the major logical operators and examples of how they are expressed in R:</p>
+<ul>
+<li><p>IF (this one is special because it’s written in plain English)</p></li>
+<li><p>AND is written as <code>&amp;</code> (“ampersand”)</p></li>
+<li><p>OR is written as <code>|</code> (surprisingly, there doesn’t seem to be a more elegant name for this other than “vertical-bar”)</p></li>
+<li><p>NOT is written as <code>!</code> (“exclamation mark”)</p></li>
+</ul>
+<p>For the most part, these operators are referred to by the logical operations they perform. So, it’d be weird to say “A ampersand B”, and more normal to say “A AND B”.</p>
+<h1 id="control-logic">Control logic</h1>
+<p>Together, conditional and logical operators can be used to do really powerful things. For example, it lets you decide whether you want to eat a sandwich.</p>
+<p>Well, do you? How do you know?</p>
+<p>When we make decisions in our everyday life, we want to control our actions, depending on what we know to be logically true about the world. Hence, <strong>control logic</strong>.</p>
+<p>Most likely, you only want to eat a sandwich IF you’re hungry. But there are also other things that are true about the world, like the fact that you don’t have any bread in your kitchen. So maybe you’ll only eat a sandwich IF you’re hungry AND you have all the ingredients.</p>
+<p>This is control logic at work! Note that in order to execute the action “eat a sandwich”, you have to check whether two things are true: 1) Are you hungry? 2) Do you have all the ingredients needed to make a sandwich? If only one of these things is true, then you won’t eat a sandwich.</p>
+<p>If we were asking a computer to make a decision for us, how would it decide? We won’t write any real code (I did promise you that we wouldn’t), but we can write fake code (known as pseudocode) which would get the job done:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> hungry<span class="sc">==</span>True <span class="sc">&amp;</span> have_ingredients<span class="sc">==</span>True<span class="sc">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    eat_sandwich</span></code></pre></div>
+</div>
+<p>Sometimes, when I feel stressed out, I’ll eat something even if I’m not hungry. How would we express this in pseudocode?</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (hungry<span class="sc">==</span>True <span class="sc">|</span> stressed<span class="sc">==</span>True) <span class="sc">&amp;</span> have_ingredients<span class="sc">==</span>True<span class="sc">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  eat_sandwich</span></code></pre></div>
+</div>
+<p>The parentheses are used the same way they’re used in algebra. Expressions that are inside the same set of parentheses get evaluated together. What would happen if we grouped the operators differently?</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> hungry<span class="sc">==</span>True <span class="sc">|</span> (stressed<span class="sc">==</span>True <span class="sc">&amp;</span> have_ingredients<span class="sc">==</span>True)<span class="sc">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  eat_sandwich</span></code></pre></div>
+</div>
+<p><strong><em>Hint:</em></strong> What would this control logic have you do if you were hungry, but had no sandwich ingredients? Is that sensible?</p>
+<h1 id="iteration">Iteration</h1>
+<p>Let’s say we work for a car manufacturing company, and we’re trying to program a robot arm to tighten the screws that keep the wheels attached to the car (technically, these are lug nuts, but let’s just say screws). How would we do that?</p>
+<p>We could write pseudocode that looks like this:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grab_screw</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>turn_screw</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>turn_screw</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>turn_screw</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>turn_screw</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">...</span> (copy<span class="sc">/</span>paste many more times)</span></code></pre></div>
+</div>
+<p>We can see that to tighten a single screw, we’d need a thousand lines of code. Surely, there is a better method! This is the problem of <strong>iteration</strong>, which is a fancy word for “do something over and over again.” So, how can we efficiently iterate through all of the screw turns?</p>
+<h2 id="for-loops">for loops</h2>
+<p>Let’s imagine that we know ahead of time exactly how many times a screw needs to be turned before we stop. In this case, we could write:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>grab_screw</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="dv">1</span> through <span class="dv">1000</span><span class="sc">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  turn_screw</span></code></pre></div>
+</div>
+<p>This is known as a <strong>for loop</strong>, because we’re asking the computer to iterate through loops <em>for</em> a pre-determined amount of time.</p>
+<h2 id="while-loops">while loops</h2>
+<p>But oftentimes, we can’t predict the future, so we don’t know how many loops we need to iterate through. In this case, we could do something like this:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grab_screw</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>screw_is_loose <span class="ot">=</span> True</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> screw_is_loose <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  turn_screw</span></code></pre></div>
+</div>
+<p>Once the screw is no longer loose, the loop will stop, and the robot will stop turning the screw. This is known as a <strong>while loop</strong>, because we’re asking the computer to iterate through loops <em>while</em> a condition is met.</p>
+<h1 id="functions">Functions</h1>
+<p>Maybe in algebra class, you remember learning about functions. They take the form <span class="math inline">\(f(x) = x + 7\)</span>, which is about the most boring thing we could use a function to do. If you’re asked to solve <span class="math inline">\(f(5)\)</span>, you assign <span class="math inline">\(x = 5\)</span>, then solve <span class="math inline">\(5 + 7 = 12\)</span>.</p>
+<p>The name of the function, in this case, is <span class="math inline">\(f\)</span>. The parentheses surround the variable <span class="math inline">\(x\)</span>, which is the <em>argument</em> of the function (also known as a parameter, or an input). When you call the function, you supply an argument, and in doing so, you assign a value to <span class="math inline">\(x\)</span>.</p>
+<h2 id="using-functions">Using functions</h2>
+<p>Let’s use functions to do more interesting things. We can illustrate using Ke$ha’s 2009 hit song “TiK ToK” (which perhaps is a dated cultural reference that reveals how old I am…).</p>
+<blockquote>
+<p>Wake up in the morning feelin’ like P. Diddy<br />
+Grab my glasses, I’m out the door, I’m gonna hit this city<br />
+Before I leave, brush my teeth with a bottle of Jack<br />
+’Cause when I leave for the night, I ain’t coming back</p>
+</blockquote>
+<p>How might we write this in pseudocode?</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wake_up</span>(morning)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">feel_like</span>(p_diddy)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grab</span>(glasses)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">brush_teeth</span>(jack_daniels)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>leave <span class="ot">=</span> <span class="fu">walk_out</span>(door)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> leave <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">navigate_to</span>(<span class="at">location =</span> city, <span class="at">come_back =</span> False)</span></code></pre></div>
+</div>
+<p>Note that in the last line, we’ve specified two arguments to the function <code>navigate_to</code>, and we’ve also provided <em>named</em> arguments. We don’t necessarily have to do that, as you can see here:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wake_up</span>(morning)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">feel_like</span>(p_diddy)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grab</span>(glasses)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">brush_teeth</span>(jack_daniels)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>leave <span class="ot">=</span> <span class="fu">walk_out</span>(door)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> leave <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">navigate_to</span>(city, False)</span></code></pre></div>
+</div>
+<p>We could also name <em>every</em> argument. The name of each argument is specified by whoever makes the function, and a good function-writer will use informative names for each argument. Here’s an example:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wake_up</span>(<span class="at">when =</span> morning)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">feel_like</span>(<span class="at">emotion =</span> p_diddy)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grab</span>(<span class="at">object =</span> glasses)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">brush_teeth</span>(<span class="at">toothbrushing_substance =</span> jack_daniels)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>leave <span class="ot">=</span> <span class="fu">walk_out</span>(<span class="at">portal =</span> door)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> leave <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">navigate_to</span>(<span class="at">location =</span> city, <span class="at">come_back =</span> False)</span></code></pre></div>
+</div>
+<h2 id="functions-are-flexible">Functions are flexible</h2>
+<p>By supplying different arguments to the same functions, we could make this song about me instead. This is really nice, because it gives you a lot of flexibility. Just by changing the arguments, we’ve gone from a party animal to a grad student.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wake_up</span>(late_afternoon)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">feel_like</span>(lazy_bum)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grab</span>(glasses)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">brush_teeth</span>(toothpaste)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>leave <span class="ot">=</span> <span class="fu">walk_out</span>(nowhere)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> leave <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">navigate_to</span>(<span class="at">location =</span> Providence, <span class="at">come_back =</span> True)</span></code></pre></div>
+</div>
+<h2 id="writing-custom-functions">Writing custom functions</h2>
+<p>Even better… if this is a routine that I iterate through often, I can nest this sequence of functions inside a custom function. How might I write this?</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Function <span class="fu">start_day</span>(is_pandemic)<span class="sc">:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">wake_up</span>(late_afternoon)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">feel_like</span>(lazy_bum)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">grab</span>(glasses)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">brush_teeth</span>(toothpaste)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> is_pandemic <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        leave <span class="ot">=</span> <span class="fu">walk_out</span>(nowhere)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span><span class="sc">:</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        leave <span class="ot">=</span> <span class="fu">walk_out</span>(work)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> leave <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">navigate_to</span>(<span class="at">location =</span> Providence, <span class="at">come_back =</span> True)</span></code></pre></div>
+</div>
+<p>Why is this useful? Because now I have a sequence of actions that I can call whenever I need to start my day. For example, I can combine my custom function with iteration and control logic to control my day-to-day behavior:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> grad_student <span class="sc">==</span> True<span class="sc">:</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    is_pandemic <span class="ot">=</span> <span class="fu">covid19_still_around</span>()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">start_day</span>(is_pandemic)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">work_all_day</span>(<span class="at">urgent_upcoming_deadline =</span> True)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span>()</span></code></pre></div>
+</div>
+<p>Let’s break this down into plain English. While it’s true that I’m a grad student, I first check whether the covid19 pandemic is still around. If so, supplying that argument to the function <code>start_day</code> causes me to stay home. If not, supplying that argument causes me to walk to work.</p>
+<h1 id="variables">Variables</h1>
+<p>There’s one last key idea you need to understand before you’ve understood the most fundamental concepts in programming, which is that variables are containers for information.</p>
+<p>Sometimes, the containers are small, and they only fit one piece of information inside them. These are called <strong>scalar</strong> variables. Here’s an example of a scalar assignment: <code>x = "fish"</code></p>
+<p>Sometimes, the containers are bigger, and they can fit lots of scalars inside of them. For example: <code>x = ["fish", "painting", "iPhone"]</code>. This is a <strong>vector</strong> that’s assigned to the variable <code>x</code>. If it helps, you can think of a vector as being like a single row of a datatable.</p>
+<p>Sometimes, the containers are even bigger, and they can fit lots of vectors inside of them. This is sometimes called an <strong>array</strong>, a <strong>matrix</strong>, a <strong>dataframe</strong>, a <strong>datatable</strong>, and so on. For example:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> [</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  [<span class="st">&quot;fish&quot;</span>, <span class="st">&quot;painting&quot;</span>, <span class="st">&quot;iPhone&quot;</span>],</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  [<span class="st">&quot;crocodile&quot;</span>, <span class="st">&quot;song&quot;</span>, <span class="st">&quot;Android&quot;</span>],</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  [<span class="st">&quot;hummingbird&quot;</span>, <span class="st">&quot;sculpture&quot;</span>, <span class="st">&quot;Nokia&quot;</span>]</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div>
+</div>
+<p>Now, the variable <code>x</code> contains a 3-by-3 array, since there are three rows and three elements inside each row.</p>
+<h1 id="summary">Summary</h1>
+<p>I’ve stayed true to my word: we haven’t written a single line of “real” code here. But, using pseudocode, we’ve developed some intuitions about how real code could be written in various computing languages.</p>
+<p>What have we learned?</p>
+<ol type="1">
+<li><strong>Datatypes:</strong> There are different types of data. They’re useful for different things.</li>
+<li><strong>Operators:</strong> Using operators, we can take two pieces of data and “do” something with them.</li>
+<li><strong>Control logic:</strong> Using operators, we can control whether certain actions are taken.</li>
+<li><strong>Iteration:</strong> Using control logic, we can perform the same actions over and over and over again.</li>
+<li><strong>Functions:</strong> In order to do anything functional with data, we have to define i) which data to use, and ii) what actions to perform on those data. Functions specify both of these things.</li>
+<li><strong>Variables:</strong> We can store the results of our computation inside containers. If needed, we can even put those containers into bigger containers.</li>
+</ol>
+<p>All of these ideas can be combined with each other in infinitely complex ways, and it is this process of combining ideas that defines the art of programming.</p>
+<h1 id="next-steps">Next steps</h1>
+<p>So hopefully, after reading this little guide, you feel less afraid of writing “real” code. That’s great! If you understand these very fundamental ideas, you can learn to translate them into language-specific syntax.</p>
+<p>Programming languages that are commonly used in psychology are:</p>
+<ul>
+<li><p>Python (General-purpose language with libraries that support the building of computerized experiments, as well as performing statistical analysis/data science)</p></li>
+<li><p>R (Designed for performing statistics and data science)</p></li>
+<li><p>Matlab (Heavily-optimized numeric computation. Also home to PsychToolbox, a library that is used to program computerized experiments)</p></li>
+<li><p>JavaScript (Web development/experiments)</p></li>
+</ul>
+<p>If you like my teaching style, I’ve written other tutorials that you might find useful. <a href="../../tutorials.html">You can find a directory of posts here.</a></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2443,6 +2412,15 @@ External
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

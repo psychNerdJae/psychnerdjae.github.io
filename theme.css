@@ -75,3 +75,8 @@ d-appendix {
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
 
+d-article li {
+  margin-bottom: 0em;
+  margin-left: 0;
+  padding-left: 0;
+}

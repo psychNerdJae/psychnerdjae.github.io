@@ -86,26 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Jae-Young Son: Curriculum Vitae</title>
+  <title>Jae-Young Son: Tutorials</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Jae-Young Son: Curriculum Vitae"/>
+  <meta property="og:title" content="Jae-Young Son: Tutorials"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Jae-Young Son"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Jae-Young Son: Curriculum Vitae"/>
+  <meta property="twitter:title" content="Jae-Young Son: Tutorials"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Curriculum Vitae"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Tutorials"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -456,265 +456,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2183,7 +1924,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
-  </style>
+
+  d-article li {
+    margin-bottom: 0em;
+    margin-left: 0;
+    padding-left: 0;
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2339,7 +2085,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2359,7 +2105,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Curriculum Vitae","authors":[]}
+{"title":"Tutorials","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2368,9 +2114,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Jae-Young Son</a>
-<a href="cv.html">CV</a>
-<a href="cv.html#publications">Publications</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Research
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="cv.pdf">CV</a>
+<a href="publications.html">Publications</a>
+</div>
+</div>
 <a href="blog.html">PsychBlog &amp; Jelly</a>
+<a href="tutorials.html">Tutorials</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
 External
@@ -2382,9 +2138,9 @@ External
 <a href="https://github.com/psychNerdJae">GitHub</a>
 <a href="https://scholar.google.com/citations?user=JPPuzI8AAAAJ">Google Scholar</a>
 <a href="https://neurotree.org/neurotree/tree.php?pid=747308">NeuroTree</a>
+<a href="https://www.linkedin.com/in/jaeyoungson/">LinkedIn</a>
 </div>
 </div>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2396,7 +2152,7 @@ External
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Curriculum Vitae</h1>
+<h1>Tutorials</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2404,264 +2160,44 @@ External
 
 
 <div class="d-article">
-<div class="d-contents d-contents-float">
-<nav class="l-text toc figcaption" id="TOC">
-<h3>Contents</h3>
+<p>This page provides a structured directory of tutorials suitable for beginner-level programmers. It is <em>not</em> a full directory of all tutorials I’ve ever written. To see a more comprehensive list, <a href="./blog.html#category:tutorials">check out the blog entries tagged with “tutorials”</a>.</p>
+<h1 id="language-free-introductions">Language-free introductions</h1>
 <ul>
-<li><a href="#jae-young-son">Jae-Young Son</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#employment">Employment</a></li>
-<li><a href="#publications">Publications</a></li>
-<li><a href="#talks">Talks</a></li>
-<li><a href="#posters">Posters</a></li>
-<li><a href="#grants-fellowships">Grants &amp; Fellowships</a></li>
-<li><a href="#awards-honors">Awards &amp; Honors</a></li>
-<li><a href="#research-training">Research Training</a></li>
-<li><a href="#teaching">Teaching</a></li>
-<li><a href="#scientific-community-outreach">Scientific &amp; Community Outreach</a></li>
-<li><a href="#professional-departmental-service">Professional &amp; Departmental Service</a></li>
-<li><a href="#ad-hoc-review">Ad Hoc Review</a></li>
-<li><a href="#popular-science-writing">“Popular Science” Writing</a></li>
-<li><a href="#media-coverage">Media Coverage</a></li>
+<li><a href="./posts/2021-07-12-no-code-intro-programming/">No-code introduction to programming</a></li>
+<li>GitHub (coming soon…)</li>
 </ul>
-</nav>
-</div>
-<h1 id="jae-young-son">Jae-Young Son</h1>
-<p><a href="https://jaeyoungson.com/cv.pdf"><strong>Download CV</strong></a> | <a href="https://scholar.google.com/citations?user=JPPuzI8AAAAJ"><strong>Google Scholar</strong></a></p>
-<p><strong>Email:</strong> jae at brown dot edu | <strong>Website:</strong> <a href="https://jaeyoungson.com">www.jaeyoungson.com</a></p>
-<p>This document was most recently compiled on 2021-03-29 using R Markdown.</p>
-<h1 id="education">Education</h1>
-<p><strong>Ph.D.</strong><br />
-Brown University<br />
-Dept. of Cognitive, Linguistic, &amp; Psychological Sciences (CLPS)<br />
-2018 - Present<br />
-Advisor: Oriel FeldmanHall</p>
-<p><strong>B.A.</strong><br />
-Stanford University<br />
-2012 - 2016<br />
-Psychology major advisor: Jamil Zaki<br />
-Neuroscience concentration advisor: Samuel McClure</p>
-<h1 id="employment">Employment</h1>
-<p><strong>Lab Manager</strong><br />
-2016 - 2018<br />
-Brown University<br />
-Dept. of Cognitive, Linguistic, &amp; Psychological Sciences (CLPS)<br />
-Supervisor: Oriel FeldmanHall<br />
-</p>
-<p><strong>Research Assistant</strong><br />
-2013 - 2016<br />
-Stanford University<br />
-Dept. of Psychology<br />
-Supervisors: Jamil Zaki &amp; W. Craig Williams</p>
-<h1 id="publications">Publications</h1>
-<ol type="1">
-<li><p>Williams, W.C., Leong, Y.C., Collier, E.A., Nook, E.C., <strong>Son, J.</strong>, &amp; Zaki, J. (in prep). Communicating emotion through facial expressions: Social consequences and neural correlates.</p></li>
-<li><p><strong>Son, J.</strong>, Bhandari, A., &amp; FeldmanHall, O. (revise &amp; resubmit). Cognitive maps of social features enable adaptive inference in social networks.</p></li>
-<li><p>Heffner, J., <strong>Son, J.</strong>, &amp; FeldmanHall, O. (revise &amp; resubmit). Emotion prediction errors guide socially adaptive behavior.</p></li>
-<li><p><strong>Son, J.</strong>, Bhandari, A., &amp; FeldmanHall, O. (2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. <em>Scientific Reports.</em> <a href="https://www.nature.com/articles/s41598-019-48050-2"><strong>Online (Open Access)</strong></a> | <a href="https://jaeyoungson.com/papers/CrowdsourcingPunishment_SciRep_2019.pdf"><strong>PDF</strong></a> | <a href="https://osf.io/8ka47/"><strong>Data &amp; Code</strong></a></p></li>
-<li><p>FeldmanHall, O., <strong>Son, J.</strong>, &amp; Heffner, J. (2018). Norms and the flexibility of moral action. <em>Personality Neuroscience.</em> <a href="https://www.cambridge.org/core/journals/personality-neuroscience/article/norms-and-the-flexibility-of-moral-action/A8A5140A517ECEE314A21FF9FE0E9EED"><strong>Online (Open Access)</strong></a> | <a href="https://jaeyoungson.com/papers/NormsMoralAction_PN_2018.pdf"><strong>PDF</strong></a></p></li>
-</ol>
-<p><em>Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes in which they are published. Access to these articles is provided to facilitate timely distribution of scientific knowledge, and is therefore intended for your personal use only. No commercial use may be made of these articles, nor is mass production of these articles permitted.</em></p>
-<h1 id="talks">Talks</h1>
-<ol type="1">
-<li><p><strong>Son, J.</strong> (December 2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. Presented at the Brown University Social Cognitive Seminar Series, Providence, RI.</p></li>
-<li><p><strong>Son, J.</strong> (October 2019). How do people use structure to learn about social networks? Presented at the Brown University First Year Presentation Colloquium, Providence, RI.</p></li>
-<li><p><strong>Son, J.</strong> (June 2019). Structure learning in social networks. Presented at the 3rd Annual Meeting of New England Research on Decision-Making, Cambridge MA.</p></li>
-<li><p><strong>Son, J.</strong> (March 2018). How groups exert influence over decision-making. Talk given at a lab meeting for the Morality Lab at Boston College, Boston, MA.</p></li>
-<li><p><strong>Son, J.</strong>, &amp; FeldmanHall, O. (May 2017). A tipping-point conformity effect for justice: Group choice shifts preferences for punishment. Talk given at the 1st Annual Meeting of NERD (New England Research on Decision-Making), Providence, RI.</p></li>
-<li><p><strong>Son, J.</strong>, Tamir, D.I., Williams, W.C., &amp; Zaki, J. (June 2016). Preferences for gathering and sharing social information about the self and friends: Disclosure target and directionality predict disclosure choice. Talk given at the Annual Stanford Psychology Honors Colloquium, Stanford, CA.</p></li>
-</ol>
-<h1 id="posters">Posters</h1>
-<p><em>* Indicates mentored student</em></p>
-<ol type="1">
-<li><p><strong>Son, J.</strong>, Bhandari, A., &amp; FeldmanHall, O. (October 2020). Structural knowledge adaptively shapes the representation of social networks. Presented at the 18th Annual Meeting of the Society for NeuroEconomics (virtual).</p></li>
-<li><p><strong>Son, J.</strong>, Bhandari, A., &amp; FeldmanHall, O. (March 2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. Poster presented at the 6th Annual Meeting of the Society for Affective Science, Boston, MA.</p></li>
-<li><p>Heffner, J., <strong>Son, J.</strong>, &amp; FeldmanHall, O. (March 2018). Emotion prediction errors predict decisions to punish. Poster presented at the 21st Annual Mind/Brain Research Day, Providence, RI.</p></li>
-<li><p>Lee, W.*, <strong>Son, J.</strong>, &amp; FeldmanHall, O. (March 2018). Social influence increases preferences for uncertain gambles. Poster presented at the 21st Annual Mind/Brain Research Day, Providence, RI.</p></li>
-<li><p>Hu, M.*, <strong>Son, J.</strong>, &amp; FeldmanHall, O. (August 2017). Acquired equivalence: Evidence for mechanisms supporting moral learning. Poster presented at the annual Brown Summer Research Symposium, Providence, RI.</p></li>
-<li><p><strong>Son, J.</strong>, &amp; FeldmanHall, O. (May 2017). A tipping-point conformity effect for justice: Group choice shifts preferences for punishment. Poster presented at the 29th Annual Meeting of the Association for Psychological Science, Boston, MA.</p></li>
-<li><p><strong>Son, J.</strong>, &amp; FeldmanHall, O. (March 2017). A tipping-point conformity effect for justice: Group choice shifts preferences for punishment. Poster presented at the 20th Annual Mind/Brain Research Day, Providence, RI.</p></li>
-<li><p>Williams, W.C., Leong, Y.C., <strong>Son, J.</strong>, Alqueza, K., &amp; Zaki, J. (April 2016). Facial expressions track brain regions associated with affective salience and theory of mind. Poster presented at the 9th Annual Meeting of the Social &amp; Affective Neuroscience Society, New York, NY.</p></li>
-<li><p>Williams, W.C., Leong, Y.C., <strong>Son, J.</strong>, Alqueza, K., &amp; Zaki, J. (March 2016). Facial expressions track brain regions associated with affective salience and theory of mind. Poster presented at the 3rd Annual Meeting of the Society for Affective Science, Chicago, IL.</p></li>
-<li><p>Williams, W.C., Leong, Y.C., <strong>Son, J.</strong>, Alqueza, K., &amp; Zaki, J. (January 2016). Facial expressions track brain regions associated with affective salience and theory of mind. Poster presented at the 17th Annual Emotion Pre-Conference to the Annual Meeting of the Society for Personality and Social Psychology, San Diego, CA.</p></li>
-<li><p>Williams, W.C., Nook, E., <strong>Son, J.</strong>, &amp; Zaki, J. (April 2014). Audiences enhance the expression and communication but not the experience of emotion. Poster presented at the 7th Annual Meeting of the Social &amp; Affective Neuroscience Society, Denver, CO.</p></li>
-<li><p>Williams, W.C., Nook, E., <strong>Son, J.</strong>, &amp; Zaki, J. (February 2014). Audiences enhance the expression and communication but not the experience of emotion. Poster presented at the 9th Annual Emotion Pre-Conference to the Annual Meeting of the Society for Personality and Social Psychology, Austin, TX.</p></li>
-<li><p>Williams, W.C., Nook, E., <strong>Son, J.</strong>, &amp; Zaki, J. (June 2013). Audiences enhance the expression and communication but not the experience of emotion. Poster presented at the Stanford PsychSummer Conference.</p></li>
-</ol>
-<h1 id="grants-fellowships">Grants &amp; Fellowships</h1>
+<h1 id="r-tidyverse">R / tidyverse</h1>
 <ul>
-<li><p>2019-2022 - National Science Foundation Graduate Research Fellowship Program ($138,000, award #2040433)</p></li>
-<li><p>2019 - Brown University Graduate Travel Grant ($622)</p></li>
-<li><p>2015 - Stanford Undergraduate Advising &amp; Research “Small Grant” ($1,500)</p></li>
-<li><p>2014 - Stanford Undergraduate Teaching Fellowship ($1,000)</p></li>
-<li><p>2013 - Stanford PsychSummer Grant ($7,500)</p></li>
-</ul>
-<h1 id="awards-honors">Awards &amp; Honors</h1>
+<li><a href="./posts/2021-07-12-r-tutorial-setup/">Setup guide for R tutorials</a>
 <ul>
-<li><p>2016 - B.A. Psychology with Departmental Honors</p></li>
-<li><p>2013 - Stanford PsychSummer “Best of Show” Poster Award</p></li>
-</ul>
-<h1 id="research-training">Research Training</h1>
-<ul>
-<li><p>2019 - Methods in Neuroscience at Dartmouth (MIND)</p>
-<ul>
-<li>Dartmouth College, Hanover, NH</li>
-<li>“Hackathon”-style summer school for computational modeling.</li>
+<li>Installing R / RStudio</li>
+<li>Creating a GitHub account / installing GitHub Desktop</li>
+<li>How to fork/clone the tutorials</li>
 </ul></li>
-<li><p>2017 - Computational Modeling Workshop, Brown Institute for Brain Science</p>
+<li><a href="https://github.com/psychNerdJae/into-the-tidyverse">into-the-tidyverse</a>
 <ul>
-<li>Brown University, Providence, RI</li>
-<li>“Bootcamp”-style summer course covering computational modeling techniques such as reinforcement learning, drift diffusion modeling, and hierarchical Bayesian estimation.</li>
+<li>Learn how to work with data using the <code>tidyverse</code> ecosystem</li>
+<li>Prerequisite: Setup guide</li>
+</ul></li>
+<li><a href="https://github.com/psychNerdJae/learning-stats-backwards">learn-stats-backwards</a>
+<ul>
+<li>Learn how to perform basic regression analyses using <code>R</code></li>
+<li>Prerequisite: into-the-tidyverse</li>
 </ul></li>
 </ul>
-<h1 id="teaching">Teaching</h1>
+<h1 id="hddm-python">HDDM (Python)</h1>
 <ul>
-<li><p>2021</p>
-<ul>
-<li><p>Teaching Assistant - CLPS 0010: Mind, Brain, and Behavior: An Interdisciplinary Approach</p>
-<ul>
-<li><p>Brown University, Providence, RI</p></li>
-<li><p>Supervisor: Elena Festa</p></li>
-<li><p>Introductory lecture course with an enrollment of 200 students.</p></li>
-</ul></li>
-</ul></li>
-<li><p>2020</p>
-<ul>
-<li><p>Teaching Assistant - CLPS 0700: Social Psychology</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Supervisor: Oriel FeldmanHall</li>
-<li>Introductory lecture course with an enrollment of 300 students. Helped students design and analyze their own studies, and provided guidance and feedback on writing journal-style scientific reports. Delivered solo guest lecture on attribution.</li>
-</ul></li>
-<li><p>Guest Workshop Instructor - Computational Modeling Workshop, Carney Institute for Brain Science</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Delivered a hands-on workshop for estimating hierarchical drift diffusion models using the HDDM package in Python.</li>
-</ul></li>
-</ul></li>
-<li><p>2019</p>
-<ul>
-<li><p>Teaching Assistant - CLPS 1790: Personality and Clinical Asessment</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Supervisor: Jack Wright</li>
-<li>Upper-level lab course with an enrollment of 24 students. Helped students design and analyze their own studies, and provided guidance and feedback on writing journal-style scientific reports.</li>
-</ul></li>
-<li><p>Workshop Instructor - Data Science Using R</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Weekly workshop for undergraduates. Covered data wrangling, visualization, and mixed-effects regression.</li>
-</ul></li>
-<li><p>Guest Workshop Instructor - Computational Modeling Workshop, Carney Institute for Brain Science</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Delivered a hands-on workshop for estimating hierarchical drift diffusion models using the HDDM package in Python.</li>
-</ul></li>
-<li><p>Guest Lecturer - Summer @ Brown</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Delivered a lecture entitled “Social Preferences and the Brain” for the class “Neuroeconomics: The science of decision-making”, which was part of the “Summer @ Brown” summer school for high school students.</li>
-</ul></li>
-</ul></li>
-<li><p>2018</p>
-<ul>
-<li><p>Workshop Instructor - Programming Psychology Experiments</p>
-<ul>
-<li>Brown University, Providence, RI</li>
-<li>Three-part workshop teaching the fundamentals of programming computerized psychology experiments using PsychToolbox in Matlab.</li>
-</ul></li>
-</ul></li>
-<li><p>2014-2016</p>
-<ul>
-<li><p>Teaching Fellow - Psych One: Introduction to Psychology</p>
-<ul>
-<li>Stanford University, Stanford, CA</li>
-<li>Supervisors: Bridgette Martin-Hard, James Gross, Jamil Zaki, &amp; Gregory Walton</li>
-<li>Taught weekly sections (13-15 students each) in F14, W15, W16, and S16.</li>
-</ul></li>
-</ul></li>
+<li>coming soon…</li>
 </ul>
-<h1 id="scientific-community-outreach">Scientific &amp; Community Outreach</h1>
+<h1 id="feature-based-reinforcement-learning-python">Feature-based reinforcement learning (Python)</h1>
 <ul>
-<li><p>2021</p>
-<ul>
-<li><p>Study Group Mentor - Leadership Alliance</p>
-<ul>
-<li>Provided mentorship for undergraduate students (the Carney Brain Science cohort) participating in Leadership Alliance, an organization that provides research opportunities to students from historically underrepresented and marginalized groups.</li>
-</ul></li>
-<li><p>Lesson Plan Designer - Brain Week Rhode Island</p>
-<ul>
-<li>Helped design a lesson plan to introduce Rhode Island students to the brain sciences, and specifically to the science of ingroup/outgroup cognition. Created a video introducing the Robber’s Cave study and encouraging students to reflect on how groups affect their own social interactions.</li>
-</ul></li>
-</ul></li>
-<li><p>2020</p>
-<ul>
-<li><p>Study Group Mentor - Leadership Alliance</p>
-<ul>
-<li>Provided mentorship for undergraduate students (the Carney Brain Science cohort) participating in Leadership Alliance, an organization that provides research opportunities to students from historically underrepresented and marginalized groups.</li>
-</ul></li>
-</ul></li>
-<li><p>2019</p>
-<ul>
-<li><p>Guest Workshop Instructor - Leadership Alliance</p>
-<ul>
-<li>Delivered workshop to students participating in Leadership Alliance, an organization that provides research opportunities to students from historically underrepresented and marginalized groups. Discussed and practiced the principles of effective scientific writing and communication.</li>
-</ul></li>
-</ul></li>
-<li><p>2016</p>
-<ul>
-<li><p>Co-organizer - Stanford Undergraduate Psychology Conference</p>
-<ul>
-<li>An entirely undergraduate-organized conference hosted at Stanford University, featuring research from undergraduates from around the U.S. and internationally.</li>
-</ul></li>
-</ul></li>
-<li><p>2014-2016</p>
-<ul>
-<li><p>Organizer - Stanford Undergraduate Psychology Association</p>
-<ul>
-<li><p>Generally: organized events for undergraduate students and community members to learn about (and engage in) psychological science.</p></li>
-<li><p>Primary organizer for a discussion with Dr. Albert Bandura regarding his newly-published book, <em>Moral Disengagement</em>.</p></li>
-<li><p>Co-organizer for a screening of the film <em>The Stanford Prison Experiment</em>, and a panel discussion with Dr. Philip Zimbardo afterwards.</p></li>
-</ul></li>
-</ul></li>
+<li>coming soon…</li>
 </ul>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="images/bandura.jpg" width="400px" /><img src="images/zimbardo.jpg" width="400px" /></p>
-</div>
-<h1 id="professional-departmental-service">Professional &amp; Departmental Service</h1>
+<h1 id="psychtoolbox-matlab">PsychToolbox (Matlab)</h1>
 <ul>
-<li>2020-present - Graduate Student Representative - Carney Institute for Brain Science</li>
-<li>2019-present - Member of Diversity &amp; Innovation Committee - Society for Affective Science Student Committee</li>
-<li>2019-2020 - Social Media Editor - Personality Neuroscience, Cambridge University Press</li>
-<li>2019-2020 - Graduate Student Representative - Brown Dept. of Cog., Ling., &amp; Psych. Sci.</li>
-<li>2018-2019 - Social Events Planning Co-chair - Brown Dept. of Cog., Ling., &amp; Psych. Sci.</li>
-<li>2017 - Co-organizer - New England Research on Decision-Making</li>
+<li>coming soon…</li>
 </ul>
-<h1 id="ad-hoc-review">Ad Hoc Review</h1>
-<ul>
-<li>Cognition</li>
-<li>Journal of Experimental Psychology: General (JEPG)</li>
-<li>Social, Cognitive, and Affective Neuroscience (SCAN)</li>
-</ul>
-<h1 id="popular-science-writing">“Popular Science” Writing</h1>
-<ul>
-<li><p>Carney Institute for Brain Science</p>
-<ul>
-<li>2019: <a href="https://www.brown.edu/carney/news/2019/02/13/what-love-here%E2%80%99s-what-brain-science-can-tell-us">What is love? Here’s what brain science can tell us.</a></li>
-</ul></li>
-</ul>
-<h1 id="media-coverage">Media Coverage</h1>
-<ul>
-<li><p>Brown Daily Herald</p>
-<ul>
-<li>2018: <a href="https://www.browndailyherald.com/2018/09/17/feldmanhall-lab-demystifies-human-behavior/">FeldmanHall Lab demystifies human behavior</a></li>
-<li>2017: <a href="https://www.browndailyherald.com/2017/02/06/new-lab-studies-emotional-decision-making/">New lab studies emotional decision-making</a></li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div></li>
-</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
