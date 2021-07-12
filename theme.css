@@ -10,6 +10,7 @@
 /* Optional: embed custom fonts here with `@import`          */
 /* This must remain at the top of this file.                 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
 
 
 html {
@@ -27,7 +28,7 @@ html {
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    open-sans;
-  --mono-font:       monospace;
+  --mono-font:       roboto-mono;
   --body-font:       open-sans;
   --navbar-font:     open-sans;  /* websites + blogs only */
 }
@@ -79,4 +80,10 @@ d-article li {
   margin-bottom: 0em;
   margin-left: 0;
   padding-left: 0;
+}
+
+code {
+  background-color: #eee;
+  color: green;
+  font-size: 14px;
 }

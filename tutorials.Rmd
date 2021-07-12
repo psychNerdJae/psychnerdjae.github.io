@@ -18,7 +18,7 @@ This page provides a structured directory of tutorials suitable for beginner-lev
 - [into-the-tidyverse](https://github.com/psychNerdJae/into-the-tidyverse)
   - Learn how to work with data using the `tidyverse` ecosystem
   - Prerequisite: Setup guide
-- [learn-stats-backwards](https://github.com/psychNerdJae/learning-stats-backwards)
+- [learning-stats-backwards](https://github.com/psychNerdJae/learning-stats-backwards)
   - Learn how to perform basic regression analyses using `R`
   - Prerequisite: into-the-tidyverse
 
