@@ -49,7 +49,7 @@ knitr::include_graphics("images/places_lived.png")
 
 Misadventurer; reluctant optimist; amor fati.
 
-My name is 손재영. In English, I go by Jae. [Learn more about Korean naming conventions here](https://en.wikipedia.org/wiki/Korean_name"). [Hear how my full name is pronounced here](https://translate.google.com/?sl=kr&tl=en&text=%EC%86%90%EC%9E%AC%EC%98%81&op=translate).
+My name is 손재영. In English, I go by Jae. [Learn more about Korean naming conventions here](https://en.wikipedia.org/wiki/Korean_name). [Hear how my full name is pronounced here](https://translate.google.com/?sl=kr&tl=en&text=%EC%86%90%EC%9E%AC%EC%98%81&op=translate).
 
 ```{r echo=FALSE}
 htmltools::p(
