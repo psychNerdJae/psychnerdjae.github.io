@@ -1,7 +1,7 @@
 # CNAME for DNS
 # Need this to be ignored because Distill gets rid of CNAME every time it renders
 # When deleted off computer hard drive, it otherwise deletes off remote
-docs/CNAME
+CNAME
 
 # macOS
 .DS_Store
@@ -48,3 +48,5 @@ vignettes/*.pdf
 
 # translation temp files
 po/*~
+docs/CNAME
+
