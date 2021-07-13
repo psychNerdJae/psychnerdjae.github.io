@@ -1,6 +1,7 @@
 title: "Jae-Young Son"
 name: "Jae-Young Son"
 output_dir: "docs"
+include: ["CNAME"]
 theme: theme.css
 navbar:
   search: false
