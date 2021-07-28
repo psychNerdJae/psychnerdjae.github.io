@@ -2,6 +2,7 @@ title: "Jae-Young Son"
 name: "Jae-Young Son"
 output_dir: "docs"
 include: ["CNAME"]
+google_analytics: "G-32MBC4KXVL"
 theme: theme.css
 navbar:
   search: false
