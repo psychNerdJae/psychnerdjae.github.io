@@ -1,0 +1,19 @@
+---
+title: "About me"
+output:
+  distill::distill_article
+---
+
+```{r echo=FALSE, out.width = "25%", fig.show='hold', fig.align='center'}
+knitr::include_graphics(c(
+  "images/stanford_hex.png",
+  "images/brown_hex.png"
+))
+```
+
+```{r, echo=FALSE,out.width="25%", out.height="25%",fig.cap="caption",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c(
+  "images/stanford_hex.png",
+  "images/brown_hex.png"
+))
+``` 

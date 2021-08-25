@@ -23,10 +23,7 @@ This page provides a structured directory of tutorials suitable for beginner-lev
   - Prerequisite: into-the-tidyverse
 
 # HDDM (Python)
-- coming soon...
-
-# Feature-based reinforcement learning (Python)
-- coming soon...
+- [2021 Carney Computational Modeling Workshop](https://github.com/psychNerdJae/hddm_tutorial_carney_workshop)
 
 # PsychToolbox (Matlab)
-- coming soon...
+- [2018 PsychToolbox Workshop](https://github.com/psychNerdJae/psychtoolbox-tutorial)

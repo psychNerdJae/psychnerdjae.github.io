@@ -13,23 +13,13 @@ output:
   postcards::trestles
 ---
 
-# Research
-
 I study how we navigate the great blooming buzzing confusion of the social world.
-
-```{r echo=FALSE, out.width = "55%", fig.align='center', fig.alt="I got my research training at Stanford (BA) and Brown (PhD)."}
-knitr::include_graphics("images/education_employment.png")
-```
-
-# About me
-
-```{r echo=FALSE, out.width = "70%", fig.align='center', fig.alt="I've lived in South Korea, North Carolina, Tennessee, California, and Rhode Island."}
-knitr::include_graphics("images/places_lived.png")
-```
 
 Misadventurer; reluctant optimist; amor fati.
 
-My name is 손재영. In English, I go by Jae. [Learn more about Korean naming conventions here](https://en.wikipedia.org/wiki/Korean_name). [Hear how my full name is pronounced here](https://translate.google.com/?sl=kr&tl=en&text=%EC%86%90%EC%9E%AC%EC%98%81&op=translate).
+My name is 손재영. In English, I go by Jae.  
+[Learn more about Korean naming conventions here](https://en.wikipedia.org/wiki/Korean_name).  
+[Hear how my full name is pronounced here](https://translate.google.com/?sl=kr&tl=en&text=%EC%86%90%EC%9E%AC%EC%98%81&op=translate).
 
 ```{r echo=FALSE}
 htmltools::p(
@@ -41,3 +31,4 @@ htmltools::p(
   style = "font-size: 80%; font-style: italic"
 )
 ```
+
