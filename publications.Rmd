@@ -8,10 +8,11 @@ output:
 
 # Publications
 
-1.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (accepted). Cognitive maps of social features enable flexible inference in social networks. *Proceedings of the National Academy of Sciences.*
-
-2.  Heffner, J., **Son, J.**, & FeldmanHall, O. (accepted). Emotion prediction errors guide socially adaptive behavior. *Nature Human Behaviour.*\
+1.  Heffner, J., **Son, J.**, & FeldmanHall, O. (accepted). Emotion prediction errors guide socially adaptive behavior. *Nature Human Behaviour.*\
     [**Online (preprint)**](https://psyarxiv.com/azeyk/)
+
+2.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (2021). Cognitive maps of social features enable flexible inference in social networks. *Proceedings of the National Academy of Sciences.\
+    *[**Online**](https://www.pnas.org/content/118/39/e2021699118) \| [**PDF**](https://jaeyoungson.com/papers/CogMaps_PNAS_2021.pdf) \| [**Data & Code**](https://osf.io/v8ucz/)
 
 3.  **Son, J.**, Bhandari, A., & FeldmanHall, O. (2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. *Scientific Reports.*\
     [**Online (Open Access)**](https://www.nature.com/articles/s41598-019-48050-2) \| [**PDF**](https://jaeyoungson.com/papers/CrowdsourcingPunishment_SciRep_2019.pdf) \| [**Data & Code**](https://osf.io/8ka47/)
