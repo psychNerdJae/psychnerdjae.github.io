@@ -81,6 +81,6 @@ Since then, I have developed more extensive materials for teaching [R (using tid
 
 One of my students created a heartwarming diagram depicting how much they learned about statistics, and their desire to learn more:
 
-```{r}
+```{r, echo=FALSE}
 knitr::include_graphics("./images/stats_handdrawn.jpg")
 ```
