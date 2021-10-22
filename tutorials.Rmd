@@ -4,7 +4,9 @@ output:
   distill::distill_article
 ---
 
-This page provides a structured directory of tutorials suitable for beginner-level programmers. It is *not* a full directory of all tutorials I've ever written. To see a more comprehensive list, [check out the blog entries tagged with "tutorials"](./blog.html#category:tutorials).
+As a scientist, part of my core philosophy is that we should "give away" our work whenever we can. For me, this not only includes scientific communication about the *outcomes* of research, but also the transmission of technical skills that can help others *produce* more research.
+
+To this end, this page provides a structured directory of tutorials I've written that are suitable for beginner-level programmers. It is *not* a full directory of all tutorials I've ever written. To see a more comprehensive list, [check out my blog entries tagged with "tutorials"](./blog.html#category:tutorials).
 
 # Language-free introductions
 - [No-code introduction to programming](./posts/2021-07-12-no-code-intro-programming/)
@@ -23,7 +25,7 @@ This page provides a structured directory of tutorials suitable for beginner-lev
   - Prerequisite: into-the-tidyverse
 
 # HDDM (Python)
-- [2021 Carney Computational Modeling Workshop](https://github.com/psychNerdJae/hddm_tutorial_carney_workshop)
+- [HDDM self-teaching materials](https://github.com/psychNerdJae/hddm_tutorial)
 
 # PsychToolbox (Matlab)
 - [2018 PsychToolbox Workshop](https://github.com/psychNerdJae/psychtoolbox-tutorial)

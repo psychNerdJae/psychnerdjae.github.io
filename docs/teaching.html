@@ -86,26 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Jae-Young Son: PsychBlog &amp; Jelly</title>
+  <title>Jae-Young Son: Teaching &amp; Mentoring</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Jae-Young Son: PsychBlog &amp; Jelly"/>
+  <meta property="og:title" content="Jae-Young Son: Teaching &amp; Mentoring"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Jae-Young Son"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Jae-Young Son: PsychBlog &amp; Jelly"/>
+  <meta property="twitter:title" content="Jae-Young Son: Teaching &amp; Mentoring"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["PsychBlog & Jelly"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Teaching & Mentoring"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[1]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2114,12 +2114,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"PsychBlog & Jelly","authors":[]}
+{"title":"Teaching & Mentoring","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2155,351 +2155,9 @@ External
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="PsychBlog &amp; Jelly">PsychBlog &amp; Jelly</h1>
-<a href="posts/2021-08-27-carney-conversations/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["psych","grad school","media coverage"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 27, 2021</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Carney Conversations: The next generation of scientists on the future of brain science</h2>
-<div class="dt-tags">
-<div class="dt-tag">psych</div>
-<div class="dt-tag">grad school</div>
-<div class="dt-tag">media coverage</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2021-08-27-new-tutorials/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["psych","tutorials","coding","matlab","python"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 27, 2021</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>New tutorials for HDDM and PsychToolbox</h2>
-<div class="dt-tags">
-<div class="dt-tag">psych</div>
-<div class="dt-tag">tutorials</div>
-<div class="dt-tag">coding</div>
-<div class="dt-tag">matlab</div>
-<div class="dt-tag">python</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2021-07-12-no-code-intro-programming/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["tutorials","coding"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 12, 2021</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>No-code introduction to programming</h2>
-<div class="dt-tags">
-<div class="dt-tag">tutorials</div>
-<div class="dt-tag">coding</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2021-07-12-r-tutorial-setup/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["tutorials","r","coding"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 12, 2021</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Setup guide for R tutorials</h2>
-<div class="dt-tags">
-<div class="dt-tag">tutorials</div>
-<div class="dt-tag">r</div>
-<div class="dt-tag">coding</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2021-02-21-grad-apps/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["psych","grad school"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 24, 2019</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Grad School Application Advice</h2>
-<div class="dt-tags">
-<div class="dt-tag">psych</div>
-<div class="dt-tag">grad school</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2018-02-06-influential-women-poc/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["psych"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 6, 2018</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Influential Living Psychologists: Women &amp; POC</h2>
-<div class="dt-tags">
-<div class="dt-tag">psych</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2017-09-16-grad-app-thoughts/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["grad school"]}</script>
-<div class="metadata">
-<div class="publishedDate">Sept. 16, 2017</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Thoughts as I begin the grad school application process</h2>
-<div class="dt-tags">
-<div class="dt-tag">grad school</div>
-</div>
-<p></p>
-</div>
-</a>
-<a href="posts/2017-08-16-psychblog-and-jelly/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["meta"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 16, 2017</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>PsychBlog &amp; Jelly</h2>
-<div class="dt-tags">
-<div class="dt-tag">meta</div>
-</div>
-<p></p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div><div class="sidebar-section custom">
-  <h3>Search</h3>
-  <form action="https://duckduckgo.com/">
-  <input type="text" name="q" placeholder="Search...">
-  <input type="hidden" name="sites" 
-  value="https://jaeyoungson.com">
-  </form>
-</div></div>
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:articles">articles</a>
-<span class="category-count">(8)</span>
-</li>
-<li>
-<a href="#category:coding">coding</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:grad_school">grad school</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:matlab">matlab</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:media_coverage">media coverage</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:meta">meta</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:psych">psych</a>
-<span class="category-count">(4)</span>
-</li>
-<li>
-<a href="#category:python">python</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:r">r</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:tutorials">tutorials</a>
-<span class="category-count">(3)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>PsychBlog &amp; Jelly</h1>
+<h1>Teaching &amp; Mentoring</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2507,6 +2165,96 @@ function init_posts_list() {
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#classroom-instruction">Classroom instruction</a></li>
+<li><a href="#leadership-alliance">Leadership Alliance</a></li>
+<li><a href="#hddm-workshops">HDDM workshops</a></li>
+<li><a href="#r-statistics-workshops">R &amp; statistics workshops</a></li>
+</ul>
+</nav>
+</div>
+<h1 id="classroom-instruction">Classroom instruction</h1>
+<p>My scientific and personal philosophy is that we are lifelong learners: we are all students because we always have room to grow. I take pride in being an instructor who challenges students to grow, and more importantly, an instructor who inspires students to <em>seek</em> opportunities to be challenged. I don’t always get the balance right (when it comes to teaching, I’ve still got a lot of growing to do!), but I’m heartened to see that I sometimes do.</p>
+<ul>
+<li><strong>Mind, Brain, and Behavior</strong> (Summer 2021, Teaching Assistant)
+<ul>
+<li>Consistently prepared: 4.74/5</li>
+<li>Effectively engaged students: 4.44/5</li>
+<li>Responsive to students: 4.74/5</li>
+<li>Made content clear and understandable: 4.58/5</li>
+<li>Provided clear feedback on assignments that improved learning: 4.58/5</li>
+<li>Overall rating of effectiveness: 4.58/5</li>
+<li>Qualitative feedback:
+<ul>
+<li>“Always presented the information in a well-paced understandable manner and was always encouraging us to participate more.”</li>
+<li>“Encouraging us to think through ideas for ourselves and participate helped to gain a better grasp on scientific writing.”</li>
+<li>“His presentations were clear and simple, and he communicated information effectively.”</li>
+<li>“Jae provided clear feedback to the response papers, and this allowed me to improve my writing.”</li>
+<li>“Willing to answer questions and encouraging attitude”</li>
+</ul></li>
+</ul></li>
+<li><strong>Social Psychology</strong> (Fall 2020, Teaching Assistant)
+<ul>
+<li>Consistently prepared: 4.51/5</li>
+<li>Effectively engaged students: 4.17/5</li>
+<li>Responsive to students: 4.34/5</li>
+<li>Made content clear and understandable: 4.28/5</li>
+<li>Provided clear feedback on assignments that improved learning: 4.2/5</li>
+<li>Overall rating of effectiveness: 4.2/5</li>
+<li>Qualitative feedback:
+<ul>
+<li>“The lecture he taught was very entertaining and informative, and it was one of my favorite lectures during the course. Jae is particularly skilled at simplifying complicated topics and answering confusing questions.”</li>
+<li>“He always answers questions and welcomes intellectual questions. He explained concepts extremely well (like during the one lecture that he taught).”</li>
+<li>“Jae gave probably the best TA lecture I’ve ever had at Brown—great job!”</li>
+<li>“Jae consistently answered questions on Piazza with speed and clear/helpful answers. During office hours, he was patient and helped students come to their own conclusion by asking thought-provoking questions. His passion for psychology was very clear and helped motivate students to engage deeper with the course content.”</li>
+<li>“His ability to redirect questions back at you in an extremely effective way is unmatched. His way of explaining concepts is great, and he always makes sure that you understand a question he’s attempted to answer before moving on.”</li>
+<li>“He gives great feedback that guides students to do better rather than simply giving them the answer. I especially love the lecture that he gave and the fact that he brought in real world issues and at the same time made it relatable and understandable.”</li>
+<li>“He did an excellent job during his guest lecture (I thought that lecture had some of the most challenging content, but Jae broke down the concepts and made everything really clear), which was one of the most memorable lectures for me.”</li>
+<li>“The only reason I only agreed with the questions for the other TA’s was to demonstrate how much Jae meant to this course. He continually worked to ensure that our concerns and questions were addressed both in lecture and on piazza. I felt much calmer thanks to Jae’s approach to teaching.”</li>
+</ul></li>
+</ul></li>
+<li><strong>Personality and Clinical Assessment</strong> (Fall 2019, Teaching Assistant)
+<ul>
+<li>Consistently prepared: 4.95/5</li>
+<li>Effectively engaged students: 4.95/5</li>
+<li>Responsive to students: 4.9/5</li>
+<li>Made content clear and understandable: 4.86/5</li>
+<li>Provided clear feedback on assignments that improved learning: 4.82/5</li>
+<li>Overall rating of effectiveness: 4.91/5</li>
+<li>Qualitative feedback:
+<ul>
+<li>“Always available to help and consistently looked for ways to make us understand more about statistics”</li>
+<li>“Extremely well-spoken and down-to-earth … I always felt able to ask him questions and seek his guidance on issues.”</li>
+<li>“His eagerness to help student’s problems with challenges throughout the course is an attribute that is very helpful and very effective”</li>
+<li>“Jae has an engaging, encouraging teaching style. He makes an effort to understand each student’s perspective, and he prompts students to answer their own questions by providing gentle guidance”</li>
+<li>“Amazing so willing to help &amp; go out of his way to take the time to help you succeed. A big reason I was able to learn so much &amp; succeed in this class”</li>
+<li>“He challenged us by being critical of our ideas when required, but also gave us the assistance we needed to go through with more complicated analyses.”</li>
+<li>“Jae is awesome! His passion and knowledge about research is clear. He takes great interest in students’ ideas and is so helpful in explaining to students why they are doing what they are doing and probing students to think about the research design of their project. He puts a lot of effort into grading and his comments are so helpful. His attitude and kind spirit also make him incredibly approachable and made me feel like research is a fun endeavor, which motivated me to want to know why I was doing what I was doing and think critically.”</li>
+<li>“Extremely effective in explaining things as necessary to understand new concepts, challenging us to think in new ways instead of just giving us the answer.”</li>
+</ul></li>
+</ul></li>
+</ul>
+<h1 id="leadership-alliance">Leadership Alliance</h1>
+<p>In the summers of 2020 and 2021, I was a “study group” leader for <a href="https://theleadershipalliance.org/">The Leadership Alliance</a>, an organization that provides research and professional development opportunities to students from historically excluded and minoritized backgrounds. I worked with cohorts affiliated with the Carney Institute for Brain Science. In our weekly sessions, we talked about different aspects of the “hidden curriculum” in academia, strategies for succeeding as a researcher, and developing scientific skills (e.g., writing an abstract, creating a research poster, etc.)</p>
+<p>To hear more about these students’ transformative experiences, you can read <a href="https://www.brown.edu/carney/news/2020/07/23/perspective-%E2%80%98i-learned-so-much-more-i-could%E2%80%99ve-ever-imagined%E2%80%99">this perspective piece</a> and this <a href="https://www.brown.edu/news/2021-08-03/carney-summer">article from Brown News</a>.</p>
+<h1 id="hddm-workshops">HDDM workshops</h1>
+<p>Since 2018, I have been a guest workshop instructor for the Computational Modeling Workshop (sponsored by the Carney Institute for Brain Sciences at Brown University). In 2021, I was also invited to present on DDM for the Computational Psychiatry Course at Zurich.</p>
+<p>My workshop introduces participants to the drift diffusion model (DDM), a computational model of decision-making that leverages information about choices and reaction times to characterize evidence/value accumulation. The workshop materials show participants how to use HDDM, which estimates DDM parameters in a hierarchical Bayesian framework, and are designed for people who have relatively little experience with either programming or computational modeling. All materials are free and open, and can be accessed at [this GitHub repository]((<a href="https://github.com/psychNerdJae/hddm_tutorial" class="uri">https://github.com/psychNerdJae/hddm_tutorial</a>).</p>
+<p>Attendees of the Brown workshop have provided positive feedback about this workshop. One attendee wrote that one of the things they found most helpful was to “see how people (such as Jae) apply [modeling] in their research.” With regards to my hands-on session, an attendee wrote that “It [is] helpful to reinforce what steps you should go through when you model. Jae had this as a part of their presentation, and it was really helpful.” When writing about their favorite parts of the workshop, an attendee wrote that “Breakout sessions were very helpful - especially DDM sessions hosted by Jae-Young Son and Mads Lund Pederson.”</p>
+<h1 id="r-statistics-workshops">R &amp; statistics workshops</h1>
+<p>In 2019, I taught a weekly workshop for undergraduates enrolled in the class Personality and Clinical Assessment. None of the students had past experience with programming or statistics, but all successfully learned how to perform essential data wrangling, visualization, and statistical procedures (including mixed-effects regression).</p>
+<p>Since then, I have developed more extensive materials for teaching <a href="https://github.com/psychNerdJae/into-the-tidyverse">R (using tidyverse)</a> and <a href="https://github.com/psychNerdJae/learning-stats-backwards">statistics</a>. All materials are free and open.</p>
+<p>One of my students created a heartwarming diagram depicting how much they learned about statistics, and their desire to learn more:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='st'>"./images/stats_handdrawn.jpg"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="images/stats_handdrawn.jpg" /><!-- --></p>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

@@ -7,14 +7,14 @@ theme: theme.css
 navbar:
   search: false
   left:
-    - text: "CV"
-      href: cv.pdf
-    - text: "Publications"
+    - text: "CV & Publications"
       href: publications.html
-    - text: "PsychBlog & Jelly"
-      href: blog.html
     - text: "Tutorials"
       href: tutorials.html
+    - text: "Teaching & Mentoring"
+      href: teaching.html
+    - text: "PsychBlog & Jelly"
+      href: blog.html
     - text: "External"
       menu:
         - text: "Twitter"
