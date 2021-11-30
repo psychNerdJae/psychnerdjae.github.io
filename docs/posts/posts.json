@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2021-11-29-website-tutorial/",
+    "title": "Academic website tutorial",
+    "description": {},
+    "author": [],
+    "date": "2021-11-29",
+    "categories": [
+      "grad school",
+      "tutorials"
+    ],
+    "contents": "\nThis blog post was originally written on November 29, 2021. It was last updated on 2021-11-29 using R Markdown.\nJust wanted to note that I’ve uploaded some tutorial slides about creating an academic website.\nEvery grad student should have a web presence! I’m absolutely gung-ho about this. Even if you don’t have any knowledge of web development, it’s easy (and free!) to create your own academic site. This was one of the big things I kept pestering our department about over several years, because I think it’s so important to have this information centrally available on our department website. Thanks to the efforts of our amazing IT manager Pedro, our grad student page finally links to our personal pages!\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-11-29T23:24:18-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-08-27-carney-conversations/",
     "title": "Carney Conversations: The next generation of scientists on the future of brain science",
     "description": {},
