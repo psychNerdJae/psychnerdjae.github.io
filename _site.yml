@@ -7,8 +7,6 @@ theme: theme.css
 navbar:
   search: false
   left:
-    - text: "CV & Publications"
-      href: publications.html
     - text: "Tutorials"
       href: tutorials.html
     - text: "Teaching & Mentoring"
