@@ -9,8 +9,6 @@ navbar:
   left:
     - text: "Tutorials"
       href: tutorials.html
-    - text: "Teaching & Mentoring"
-      href: teaching.html
     - text: "PsychBlog & Jelly"
       href: blog.html
     - text: "External"
