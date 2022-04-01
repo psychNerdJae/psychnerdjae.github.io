@@ -7,9 +7,37 @@ output:
     toc_float: true
 ---
 
-# Classroom instruction
+My scientific and personal philosophy is that we are lifelong learners: we are all students because we always have room to grow. I take pride in being an instructor who challenges students to grow, and more importantly, an instructor who inspires students to *seek* opportunities to be challenged. I don't always get the balance right (I've still got a lot of growing to do!), but I'm heartened to see that I sometimes do.
 
-My scientific and personal philosophy is that we are lifelong learners: we are all students because we always have room to grow. I take pride in being an instructor who challenges students to grow, and more importantly, an instructor who inspires students to *seek* opportunities to be challenged. I don't always get the balance right (when it comes to teaching, I've still got a lot of growing to do!), but I'm heartened to see that I sometimes do.
+I was honored to be one of four recipients of the 2022 [Presidential Award for Excellence in Teaching](https://www.brown.edu/academics/gradschool/about/awards/excellence-teaching-award) at Brown, which "recognizes outstanding pedagogical achievement by a Brown University graduate student."
+
+# Technical workshops
+
+## HDDM
+
+Since 2018, I have been a guest workshop instructor for the Computational Modeling Workshop (sponsored by the Carney Institute for Brain Sciences at Brown University). In 2021, I was also invited to present at the Computational Psychiatry Course hosted by the Translational Neuromodeling Unit in Zurich, Switzerland, at which I delivered an introductory lecture and taught a hands-on workshop.
+
+My workshop introduces participants to the drift diffusion model (DDM), a computational model of decision-making that leverages information about choices and reaction times to characterize evidence/value accumulation. The workshop materials show participants how to use HDDM, which estimates DDM parameters in a hierarchical Bayesian framework, and are designed for people who have relatively little experience with either programming or computational modeling. All materials are free and open, and can be accessed at [this GitHub repository](https://github.com/psychNerdJae/hddm_tutorial).
+
+Attendees of the Brown workshop have provided positive feedback about this workshop. One attendee wrote that one of the things they found most helpful was to "see how people (such as Jae) apply [modeling] in their research." With regards to my hands-on session, an attendee wrote that "It [is] helpful to reinforce what steps you should go through when you model. Jae had this as a part of their presentation, and it was really helpful." When writing about their favorite parts of the workshop, an attendee wrote that "Breakout sessions were very helpful - especially DDM sessions hosted by Jae-Young Son and Mads Lund Pederson."
+
+## Data science and statistics
+
+In 2019, I taught a weekly workshop for undergraduates enrolled in the class Personality and Clinical Assessment. None of the students had past experience with programming or statistics, but all successfully learned how to perform essential data wrangling, visualization, and statistical procedures (including mixed-effects regression).
+
+Since then, I have developed more extensive materials for teaching [R (using tidyverse)](https://github.com/psychNerdJae/into-the-tidyverse) and [statistics](https://github.com/psychNerdJae/learning-stats-backwards). All materials are free and open.
+
+One of my students created a heartwarming diagram depicting how much they learned about statistics, and their desire to learn more:
+
+```{r, echo=FALSE}
+knitr::include_graphics("./images/stats_handdrawn.jpg")
+```
+
+## Computational modeling
+
+I have also written an introductory tutorial series for [computational modeling using R](https://github.com/psychNerdJae/cog-comp-modeling), which covers utility modeling (risk and ambiguity preferences), reinforcement learning, and DIY regression. In principle, this series provides enough of a gentle introduction that a beginner could become self-proficient in learning more advanced modeling techniques, and in learning about other classes of cognitive computational models. All materials are free and open.
+
+# Classroom instruction
 
 - **Mind, Brain, and Behavior** (Summer 2021, Teaching Assistant)
   - Consistently prepared: 4.74/5
@@ -64,23 +92,3 @@ My scientific and personal philosophy is that we are lifelong learners: we are a
 In the summers of 2020 and 2021, I was a "study group" leader for [The Leadership Alliance](https://theleadershipalliance.org/), an organization that provides research and professional development opportunities to students from historically excluded and minoritized backgrounds. I worked with cohorts affiliated with the Carney Institute for Brain Science. In our weekly sessions, we talked about different aspects of the "hidden curriculum" in academia, strategies for succeeding as a researcher, and developing scientific skills (e.g., writing an abstract, creating a research poster, etc.)
 
 To hear more about these students' transformative experiences, you can read [this perspective piece](https://www.brown.edu/carney/news/2020/07/23/perspective-%E2%80%98i-learned-so-much-more-i-could%E2%80%99ve-ever-imagined%E2%80%99) and this [article from Brown News](https://www.brown.edu/news/2021-08-03/carney-summer).
-
-# HDDM workshops
-
-Since 2018, I have been a guest workshop instructor for the Computational Modeling Workshop (sponsored by the Carney Institute for Brain Sciences at Brown University). In 2021, I was also invited to present on DDM for the Computational Psychiatry Course at Zurich.
-
-My workshop introduces participants to the drift diffusion model (DDM), a computational model of decision-making that leverages information about choices and reaction times to characterize evidence/value accumulation. The workshop materials show participants how to use HDDM, which estimates DDM parameters in a hierarchical Bayesian framework, and are designed for people who have relatively little experience with either programming or computational modeling. All materials are free and open, and can be accessed at [this GitHub repository](https://github.com/psychNerdJae/hddm_tutorial).
-
-Attendees of the Brown workshop have provided positive feedback about this workshop. One attendee wrote that one of the things they found most helpful was to "see how people (such as Jae) apply [modeling] in their research." With regards to my hands-on session, an attendee wrote that "It [is] helpful to reinforce what steps you should go through when you model. Jae had this as a part of their presentation, and it was really helpful." When writing about their favorite parts of the workshop, an attendee wrote that "Breakout sessions were very helpful - especially DDM sessions hosted by Jae-Young Son and Mads Lund Pederson."
-
-# R & statistics workshops
-
-In 2019, I taught a weekly workshop for undergraduates enrolled in the class Personality and Clinical Assessment. None of the students had past experience with programming or statistics, but all successfully learned how to perform essential data wrangling, visualization, and statistical procedures (including mixed-effects regression).
-
-Since then, I have developed more extensive materials for teaching [R (using tidyverse)](https://github.com/psychNerdJae/into-the-tidyverse) and [statistics](https://github.com/psychNerdJae/learning-stats-backwards). All materials are free and open.
-
-One of my students created a heartwarming diagram depicting how much they learned about statistics, and their desire to learn more:
-
-```{r, echo=FALSE}
-knitr::include_graphics("./images/stats_handdrawn.jpg")
-```

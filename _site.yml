@@ -7,6 +7,8 @@ theme: theme.css
 navbar:
   search: false
   left:
+    - text: "Teaching"
+      href: teaching.html
     - text: "Tutorials"
       href: tutorials.html
     - text: "PsychBlog & Jelly"
