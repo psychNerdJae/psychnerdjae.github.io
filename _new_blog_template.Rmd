@@ -7,8 +7,17 @@ output:
     toc_float: true
     self_contained: false
 categories:
-  - psych
+  - coding
+  - fmri
   - grad school
+  - matlab
+  - media coverage
+  - meta
+  - psych
+  - python
+  - r
+  - tutorials
+  
 ---
 
-This blog post was originally written on DATE. It was last updated on `r Sys.Date()` using R Markdown.
+This blog post was last generated on `r Sys.Date()` using R Markdown.

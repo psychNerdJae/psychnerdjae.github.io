@@ -1,0 +1,154 @@
+---
+title: "Brain warping"
+date: April 1, 2022
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    self_contained: false
+categories:
+  - coding
+  - fmri
+---
+
+This blog post was last generated on `r Sys.Date()` using R Markdown.
+
+# Converting between MNI and T1w spaces
+
+Whereas standard univariate fMRI analyses can be performed in a standard space like MNI, Representational Similarity Analysis (RSA) relies on finding fine-grained spatial patterns in brain data. My preferred approach is to perform RSA *in each subject's native brain space* (i.e., T1w). As most anatomical atlases (and therefore regions of interest) are defined in MNI space, we need some method for warping them into each subject's T1w space.
+
+Happily, one of the many useful things that [fmriprep](https://fmriprep.org/) produces is a set of warping parameters specifying how to get from one neuroimaging space (e.g. subject-specific T1w space) to another (e.g. MNI). The underlying procedure is performed using [ANTs](https://github.com/ANTsX/ANTs) (Advanced Normalization Tools). This transformation (and its inverse) is automatically performed when calling fmriprep, and is saved as a pair of `.h5` files in each subject's `anat` folder. The main software is written in C++, but wrappers have been written for R and Python.
+
+Unhappily, at the time of writing (April 2022), it's either difficult or impossible to install [ANTsPy](https://github.com/ANTsX/ANTsPy) on a Mac M1 chip. At this point, I've fully transitioned over to using M1-equipped computers, and for better or for worse (usually worse), I insist on being able to test analysis code locally before running it on Oscar (Brown's high-performance computing cluster).
+
+The workaround? When it's possible to pre-compute files before starting the analysis in Python, I just use the C++ version in my shell. In principle, it shouldn't be too hard to call the shell from a Python script, but my overall workflow doesn't call for any "on-demand" warping.
+
+When testing ANTs locally, I use a Docker container for convenience. However, since the majority of the subjects' data only lives on the computing cluster, I've also got to use a Singularity container when warping ROIs for each subject.
+
+## Docker (local)
+
+On a local machine, the easiest way to use ANTs is by downloading and calling a Docker container. If you don't have it already, you'll need to [install Docker](https://www.docker.com/products/personal/). If you're not familiar with what Docker is, or what makes it useful, [read this beginner-friendly explainer by Microsoft](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/docker-defined).
+
+Start up Docker, open up a terminal, and then type:
+
+```{verbatim}
+docker pull antsx/ants:latest
+```
+
+To look at the documentation for the ANTs function we'll be using, you can then type:
+
+```{verbatim}
+docker run --rm -it antsx/ants
+antsApplyTransforms
+exit
+```
+
+I then basically followed the instructions in this tutorial by [BrainHack Princeton](https://brainhack-princeton.github.io/handbook/content_pages/04-03-registration.html). The following code simply adapts it to be (slightly) more programmatic, and to run using Docker. Note that environmental variables like `$USER` are defined for macOS and Linux (I'm in the former camp), but might not translate on Windows.
+
+```{verbatim}
+# Probably your top-level study/project directory
+bind_dir=/Users/${USER}/location_of_your_project
+
+# Create native-space ROIs for which subjects?
+process_subs=($(seq 1 40))
+
+# Pathing (relative to your bind directory)
+roi_mni_dir=roi_mni
+bids_prefix=bids/derivatives/fmriprep
+bids_suffix=ses-01/anat
+
+# File names
+roi_mni_file=hippocampus_bilateral_AAL.nii
+ref_file_suffix=_ses-01_acq-mprage_desc-preproc_T1w.nii.gz
+trans_file_suffix=_ses-01_acq-mprage_from-MNI152NLin2009cAsym_to-T1w_mode-image_xfm.h5
+
+for sub in ${process_subs[*]}
+do
+  printf -v sub_id "sub-%03d" ${sub}
+
+  docker run --rm \
+    -v ${bind_dir}:/data:rw \
+    antsx/ants \
+      antsApplyTransforms \
+        -i ${roi_mni_dir}/${roi_mni_file} \
+        -r ${bids_prefix}/${sub_id}/${bids_suffix}/${sub_id}${ref_file_suffix} \
+        -t ["${bids_prefix}/${sub_id}/${bids_suffix}/${sub_id}${trans_file_suffix}",0] \
+        -n NearestNeighbor \
+        -o ${bids_prefix}/${sub_id}/${bids_suffix}/${roi_mni_file%.nii}_${sub_id}_T1w.nii \
+        -v 1
+done
+```
+
+## Singularity (cluster)
+
+For running containerized applications on high-performance computing clusters, Singularity is the way to go. Happily, as long as the source software lives on Docker Hub, it's very easy to "convert" the Docker container into a Singularity container. These instructions are based on [this tutorial from NASA](https://www.nas.nasa.gov/hecc/support/kb/converting-docker-images-to-singularity-for-use-on-pleiades_643.html).
+
+The cluster already has Singularity running by default, so once you're on Oscar, simply navigate to wherever you want to store the container (or specify it in the function call), and type the following:
+
+```{verbatim}
+singularity pull ants.sif docker://antsx/ants
+```
+
+Here's an example shell script I've used to batch-process subjects/ROIs on the cluster:
+
+```{verbatim}
+#!/bin/bash
+#SBATCH -t 15:00
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem=1gb
+#SBATCH --output=warp_roi_sub_%a.out
+#SBATCH --array=1-40
+
+# Zero-padded subject ID
+printf -v sub_id "%03d" $SLURM_ARRAY_TASK_ID
+
+### Top-level project directory
+# Note: All other paths get defined in relation to this
+bind_dir=/gpfs/home/${USER}/data/${USER}/project_name_here
+
+### Where does the singularity container live?
+simg=${bind_dir}/singularity/ants.sif
+
+### Where should output ROIs be saved?
+output_dir=${bind_dir}/fmri_data/roi_t1w
+mkdir -m 775 ${output_dir}
+mkdir -m 775 ${output_dir}/sub-${sub_id}
+
+### Define pathing for MNI ROIs
+# Where do the source ROIs (in MNI space) live?
+source_roi_dir=${bind_dir}/niftis/rois
+
+# What MNI ROIs should be warped into T1w space?
+warp_these=(\
+  hpc_harvard_oxford.nii \
+  ant_hpc_harvard_oxford.nii \
+  post_hpc_harvard_oxford.nii \
+  )
+
+### Define pathing for fmriprep
+# Where's the fmriprep top-level directory?
+fmriprep_dir=${bind_dir}/fmri_data/project_name_here/bids/derivatives/fmriprep
+
+# Inside each fmriprep subject folder, where are the anatomical scans?
+anat_suffix=ses-01/anat
+
+# What's the name-stem for the T1w anatomical scan?
+t1w_suffix=_ses-01_acq-mprage_desc-preproc_T1w.nii.gz
+
+# What's the name-stem for the MNI-to-T1w transform matrix?
+trans_file_suffix=_ses-01_acq-mprage_from-MNI152NLin2009cAsym_to-T1w_mode-image_xfm.h5
+
+### Run ANTs
+for roi in ${warp_these[*]}
+do
+  singularity exec --bind ${bind_dir} ${simg} \
+  antsApplyTransforms \
+  -i ${source_roi_dir}/${roi} \
+  -r ${fmriprep_dir}/sub-${sub_id}/${anat_suffix}/sub-${sub_id}${t1w_suffix} \
+  -t ["${fmriprep_dir}/sub-${sub_id}/${anat_suffix}/sub-${sub_id}${trans_file_suffix}",0] \
+  -n NearestNeighbor \
+  -o ${output_dir}/sub-${sub_id}/sub-${sub_id}_${roi%_harvard_oxford.nii}_t1w.nii \
+  -v 1
+done
+```
