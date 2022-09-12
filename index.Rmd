@@ -11,15 +11,24 @@ output:
   postcards::trestles
 ---
 
-## About me
+## Research
 
-I study how we navigate the great blooming buzzing confusion of the social world.
+How do we navigate the great blooming buzzing confusion of our social networks?
+
+The complexity of the social world makes it difficult for us to make adaptive decisions. Our choices unfold in the vast landscape of people's relationships with each other, such that our actions can have far-reaching impacts on our communities. We can make more adaptive decisions by building mental representations, known as ***cognitive maps***, of the individuals in our social networks, and how they're connected to each other.
+
+*My research explores how people build cognitive maps of social networks, and how these cognitive maps inform social decision making.*
+
+&nbsp;  
+
+## About me
 
 Misadventurer; reluctant optimist; amor fati.
 
 My name is 손재영. In English, I go by Jae. Learn more about Korean naming conventions [here](https://en.wikipedia.org/wiki/Korean_name). Hear how my full name is pronounced [here](https://translate.google.com/?sl=kr&tl=en&text=%EC%86%90%EC%9E%AC%EC%98%81&op=translate).
 
-```{r echo=FALSE}
+```{r marcuse-quote}
+#| echo=FALSE
 htmltools::p(
   "
   \"One-dimensional thought is systematically promoted by the makers of politics and their purveyors of mass information.
@@ -41,7 +50,10 @@ An index of my publications can also be found on [**Google Scholar**](https://sc
 ::::: {#epe21 .article-grid}
 
 ::: {#img}
-```{r, echo=FALSE, out.width="150px"}
+```{r nhb-2021}
+#| echo=FALSE,
+#| out.width="150px",
+#| fig.alt = "Decorative image."
 knitr::include_graphics("./papers/EPE_NHB_2021.png")
 ```
 :::
@@ -59,7 +71,10 @@ Heffner, J., **Son, J.**, & FeldmanHall, O. (2021). Emotion prediction errors gu
 ::::: {#cogmap21 .article-grid}
 
 ::: {#img}
-```{r, echo=FALSE, out.width="150px"}
+```{r pnas-2021}
+#| echo=FALSE,
+#| out.width="150px",
+#| fig.alt = "Decorative image."
 knitr::include_graphics("./papers/CogMaps_PNAS_2021.png")
 ```
 :::
@@ -77,7 +92,10 @@ knitr::include_graphics("./papers/CogMaps_PNAS_2021.png")
 ::::: {#conform19 .article-grid}
 
 ::: {#img}
-```{r, echo=FALSE, out.width="150px"}
+```{r scirep-2019}
+#| echo=FALSE,
+#| out.width="150px",
+#| fig.alt = "Decorative image."
 knitr::include_graphics("./papers/CrowdsourcingPunishment_SciRep_2019.png")
 ```
 :::
@@ -95,7 +113,10 @@ knitr::include_graphics("./papers/CrowdsourcingPunishment_SciRep_2019.png")
 ::::: {#norms18 .article-grid}
 
 ::: {#img}
-```{r, echo=FALSE, out.width="150px"}
+```{r pn-2018}
+#| echo=FALSE,
+#| out.width="150px",
+#| fig.alt = "Decorative image."
 knitr::include_graphics("./papers/NormsMoralAction_PN_2018.png")
 ```
 :::
@@ -108,7 +129,8 @@ FeldmanHall, O., **Son, J.**, & Heffner, J. (2018). Norms and the flexibility of
 
 :::::
 
-```{r echo=FALSE}
+```{r disclaimer}
+#| echo=FALSE
 htmltools::p(
   "
   Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes
@@ -132,7 +154,10 @@ htmltools::p(
 ::::: {#emocomm .article-grid}
 
 ::: {#img}
-```{r, echo=FALSE, out.width="150px"}
+```{r emocomm}
+#| echo=FALSE,
+#| out.width="150px",
+#| fig.alt = "Decorative image."
 knitr::include_graphics("./papers/EmoComm.png")
 ```
 :::
