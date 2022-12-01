@@ -1,0 +1,23 @@
+---
+title: "Jae-Young Son"
+image: ./files/images/home_photo.jpg
+about:
+  template: jolla
+  image-shape: round
+  links:
+    - text: CV
+      href: cv.qmd
+    - text: Email
+      href: mailto:jae@brown.edu
+    - icon: mastodon
+      text: Mastodon
+      href: https://sciences.social/@psychNerdJae
+    - icon: github
+      text: GitHub
+      href: https://github.com/psychNerdJae/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/jaeyoungson/
+---
+
+I study how we navigate the great blooming buzzing confusion of the social world.

@@ -1,0 +1,31 @@
+---
+title: "PsychBlog & Jelly"
+author: "Jae-Young Son"
+date: "2017-08-16"
+categories: [meta]
+image: "image.jpg"
+---
+
+## What is PsychBlog & Jelly?
+
+Einstein famously quipped that nobody understands anything until they can explain it to their grandmother. Given that my Korean language skills are dreadful on a good day, I suppose that I'm doomed to a life of not understanding anything past, "I'm hungry."
+
+Yet, in spite of myself, I've managed to learn a few things here and there about psychology, research, and life as an academic. My hope is to share some of the things I've learned, on the off chance that someone else finds it helpful.
+
+## What can I expect to see on PsychBlog & Jelly?
+
+Honestly, I'm not sure either, but I hope it'll be interesting.
+
+## *Why* PsychBlog & Jelly?
+
+1.  I'm incorrigible when it comes to dumb backronyms.
+2.  Peanut butter and jelly sandwiches are simple but satisfying. They don't pretend to be anything special, but they're a great go-to when you need a quick fix.
+3.  I feel like I was trying to sketch the outlines for some quasi-deep metaphor, but now I'm just hungry.
+
+## A brief history of PB&J
+
+I began blogging in August 2017 using the Squarespace platform.
+
+In February 2021, I realized that I could DIY using [Distill](https://rstudio.github.io/distill/) and GitHub Pages, and migrated the blog over.
+
+In November 2022, I migrated the blog a second time over, using the recently-released [Quarto](https://quarto.org/) framework.

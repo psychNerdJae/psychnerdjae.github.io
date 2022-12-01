@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jae-Young Son">
+<meta name="dcterms.date" content="2021-07-12">
+
+<title>Jae-Young Son - Setup guide for R tutorials</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jae-Young Son</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials.html">
+ <span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">
+ <span class="menu-text">PsychBlog &amp; Jelly</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Setup guide for R tutorials</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">tutorials</div>
+                <div class="quarto-category">coding</div>
+                <div class="quarto-category">rstats</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jae-Young Son </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 12, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><code>into-the-tidyverse</code> is a self-contained set of tutorials for data wrangling/analysis using R (via RStudio), with a very heavy emphasis on the <code>tidyverse</code> libraries. These are state-of-the-art tools that have always been (and always will be) free and open-source.</p>
+<p>These tutorials require you to use GitHub (via the easy-to-use GitHub Desktop interface), and encourage the practice of version control. Learning how to use GitHub is an increasingly important part of learning how to do data science. For that reason, you will be <em>required</em> to use GitHub in order to follow along with these tutorials. The learning curve is not too steep, and these skills will serve you well in the future.</p>
+<section id="setting-up-r" class="level1">
+<h1>Setting up R</h1>
+<section id="install-r" class="level2">
+<h2 class="anchored" data-anchor-id="install-r">Install R</h2>
+<p>The first thing you’ll need to do is to <a href="https://cran.r-project.org/">install R</a> from CRAN (Comprehensive R Archive Network).</p>
+<p>This will install the R programming language, some essential libraries, and a text-based console that might remind you of an old-school terminal window.</p>
+<p><img src="r-console.png" class="img-fluid" alt="R console (left) compared against a macOS terminal (right)"></p>
+</section>
+<section id="install-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="install-rstudio">Install RStudio</h2>
+<p>We will not be using the R console directly. Instead, we’ll be using RStudio, which builds on top of the console and gives you a lot of nice tools that help you work more efficiently. <em>Once R is installed,</em> you’ll then want to <a href="https://rstudio.com/">install RStudio</a>.</p>
+<p>You’ll immediately note that you have a lot more tools at your disposal:</p>
+<ol type="1">
+<li>R Console: Look familiar? You can use this console to type commands, just like in the “base” R console.</li>
+<li>Script Editor: Instead of using the console to type your commands one-by-one, you can write a script that contains all of your commands. That way, it’s easy to replicate an analysis because all of your code is contained within a single document, and can be run at will.</li>
+<li>Variable Viewer: When you start loading, creating, and manipulating data, you’ll see it here.</li>
+<li>Everything Else: I primarily use this panel to look at plots, or to look at the help documentation for functions I’m using.</li>
+</ol>
+<p><img src="rstudio-annotated.png" class="img-fluid" alt="Annotated image of RStudio window, entirely redundant with the in-line text descriptions."></p>
+</section>
+<section id="set-up-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-rstudio">Set up RStudio</h2>
+<p>Open up RStudio and then open up Preferences. Find the “Workspace” settings. Make sure the checkbox is <em>de-selected</em> for “Restore .Rdata into workspace at startup”. Specify <em>never</em> as the option for “Save workspace to .Rdata on exit”. This will ensure that every time you open up RStudio, you start out with a clean working environment. You’d be amazed at how many problems can be prevented by doing this.</p>
+</section>
+<section id="download-r-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="download-r-libraries">Download R libraries</h2>
+<p>You’ll need to install the following R libraries. Copy/paste the following code into the console window, then press enter to run it. We may need to install other libraries in the future, but these ones are so useful that I use them in virtually every project.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"janitor"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="setting-up-github" class="level1">
+<h1>Setting up GitHub</h1>
+<section id="create-github-account" class="level2">
+<h2 class="anchored" data-anchor-id="create-github-account">Create GitHub account</h2>
+<p>You will need to create an account at <a href="https://github.com/">GitHub</a>.</p>
+<p><strong>git</strong> is a system for performing <strong>version control</strong>. What does that mean? Basically, it allows you to save “snapshots” of your files at any given moment. This allows you to track how your code (and data) change over time. So if you accidentally delete a lot of important code, and later realize that you need to recover it, git allows you to go back to a snapshot that contains the code you want. So you can think of it like an archiving system.</p>
+<p><strong>GitHub</strong> is an online data storage platform that uses git to store a full archive of changes you’ve made to a particular project. It allows you to keep a “synchronized” copy of the most up-to-date files on any computer that’s given access.</p>
+<p>Let’s walk through some of terminology, which will help you to understand how GitHub works. Let’s say you’ve got some projects on your computer’s hard drive. Each project is stored in its own <strong>repository</strong>. When you start using git to version control your repository, it creates some hidden folders which contain a full archive of changes you’ve made (sort of - more on this in a second). Using git, you can then specify when to create a snapshot of your repository. This snapshot is called a <strong>commit</strong> because you’re committing to saving a copy of your repository at this exact moment in time. Importantly, <em>you choose when to commit</em>. Different people have different preferences. Some people like to commit at set time increments, regardless of whether their changes are big or small. Some people wait to commit until they have something they feel is “worth” committing. This is entirely up to you, and you’ll develop your own preferences as you gain experience.</p>
+<p>Once you’ve committed something, you’ve saved a snapshot on your personal computer. But, that commit only lives on your computer. If you dropped your computer on the floor and destroyed its hard drive, your archive is gone forever. This is where GitHub comes in. You can save a copy of your files and your commit history onto GitHub, which allows you to <strong>clone</strong> a copy of your repository (and its full commit history!) onto any other computer. When you upload your commits to GitHub, it’s called a <strong>push</strong>. The GitHub repository contains only the “latest” versions of your files, which is dictated by when you commit and push your commits to GitHub. This can get a little more complicated when there are multiple collaborators editing files in the same repository. For simplicity, we’ll only consider two cases: 1) when a collaborator pushes a commit while you’re in the middle of changing something, and 2) how to prevent conflicting changes by working on a parallel copy of the repository.</p>
+<p>Once you’re done changing something in your code, you might create a commit and try pushing that change to GitHub. Only to find that your collaborator has also been changing things in the code, and has pushed something before you had a chance to work on the most “updated” version of your repository. Since your commit is now on an “older” version of the repository, you must first synchronize your computer’s (older) version of the repository with the (newer) GitHub version. When you check whether there’s a newer version, this is called a <strong>fetch</strong>. When you detect that there’s a newer version, you then <strong>pull</strong> the newer version on your computer. In the best-case scenario, there is no <strong>merge conflict</strong>, and you can then push your commit without any further action. In the worst-case scenario, there is a merge conflict that you manually have to resolve. That is a giant headache to do, and you’ll want to avoid merge conflicts as much as possible. The easiest way to do this is to work with a fork (you could also do this with a branch, but we won’t be using them in this workshop… once you understand forks, it’ll be really easy to google what branches do in the future).</p>
+<p>You might be familiar with the idea of a “multiverse” from comic books or science fiction. You’re living in the “main” timeline, but there are alternative realities that come in and out of existence at key moments in time. For example, there might be an alternative reality that’s exactly the same as this one, except that Ringo Starr never became the drummer for the Beatles. That would be an alternative universe that “forked” from our reality in 1962. That is exactly the logic of git. You could be working on a project with a collaborator who wants to try rewriting some existing code, but who wants to avoid messing up your existing data analysis pipelines. That collaborator could create a fork of your project, which diverges from the <code>main</code> timeline at a particular moment in time. The collaborator could then do whatever they wanted with their forked copy of the repository, without ever affecting what happens in the main copy. In principle, they could maintain a separate fork forever. Oftentimes, though, they’ll finish editing the code and will then want to merge it with the main timeline. This gives you a gentle way of merging the timelines together, since you can work through any would-be merge conflicts before trying to merge the two timelines back together.</p>
+<p>Power users often use text-based commands to manage their git repositories, but I prefer using GitHub Desktop, which an easy-to-use point-and-click interface.</p>
+</section>
+<section id="install-github-desktop" class="level2">
+<h2 class="anchored" data-anchor-id="install-github-desktop">Install GitHub Desktop</h2>
+<p>Install <a href="https://desktop.github.com/">GitHub Desktop</a>, then log in with your new GitHub credentials to set it up. These instructions are for the <code>into-the-tidyverse</code> tutorials, but it’s not too hard to figure out how to fork/clone other repositories using these instructions.</p>
+<p>If this is your first time ever using GitHub Desktop, click on “Clone a repository from the internet”, then copy/paste <code>psychNerdJae/into-the-tidyverse</code> into the textbox, then click Fetch Origin. This creates a cloned copy of my repository onto your hard drive (scroll back up to review terminology if you’re getting lost).</p>
+<p>If you’ve used GitHub Desktop before, you might have some git-managed repositories on your hard drive already. If that’s the case, click on Add, then Clone Repository, then URL. Copy/paste <code>psychNerdJae/into-the-tidyverse</code> into the textbox, then click Fetch Origin.</p>
+<p>You can now access all of the latest workshop materials. If you start creating/modifying code or data, you’ll see those changes tracked through GitHub Desktop. Remember that the only changes that are saved are the ones you take a snapshot of by committing.</p>
+<p>You’ll note that when you try to commit new changes for the first time, you’ll be prompted, “You don’t have write access to <strong>into-the-tidyverse</strong>. Want to create a fork?” Click that. When you try to push your commit, you’ll see some scary warning message that you don’t have write access to <code>psychNerdJae/into-the-tidyverse</code>. Go ahead and create a fork. In the next prompt, you’ll be asked how you’re planning on using this fork. Click on “For my own purposes”. Now, your changes are pushed to a forked copy of <code>yourUserName/into-the-tidyverse</code>, which runs in a parallel timeline to my original copy. This lets you play around with code as you’re learning to use R, without ever disturbing my original files.</p>
+<p>What if I make a change to my repository that you want to synchronize with your fork? For example, I could add more files to my repository as I develop new workshop materials, which you want to download. Since my repository is the original that your fork copies, my repository is known as the upstream (since it’s upstream in the timeline). You can always check to see if there are changes in the upstream by clicking on Current Branch and seeing whether there’s an option for <code>upstream/main</code>. If you don’t, that means there are no new commits in my version of the repository.</p>
+<p>Now that all of the materials live on your hard drive (in the cloned repository you forked from mine), you’re ready to learn!</p>
+</section>
+</section>
+<section id="file-and-folder-structure" class="level1">
+<h1>File and folder structure</h1>
+<p>These instructions are specifically for <code>into-the-tidyverse</code>, but should apply to any other tutorials I write.</p>
+<ul>
+<li><p>Files in the parent folder: Whenever you want to engage with these workshops, remember to double-click on <code>into-the-tidyverse.Rproj</code> first. This opens up a new R session (so that work you’re doing for this project doesn’t disturb whatever work you might be doing for other R projects).</p></li>
+<li><p>Tutorials: This is where you can find the HTML files containing all tutorials. Each one features a self-contained lesson on a particular topic.</p></li>
+<li><p>Sandbox: This is the only folder you should be modifying. You should never, ever, ever modify anything that’s in any other folder. Seriously, under most circumstances, there should be no reason for you to ever navigate into these directories or open these files. If you’re wanting to save scripts, plots, whatever, you should do it in the Sandbox. Make sure to follow these three simple rules to make sure everything goes smoothly:</p>
+<ol type="1">
+<li><p>Basically, don’t touch anything in the Code and Data folders, and you’ll be alright. For those of you following along in realtime (i.e., I haven’t finished writing/developing all of the materials yet), this lets you avoid merge conflicts. In short, a merge conflict emerges when my version of the file looks different from your version of the same file. So if you take my code and you use it to play around by adding/deleting code, your file is now different from my file. When you try to “sync” new materials from my repository to your forked clone, this creates a merge conflict that you’re forced to resolve before you’re allowed to download my new materials.</p></li>
+<li><p>Any time you write new code, do it in this Sandbox folder. The point of a sandbox is that you can do anything you want, and the (potentially destructive) consequences of your actions will never leave the sandbox. This is important because I’m going to encourage you very, very, very strongly never to simply run the existing scripts in the Code folder (or equivalently, simply copy/pasting existing code). So when you’re typing code from scratch and need a place to save your scripts, save them in the Sandbox.</p></li>
+<li><p>On that note, you should be typing code from scratch. This sandbox should be full of code, whether it works or not. You learn a lot from typing things from scratch, especially when you’re a beginner. This is because you’ll inevitably type things incorrectly when you do it from scratch, and then you’ll have to self-diagnose why your code doesn’t work. That is invaluable experience for learning how to code. And it will also help with your muscle memory. It takes virtually zero time for me to write a pipe (<code>%&gt;%</code>) because I have typed thousands and thousands and thousands of pipes. You cannot get good at writing code quickly without building muscle memory. If you simply run existing code, or copy/paste existing code, you are hurting your own learning. There are no shortcuts to learning code. You must do it the hard way.</p></li>
+</ol></li>
+<li><p>Code: I’m providing all of the <strong>R Markdown</strong> code from the videos in the Code folder. These scripts are provided primarily for folks with visual impairments, who would find it useful to have the text for accessibility reasons. By and large, I do <em>NOT</em> want any other group of people looking at this code. Why? Because most of your learning occurs when you make (and correct) mistakes, and you can only make mistakes if you’re trying things out from scratch. You can’t make mistakes if you’re simply running someone else’s code, or just copy/pasting code.</p></li>
+<li><p>Data: We will be using a diverse range of datasets from a variety of sources. There are times when it will make sense for you to directly download the data from the source (such as timeseries data on covid19, which is updated on a daily basis), but otherwise, the datasets will be provided in the Data folder. When applicable/available, the URL to the original dataset will be documented in the relevant scripts.</p></li>
+<li><p>Output: Sometimes, there’ll be some kind of output I want to save to your hard drive (like a plot or table), so that you have a sense for what your output ought to look like. These will be saved in the Output folder. Anytime you have some output, you should save that to the Sandbox instead.</p></li>
+</ul>
+</section>
+<section id="now-what" class="level1">
+<h1>…Now what?</h1>
+<p>If you’re ready to get started, go to the folder you’ve just created on your hard drive. From there, click into the Tutorials folder, and have fun with the first session!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

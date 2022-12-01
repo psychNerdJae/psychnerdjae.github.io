@@ -1,0 +1,36 @@
+---
+title: "Tutorials"
+---
+
+As a scientist, part of my core philosophy is that we should "give away" our work whenever we can. For me, this not only includes scientific communication about the *outcomes* of research, but also the transmission of technical skills that can help others *produce* more research.
+
+To this end, this page provides a structured directory of tutorials I've written that are suitable for beginner-level programmers. It is *not* a full directory of all tutorials I've ever written. To see a more comprehensive list, [check out my blog entries tagged with "](./blog.html#category:tutorials)[tutorials](./blog.html#category=tutorials)["](./blog.html#category:tutorials).
+
+## Language-free introductions
+
+-   [No-code introduction to programming](./posts/2021-07-12-no-code-intro-programming/)
+-   GitHub (coming soon...)
+
+## R / tidyverse
+
+-   [Setup guide for R tutorials](./posts/2021-07-12-r-tutorial-setup/)
+    -   Installing R / RStudio
+    -   Creating a GitHub account / installing GitHub Desktop
+    -   How to fork/clone the tutorials
+-   [into-the-tidyverse](https://github.com/psychNerdJae/into-the-tidyverse)
+    -   Wrangle data using the **`tidyverse`** ecosystem
+    -   Prerequisite: Setup guide
+-   [learning-stats-backwards](https://github.com/psychNerdJae/learning-stats-backwards)
+    -   Analyze data using regression
+    -   Prerequisite: into-the-tidyverse
+-   [cog-comp-modeling](https://github.com/psychNerdJae/cog-comp-modeling)
+    -   Use computational models to address questions in cognitive and psychological science
+    -   Prerequisites: into-the-tidyverse (essential), learning-stats-backwards (optional but useful)
+
+## HDDM (Python)
+
+-   [HDDM self-teaching materials](https://github.com/psychNerdJae/hddm_tutorial)
+
+## PsychToolbox (Matlab)
+
+-   [2018 PsychToolbox Workshop](https://github.com/psychNerdJae/psychtoolbox-tutorial)
