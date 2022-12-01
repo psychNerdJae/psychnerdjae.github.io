@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jae-Young Son">
+<meta name="dcterms.date" content="2021-07-12">
+
+<title>Jae-Young Son - No-code introduction to programming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jae-Young Son</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials.html">
+ <span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">
+ <span class="menu-text">PsychBlog &amp; Jelly</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">No-code introduction to programming</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">tutorials</div>
+                <div class="quarto-category">coding</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jae-Young Son </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 12, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Increasingly, research in the social sciences requires some knowledge of programming and computing. For example, it is becoming increasingly common to program computerized experiments, and to perform statistical analyses using code.</p>
+<p>This came as an incredibly rude surprise when I embarked upon my first independent research project as a college senior. Through trial and error (frankly, mostly error), I’ve gone from flunking two introductory computer science classes to teaching programming. Because of this, I understand the feeling of being code-phobic, and just how much of an overwhelming task it can feel like to learn programming.</p>
+<p>So, this is my best attempt at synthesizing some of the key ideas and insights about programming without writing a single line of code. The goal is to familiarize you with some of these ideas in plain English so that when you’re learning a particular programming language, the act of writing code is just learning how to express an idea using some fancy computer syntax.</p>
+<p>The only prior knowledge I assume is a little bit of high-school level algebra. I’ll review the relevant concepts along the way, so if you feel like your math is a little shaky, you’ll still be able to follow along.</p>
+<section id="datatypes" class="level2">
+<h2 class="anchored" data-anchor-id="datatypes">Datatypes</h2>
+<p>There are different types of objects out in the world. For example, there are fruits and there are bowling balls. Obviously, these are different. But if you’re not paying attention, you might mistake one type of object for a different type of object. A big watermelon is about the same weight as a bowling ball. An orange is approximately the right shape, and many bowling balls are orange-colored. But of course, you wouldn’t want to try biting into a bowling ball, and you probably don’t want to fling a watermelon at bowling pins.</p>
+<p>The same is true for digital objects that are handled by your computer. It might seem obvious that the number <code>5</code> and the text <code>"five"</code> are different from each other. But if we aren’t paying attention, we might miss the fact that the computer is not processing the number <code>5</code>, but the text <code>"5"</code>. From the computer’s perspective, trying to add <code>5</code> and <code>"5"</code> makes about as much sense as trying to add <code>5</code> and <code>"Detroit"</code>.</p>
+<p>This is the key idea behind datatypes. There are certain types of data, and what you’re allowed to do with those data depends on what their types are.</p>
+<p>From high school math classes, you might remember that an <strong>integer</strong> is a number that doesn’t contain a fraction or a decimal point. These are all examples of integers: <code>-99</code>, <code>0</code>, <code>200</code>. On a standard number line, integers are the “tick marks.”</p>
+<p>What about numbers that <em>do</em> contain a fraction or decimal point? This datatype is called a <strong>float</strong>. You can think of it as a number that “floats” on a number line between two integers. Sometimes, the computer uses the float datatype to represent a number that looks like an integer. For example, we know that the result of <code>2.5 + 2.5 = 5</code>, which looks like an integer to the human mind. But, because the computer started off with a float datatype <code>2.5</code>, adding things to the float results in another float.</p>
+<p>Why would there be an integer datatype at all, if it seems like a float is capable of representing the same information, and more? This is a great question, and I’ll try to answer it without getting into too much technical detail. You might have heard that computers represent information in <em>binary</em>. In other words, computers only understand the values <code>0</code> and <code>1</code>. We can get more complex representations by creating longer sequences of these two values. Integers are actually pretty easy to represent using binary, so computers are able to store information about very small and very large integers with the same amount of precision. On the other hand, floats are much harder to represent precisely using binary. You might be familiar with the idea of rounding error. We know that <code>1.25 + 1.33 = 2.58</code> if we don’t round. But if we round to the first decimal point, <code>1.25 + 1.33 = 2.6</code>. Suddenly, our computation has become much less precise. Representing information in binary means that we lose precision when we’re working with complex datatypes like floats. When precision is really important, it might be better to use integers when possible.</p>
+<p>Anytime we want to work with text, the computer will represent that using the <strong>string</strong> datatype. Think about a sentence as being a string of text, and that will help you remember. Strings can get confusing if we’re not paying close attention. For example, in a psychology experiment, we might label one of our images something like <code>"stimulus_5.jpg"</code>. We later ask the computer to extract out the 10th character, which is <code>"5"</code>. Well, to the human mind, that looks like a number. But from the computer’s perspective, we started out with a string, meaning that anything we pull out from it is still a string.</p>
+<p>Finally, we have the Boolean datatype, which can only take two values: <code>true</code> and <code>false</code>. If you’re not familiar with <a href="https://www.youtube.com/watch?v=L0eeSoU35wM">Dolly Parton’s classic song Jolene</a>, consider this a cultural lesson and go listen to it now (I grew up in East Tennnessee, where Dolly Parton’s from, and she’s considered royalty around those parts). Now that you have this song stuck in your head, remember the Boolean datatype by singing, “Boolean, Boolean, Boolean, Booleeeeeean… Yes/no, are you going to take my man?” Different languages use different syntax to represent the Boolean. Some use <code>0</code>=False and <code>1</code>=True, and others simply use the words <code>True</code> and <code>False</code>.</p>
+</section>
+<section id="operators" class="level2">
+<h2 class="anchored" data-anchor-id="operators">Operators</h2>
+<p>I’m going to provide two unsatisfying definitions of operators.</p>
+<ol type="1">
+<li><p>You have two numbers. What do you want to do with those numbers? Whatever you decide to do (add, subtract, see if one is greater than the other, etc), the thing that allows you “to do” is an <strong>operator</strong>. So the operator for “add” is <code>+</code>, and you can write the <strong>expression</strong> <code>A + B</code> to add A and B. Similarly, the operator for “greater than” is <code>&gt;</code>, and you can ask whether A is greater than B by writing <code>A &gt; B</code>.</p></li>
+<li><p>You’ll note that when we write an expression, we don’t have to use language. We can use fancy symbols like <code>+</code> and <code>&gt;</code> instead. So, if you see a fancy symbol in someone’s code, it’s likely an operator.</p></li>
+</ol>
+<p>There are four major kinds of operators: assignment, arithmetic, conditional, and logical.</p>
+</section>
+<section id="assignment-operators" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-operators">Assignment operators</h2>
+<p>In your high school math classes, you might remember using variables, like <code>A = 5</code>. The equal sign <code>=</code> is an <strong>assignment</strong> operator because you use it to assign the value <code>5</code> to the variable <code>A</code>.</p>
+</section>
+<section id="arithmetic-operators" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-operators">Arithmetic operators</h2>
+<p><strong>Arithmetic</strong> operators are pretty easy because they (mostly) look like the symbols we commonly use in math classes. We add using the plus sign <code>+</code>, subtract using the minus sign <code>-</code>, multiply using the star (also known as an asterisk) <code>*</code>, and divide using the slash <code>/</code>.</p>
+</section>
+<section id="conditional-operators" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-operators">Conditional operators</h2>
+<p><strong>Conditional</strong> operators allow you to check whether something is true or false (pop quiz: what datatype is produced when you use a conditional operator?). For example, we might want to ask, “Is A greater than B?” We could write the expression <code>A &gt; B</code>, which is either true or false.</p>
+<p>Conditional operators are a little trickier because they’re written more abstractly. For example, how would you test whether A is equal to B? Remember, we’ve already used the equal sign <code>=</code> as an assignment operator. So to get around this, we use the double-equal operator <code>==</code> to mean “is equal to”. Similarly, it’s pretty hard to type the mathematical symbol “is not equal to” <code>≠</code>, so we’ve got to find an alternative. The exact syntax is different depending on the language, but it’s common to see <code>!=</code> where the <code>!</code> operator means “not”. The operators “greater than” <code>&gt;</code> and “less than” <code>&lt;</code> are pretty easy because we use these symbols in math too. But how would we write something like “greater than or equal to” given that <code>≤</code> is also hard to type? See if you can make a guess, based on the operator used for “not equal to”. If you guessed <code>&gt;=</code> and <code>&lt;=</code>, then you’re exactly right.</p>
+<p>Why are they called conditional operators? Maybe when you were a kid, you’d ask your parents if you could go over to your friend’s house. They might have told you, “Sure, on one condition…” And then you’d groan because you knew that your ability to go to your friend’s house was conditional on you cleaning your room.</p>
+</section>
+<section id="logical-operators" class="level2">
+<h2 class="anchored" data-anchor-id="logical-operators">Logical operators</h2>
+<p>Sometimes, you want to check whether multiple conditions are true. Maybe your parent told you, “Sure, you can go to your friend’s house IF you clean your room AND do your homework first.” To do this, you would use <strong>logical</strong> operators. We’ve actually already seen one at work, because NOT is also logic. (For example: “Can you go to your friends house? Not if your room is dirty.”)</p>
+<p>Below, you can find the major logical operators and examples of how they are expressed in R:</p>
+<ul>
+<li><p>IF (this one is special because it’s written in plain English)</p></li>
+<li><p>AND is written as <code>&amp;</code> (“ampersand”)</p></li>
+<li><p>OR is written as <code>|</code> (surprisingly, there doesn’t seem to be a more elegant name for this other than “vertical-bar”)</p></li>
+<li><p>NOT is written as <code>!</code> (“exclamation mark”)</p></li>
+</ul>
+<p>For the most part, these operators are referred to by the logical operations they perform. So, it’d be weird to say “A ampersand B”, and more normal to say “A AND B”.</p>
+</section>
+<section id="control-logic" class="level2">
+<h2 class="anchored" data-anchor-id="control-logic">Control logic</h2>
+<p>Together, conditional and logical operators can be used to do really powerful things. For example, it lets you decide whether you want to eat a sandwich.</p>
+<p>Well, do you? How do you know?</p>
+<p>When we make decisions in our everyday life, we want to control our actions, depending on what we know to be logically true about the world. Hence, <strong>control logic</strong>.</p>
+<p>Most likely, you only want to eat a sandwich IF you’re hungry. But there are also other things that are true about the world, like the fact that you don’t have any bread in your kitchen. So maybe you’ll only eat a sandwich IF you’re hungry AND you have all the ingredients.</p>
+<p>This is control logic at work! Note that in order to execute the action “eat a sandwich”, you have to check whether two things are true: 1) Are you hungry? 2) Do you have all the ingredients needed to make a sandwich? If only one of these things is true, then you won’t eat a sandwich.</p>
+<p>If we were asking a computer to make a decision for us, how would it decide? We won’t write any real code (I did promise you that we wouldn’t), but we can write fake code (known as pseudocode) which would get the job done:</p>
+<pre><code>if hungry==True &amp; have_ingredients==True:
+    eat_sandwich</code></pre>
+<p>Sometimes, when I feel stressed out, I’ll eat something even if I’m not hungry. How would we express this in pseudocode?</p>
+<pre><code>if (hungry==True | stressed==True) &amp; have_ingredients==True:
+  eat_sandwich</code></pre>
+<p>The parentheses are used the same way they’re used in algebra. Expressions that are inside the same set of parentheses get evaluated together. What would happen if we grouped the operators differently?</p>
+<pre><code>if hungry==True | (stressed==True &amp; have_ingredients==True):
+  eat_sandwich</code></pre>
+<p><strong><em>Hint:</em></strong> What would this control logic have you do if you were hungry, but had no sandwich ingredients? Is that sensible?</p>
+</section>
+<section id="iteration" class="level2">
+<h2 class="anchored" data-anchor-id="iteration">Iteration</h2>
+<p>Let’s say we work for a car manufacturing company, and we’re trying to program a robot arm to tighten the screws that keep the wheels attached to the car (technically, these are lug nuts, but let’s just say screws). How would we do that?</p>
+<p>We could write pseudocode that looks like this:</p>
+<pre><code>grab_screw
+turn_screw
+turn_screw
+turn_screw
+turn_screw
+... (copy/paste many more times)</code></pre>
+<p>We can see that to tighten a single screw, we’d need a thousand lines of code. Surely, there is a better method! This is the problem of <strong>iteration</strong>, which is a fancy word for “do something over and over again.” So, how can we efficiently iterate through all of the screw turns?</p>
+<section id="for-loops" class="level3">
+<h3 class="anchored" data-anchor-id="for-loops">for loops</h3>
+<p>Let’s imagine that we know ahead of time exactly how many times a screw needs to be turned before we stop. In this case, we could write:</p>
+<pre><code>grab_screw
+for 1 through 1000:
+  turn_screw</code></pre>
+<p>This is known as a <strong>for loop</strong>, because we’re asking the computer to iterate through loops <em>for</em> a pre-determined amount of time.</p>
+</section>
+<section id="while-loops" class="level3">
+<h3 class="anchored" data-anchor-id="while-loops">while loops</h3>
+<p>But oftentimes, we can’t predict the future, so we don’t know how many loops we need to iterate through. In this case, we could do something like this:</p>
+<pre><code>grab_screw
+screw_is_loose = True
+while screw_is_loose == True:
+  turn_screw</code></pre>
+<p>Once the screw is no longer loose, the loop will stop, and the robot will stop turning the screw. This is known as a <strong>while loop</strong>, because we’re asking the computer to iterate through loops <em>while</em> a condition is met.</p>
+</section>
+</section>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<p>Maybe in algebra class, you remember learning about functions. They take the form <span class="math inline">\(f(x) = x + 7\)</span>, which is about the most boring thing we could use a function to do. If you’re asked to solve <span class="math inline">\(f(5)\)</span>, you assign <span class="math inline">\(x = 5\)</span>, then solve <span class="math inline">\(5 + 7 = 12\)</span>.</p>
+<p>The name of the function, in this case, is <span class="math inline">\(f\)</span>. The parentheses surround the variable <span class="math inline">\(x\)</span>, which is the <em>argument</em> of the function (also known as a parameter, or an input). When you call the function, you supply an argument, and in doing so, you assign a value to <span class="math inline">\(x\)</span>.</p>
+<section id="using-functions" class="level3">
+<h3 class="anchored" data-anchor-id="using-functions">Using functions</h3>
+<p>Let’s use functions to do more interesting things. We can illustrate using Ke$ha’s 2009 hit song “TiK ToK” (which perhaps is a dated cultural reference that reveals how old I am…).</p>
+<blockquote class="blockquote">
+<p>Wake up in the morning feelin’ like P. Diddy<br>
+Grab my glasses, I’m out the door, I’m gonna hit this city<br>
+Before I leave, brush my teeth with a bottle of Jack<br>
+’Cause when I leave for the night, I ain’t coming back</p>
+</blockquote>
+<p>How might we write this in pseudocode?</p>
+<pre><code>wake_up(morning)
+feel_like(p_diddy)
+grab(glasses)
+brush_teeth(jack_daniels)
+leave = walk_out(door)
+if leave == True:
+  navigate_to(location = city, come_back = False)</code></pre>
+<p>Note that in the last line, we’ve specified two arguments to the function <code>navigate_to</code>, and we’ve also provided <em>named</em> arguments. We don’t necessarily have to do that, as you can see here:</p>
+<pre><code>wake_up(morning)
+feel_like(p_diddy)
+grab(glasses)
+brush_teeth(jack_daniels)
+leave = walk_out(door)
+if leave == True:
+  navigate_to(city, False)</code></pre>
+<p>We could also name <em>every</em> argument. The name of each argument is specified by whoever makes the function, and a good function-writer will use informative names for each argument. Here’s an example:</p>
+<pre><code>wake_up(when = morning)
+feel_like(emotion = p_diddy)
+grab(object = glasses)
+brush_teeth(toothbrushing_substance = jack_daniels)
+leave = walk_out(portal = door)
+if leave == True:
+  navigate_to(location = city, come_back = False)</code></pre>
+</section>
+<section id="functions-are-flexible" class="level3">
+<h3 class="anchored" data-anchor-id="functions-are-flexible">Functions are flexible</h3>
+<p>By supplying different arguments to the same functions, we could make this song about me instead. This is really nice, because it gives you a lot of flexibility. Just by changing the arguments, we’ve gone from a party animal to a grad student.</p>
+<pre><code>wake_up(late_afternoon)
+feel_like(lazy_bum)
+grab(glasses)
+brush_teeth(toothpaste)
+leave = walk_out(nowhere)
+if leave == True:
+  navigate_to(location = Providence, come_back = True)</code></pre>
+</section>
+<section id="writing-custom-functions" class="level3">
+<h3 class="anchored" data-anchor-id="writing-custom-functions">Writing custom functions</h3>
+<p>Even better… if this is a routine that I iterate through often, I can nest this sequence of functions inside a custom function. How might I write this?</p>
+<pre><code>Function start_day(is_pandemic):
+    wake_up(late_afternoon)
+    feel_like(lazy_bum)
+    grab(glasses)
+    brush_teeth(toothpaste)
+    
+    if is_pandemic == True:
+        leave = walk_out(nowhere)
+    else:
+        leave = walk_out(work)
+    
+    if leave == True:
+        navigate_to(location = Providence, come_back = True)</code></pre>
+<p>Why is this useful? Because now I have a sequence of actions that I can call whenever I need to start my day. For example, I can combine my custom function with iteration and control logic to control my day-to-day behavior:</p>
+<pre><code>while grad_student == True:
+    is_pandemic = covid19_still_around()
+    start_day(is_pandemic)
+    work_all_day(urgent_upcoming_deadline = True)
+    sleep()</code></pre>
+<p>Let’s break this down into plain English. While it’s true that I’m a grad student, I first check whether the covid19 pandemic is still around. If so, supplying that argument to the function <code>start_day</code> causes me to stay home. If not, supplying that argument causes me to walk to work.</p>
+</section>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<p>There’s one last key idea you need to understand before you’ve understood the most fundamental concepts in programming, which is that variables are containers for information.</p>
+<p>Sometimes, the containers are small, and they only fit one piece of information inside them. These are called <strong>scalar</strong> variables. Here’s an example of a scalar assignment: <code>x = "fish"</code></p>
+<p>Sometimes, the containers are bigger, and they can fit lots of scalars inside of them. For example: <code>x = ["fish", "painting", "iPhone"]</code>. This is a <strong>vector</strong> that’s assigned to the variable <code>x</code>. If it helps, you can think of a vector as being like a single row of a datatable.</p>
+<p>Sometimes, the containers are even bigger, and they can fit lots of vectors inside of them. This is sometimes called an <strong>array</strong>, a <strong>matrix</strong>, a <strong>dataframe</strong>, a <strong>datatable</strong>, and so on. For example:</p>
+<pre><code>x = [
+  ["fish", "painting", "iPhone"],
+  ["crocodile", "song", "Android"],
+  ["hummingbird", "sculpture", "Nokia"]
+]</code></pre>
+<p>Now, the variable <code>x</code> contains a 3-by-3 array, since there are three rows and three elements inside each row.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>I’ve stayed true to my word: we haven’t written a single line of “real” code here. But, using pseudocode, we’ve developed some intuitions about how real code could be written in various computing languages.</p>
+<p>What have we learned?</p>
+<ol type="1">
+<li><strong>Datatypes:</strong> There are different types of data. They’re useful for different things.</li>
+<li><strong>Operators:</strong> Using operators, we can take two pieces of data and “do” something with them.</li>
+<li><strong>Control logic:</strong> Using operators, we can control whether certain actions are taken.</li>
+<li><strong>Iteration:</strong> Using control logic, we can perform the same actions over and over and over again.</li>
+<li><strong>Functions:</strong> In order to do anything functional with data, we have to define i) which data to use, and ii) what actions to perform on those data. Functions specify both of these things.</li>
+<li><strong>Variables:</strong> We can store the results of our computation inside containers. If needed, we can even put those containers into bigger containers.</li>
+</ol>
+<p>All of these ideas can be combined with each other in infinitely complex ways, and it is this process of combining ideas that defines the art of programming.</p>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
+<p>So hopefully, after reading this little guide, you feel less afraid of writing “real” code. That’s great! If you understand these very fundamental ideas, you can learn to translate them into language-specific syntax.</p>
+<p>Programming languages that are commonly used in psychology are:</p>
+<ul>
+<li><p>Python (General-purpose language with libraries that support the building of computerized experiments, as well as performing statistical analysis/data science)</p></li>
+<li><p>R (Designed for performing statistics and data science)</p></li>
+<li><p>Matlab (Heavily-optimized numeric computation. Also home to PsychToolbox, a library that is used to program computerized experiments)</p></li>
+<li><p>JavaScript (Web development/experiments)</p></li>
+</ul>
+<p>If you like my teaching style, I’ve written other tutorials that you might find useful. <a href="../../tutorials.html">You can find a directory of posts here.</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

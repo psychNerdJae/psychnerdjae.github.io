@@ -1,0 +1,15 @@
+---
+title: "Carney Conversations: The next generation of scientists on the future of brain science"
+author: "Jae-Young Son"
+date: "2021-08-27"
+categories: [psych, grad school, media coverage]
+image: "image.png"
+---
+
+I had a great time speaking as one of the grad student panelists for a recent [Carney Conversations](https://www.brown.edu/carney/news-events/carney-conversations) discussion, "The next generation of scientists on the future of brain science". This discussion was moderated by Drs. Diane Lipscombe and Christopher Moore, and additionally featured the panelists Kaitlyn Hajdarovic and Marc Powell.
+
+If the embedded player stops working, you can also [click here](https://www.youtube.com/watch?v=5ZRjYwUjBZ0) to view the recording on YouTube.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5ZRjYwUjBZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>

@@ -1,0 +1,58 @@
+---
+title: "Curriculum Vitae"
+tbl-colwidths: [25, 75]
+---
+
+[**View my full CV here (PDF)**](cv.pdf)**.**
+
+[**Publications**, data, and code are indexed here.](publications.qmd)
+
+## Abbreviated CV
+
+### Education
+
++-------------+--------------------------------------------------------------------+
+| **Ph.D.**   | **Brown University\                                                |
+|             | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
+|             | 2018-2024 (expected)\                                              |
+|             | Advisor: Oriel FeldmanHall                                         |
++-------------+--------------------------------------------------------------------+
+| **B.A.**    | **Stanford University\                                             |
+|             | **2012-2016\                                                       |
+|             | Psychology major advisor: Jamil Zaki\                              |
+|             | Neuroscience concentration advisor: Samuel McClure                 |
++-------------+--------------------------------------------------------------------+
+
+### Employment
+
++---------------+------------------------------------------------------------------+
+| **2016-2018** | **Lab Manager\                                                   |
+|               | **Brown University\                                              |
+|               | Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
+|               | Supervisor: Oriel FeldmanHall                                    |
++---------------+------------------------------------------------------------------+
+| **2013-2016** | **Research Assistant\                                            |
+|               | **Stanford University\                                           |
+|               | Dept. of Psychology\                                             |
+|               | Supervisors: Jamil Zaki & W. Craig Williams                      |
++---------------+------------------------------------------------------------------+
+
+### Fellowships, Grants, Awards, & Honors
+
++------------+----------------------------------------------------------------------------------------------+
+| 2022       | Brown University Presidential Award for Excellence in Teaching                               |
++------------+----------------------------------------------------------------------------------------------+
+| 2019-2022  | National Science Foundation Graduate Research Fellowship Program (\$138,000, award #2040433) |
++------------+----------------------------------------------------------------------------------------------+
+| 2019       | Brown University Graduate Travel Grant (\$622)                                               |
++------------+----------------------------------------------------------------------------------------------+
+| 2016       | Stanford University Departmental Honors                                                      |
++------------+----------------------------------------------------------------------------------------------+
+| 2015       | Stanford Undergraduate Advising & Research "Small Grant" (\$1,500)                           |
++------------+----------------------------------------------------------------------------------------------+
+| 2014       | Stanford Undergraduate Teaching Fellowship (\$1,000)                                         |
++------------+----------------------------------------------------------------------------------------------+
+| 2013       | Stanford PsychSummer Grant (\$7,500)                                                         |
+|            |                                                                                              |
+|            | Stanford PsychSummer "Best of Show" Poster Award                                             |
++------------+----------------------------------------------------------------------------------------------+

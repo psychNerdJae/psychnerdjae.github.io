@@ -1,0 +1,15 @@
+---
+title: "New tutorials for HDDM and PsychToolbox"
+author: "Jae-Young Son"
+date: "2021-08-27"
+categories: [psych, tutorials, coding, matlab, python]
+image: "image.jpg"
+---
+
+I've uploaded some new tutorials to my GitHub!
+
+[The first tutorial](https://github.com/psychNerdJae/hddm_tutorial_carney_workshop) covers drift diffusion modeling (DDM) using the Python library **HDDM**, which contains tools for hierarchical Bayesian parameter estimation. In short, DDM allows you to model how people make (relatively fast) binary-choice decisions, by decomposing choice and reaction times into psychologically-interpretable parameters. These materials were developed for the 2021 Carney Computational Modeling Workshop hosted at Brown University. The GitHub repository contains all of the workshop materials (slides, sample data, code) and instructions on how to install/use HDDM (see the wiki for details, including instructions for playing around with HDDM in the cloud).
+
+[The second tutorial](https://github.com/psychNerdJae/psychtoolbox-tutorial) covers the creation of computerized experiments using the Matlab library **PsychToolbox**, and was written for undergrads in mind. No prior coding experience is expected! These materials were developed for a workshop delivered in 2018, but are expected to continue working as-is. Sample starter code is also available in [this GitHub repository](https://github.com/psychNerdJae/PsychToolbox-Starter-Code).
+
+Finally, mostly as an organizational note to myself, I've discovered that GitHub repos have a really nice wiki feature built in (yes, I'm very late to the game), so I hope to copy some misc info from my website (e.g., installation instructions) to the relevant repos. This minimizes the possibility of information getting lost if/when I reorganize my website, and also makes it easier for people to find relevant information without having to cross-reference stuff from this site vs my GitHub.

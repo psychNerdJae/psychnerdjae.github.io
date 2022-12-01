@@ -1,0 +1,14 @@
+{
+  "hash": "23fe6099e646815ffaae7ee456135e5a",
+  "result": {
+    "markdown": "---\ntitle: \"Academic website tutorial\"\nauthor: \"Jae-Young Son\"\ndate: \"2021-11-29\"\ncategories: [tutorials, grad school]\nimage: \"image.jpg\"\n---\n\n\nThis blog post was originally written on November 29, 2021. It was last updated on 2022-11-30 using R Markdown.\n\nJust wanted to note that I've uploaded some [tutorial slides](2021_academic_website_tutorial.pdf) about creating an academic website.\n\nEvery grad student should have a web presence! I'm absolutely gung-ho about this. Even if you don't have any knowledge of web development, it's easy (and free!) to create your own academic site. This was one of the big things I kept pestering our department about over several years, because I think it's so important to have this information centrally available on our department website. Thanks to the efforts of our amazing IT manager Pedro, [our grad student page](https://www.brown.edu/academics/cognitive-linguistic-psychological-sciences/graduate-students) finally links to our personal pages!\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
