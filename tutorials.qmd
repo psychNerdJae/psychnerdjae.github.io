@@ -4,7 +4,7 @@ title: "Tutorials"
 
 As a scientist, part of my core philosophy is that we should "give away" our work whenever we can. For me, this not only includes scientific communication about the *outcomes* of research, but also the transmission of technical skills that can help others *produce* more research.
 
-To this end, this page provides a structured directory of tutorials I've written that are suitable for beginner-level programmers. It is *not* a full directory of all tutorials I've ever written. To see a more comprehensive list, [check out my blog entries tagged with "](./blog.html#category:tutorials)[tutorials](./blog.html#category=tutorials)["](./blog.html#category:tutorials).
+To this end, this page provides a structured directory of tutorials I've written that are suitable for beginner-level programmers. It is *not* a full directory of all tutorials I've ever written. To see a more comprehensive list, [check out my blog entries tagged with "tutorials"](./blog.html#category=tutorials).
 
 ## Language-free introductions
 
