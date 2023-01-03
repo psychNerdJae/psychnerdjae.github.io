@@ -10,28 +10,28 @@ An index of my publications can also be found on [**Google Scholar**](https://sc
 ![](./files/papers/EPE_NHB_2021.png){fig-alt="Decorative text" width="150px"}
 
 Heffner, J., **Son, J.**, & FeldmanHall, O. (2021). Emotion prediction errors guide socially adaptive behaviour. *Nature Human Behaviour.*\
-[**Online**](https://www.nature.com/articles/s41562-021-01213-6) \| [**PDF**](https://jaeyoungson.com/papers/EPE_NHB_2021.pdf) \| [**Data & Code**](https://github.com/jpheffne/epe)
+[**Online**](https://www.nature.com/articles/s41562-021-01213-6) \| [**PDF**](/files/papers/EPE_NHB_2021.pdf) \| [**Data & Code**](https://github.com/jpheffne/epe)
 :::
 
 ::: {layout="[1, 3]" layout-valign="center"}
 ![](./files/papers/CogMaps_PNAS_2021.png){fig-alt="Decorative text" width="150px"}
 
 **Son, J.**, Bhandari, A., & FeldmanHall, O. (2021). Cognitive maps of social features enable flexible inference in social networks. *Proceedings of the National Academy of Sciences*.\
-[**Online**](https://www.pnas.org/content/118/39/e2021699118) \| [**PDF**](https://jaeyoungson.com/papers/CogMaps_PNAS_2021.pdf) \| [**Data & Code**](https://osf.io/v8ucz/)
+[**Online**](https://www.pnas.org/content/118/39/e2021699118) \| [**PDF**](/files/papers/CogMaps_PNAS_2021.pdf) \| [**Data & Code**](https://osf.io/v8ucz/)
 :::
 
 ::: {layout="[1, 3]" layout-valign="center"}
 ![](./files/papers/CrowdsourcingPunishment_SciRep_2019.png){fig-alt="Decorative text" width="150px"}
 
 **Son, J.**, Bhandari, A., & FeldmanHall, O. (2019). Crowdsourcing punishment: Individuals reference group preferences to inform their own punitive decisions. *Scientific Reports.*\
-[**Online (Open Access)**](https://www.nature.com/articles/s41598-019-48050-2) \| [**PDF**](https://jaeyoungson.com/papers/CrowdsourcingPunishment_SciRep_2019.pdf) \| [**Data & Code**](https://osf.io/8ka47/)
+[**Online (Open Access)**](https://www.nature.com/articles/s41598-019-48050-2) \| [**PDF**](/files/papers/CrowdsourcingPunishment_SciRep_2019.pdf) \| [**Data & Code**](https://osf.io/8ka47/)
 :::
 
 ::: {layout="[1, 3]" layout-valign="center"}
 ![](./files/papers/NormsMoralAction_PN_2018.png){fig-alt="Decorative text" width="150px"}
 
 FeldmanHall, O., **Son, J.**, & Heffner, J. (2018). Norms and the flexibility of moral action. *Personality Neuroscience.*\
-[**Online (Open Access)**](https://www.cambridge.org/core/journals/personality-neuroscience/article/norms-and-the-flexibility-of-moral-action/A8A5140A517ECEE314A21FF9FE0E9EED) \| [**PDF**](https://jaeyoungson.com/papers/NormsMoralAction_PN_2018.pdf)
+[**Online (Open Access)**](https://www.cambridge.org/core/journals/personality-neuroscience/article/norms-and-the-flexibility-of-moral-action/A8A5140A517ECEE314A21FF9FE0E9EED) \| [**PDF**](/files/papers/NormsMoralAction_PN_2018.pdf)
 :::
 
 ::: {style="font-size: 70%; font-style: italic"}
