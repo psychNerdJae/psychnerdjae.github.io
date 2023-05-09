@@ -5,10 +5,15 @@ about:
   template: jolla
   image-shape: round
   links:
-    - text: CV
-      href: cv.qmd
-    - text: Email
+    - icon: mortarboard
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=JPPuzI8AAAAJ
+    - icon: envelope
+      text: Email
       href: mailto:jae@brown.edu
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/psychNerdJae
     - icon: mastodon
       text: Mastodon
       href: https://sciences.social/@psychNerdJae
