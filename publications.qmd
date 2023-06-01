@@ -43,7 +43,7 @@ Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes 
 ::: {layout="[1, 3]" layout-valign="center"}
 ![](./files/papers/MultistepAbstraction.png){fig-alt="Decorative image" width="150px"}
 
-**Son, J.**, Bhandari, A., & FeldmanHall, O. (preprint). Humans solve social link prediction with multistep abstraction. *PsyArXiv.*\
+**Son, J.**, Bhandari, A., & FeldmanHall, O. (preprint). Abstract cognitive maps enable social link prediction in humans. *PsyArXiv.*\
 [**Online (preprint)**](https://psyarxiv.com/qpa2g/)
 :::
 
