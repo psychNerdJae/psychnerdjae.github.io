@@ -11,17 +11,22 @@ tbl-colwidths: [25, 75]
 
 ### Education
 
-+-----------+--------------------------------------------------------------------+
-| **Ph.D.** | **Brown University\                                                |
-|           | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
-|           | 2018-2024 (expected)\                                              |
-|           | Advisor: Oriel FeldmanHall                                         |
-+-----------+--------------------------------------------------------------------+
-| **B.A.**  | **Stanford University\                                             |
-|           | **2012-2016\                                                       |
-|           | Psychology major advisor: Jamil Zaki\                              |
-|           | Neuroscience concentration advisor: Samuel McClure                 |
-+-----------+--------------------------------------------------------------------+
++-------------+--------------------------------------------------------------------+
+| **Ph.D.**   | **Brown University\                                                |
+|             | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
+|             | 2018-2024 (expected)\                                              |
+|             | Advisor: Oriel FeldmanHall                                         |
++-------------+--------------------------------------------------------------------+
+| **Sc.M.**   | **Brown University\                                                |
+|             | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
+|             | 2018-2023\                                                         |
+|             | Advisor: Oriel FeldmanHall                                         |
++-------------+--------------------------------------------------------------------+
+| **B.A.**    | **Stanford University\                                             |
+|             | **2012-2016\                                                       |
+|             | Psychology major advisor: Jamil Zaki\                              |
+|             | Neuroscience concentration advisor: Samuel McClure                 |
++-------------+--------------------------------------------------------------------+
 
 ### Employment
 
