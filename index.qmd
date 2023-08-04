@@ -11,9 +11,6 @@ about:
     - icon: envelope
       text: Email
       href: mailto:jae@brown.edu
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/psychNerdJae
     - icon: mastodon
       text: Mastodon
       href: https://sciences.social/@psychNerdJae
