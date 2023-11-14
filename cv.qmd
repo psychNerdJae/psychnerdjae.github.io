@@ -11,19 +11,19 @@ tbl-colwidths: [25, 75]
 
 ### Education
 
-+--------------+--------------------------------------------------------------------+
-| **Ph.D.**    | **Brown University\                                                |
-|              | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
-|              | 2018-2024 (expected)\                                              |
-|              | Advisor: Oriel FeldmanHall                                         |
-+--------------+--------------------------------------------------------------------+
-| **Sc.M.**    | **Brown University\                                                |
-|              | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
-|              | 2023                                                               |
-+--------------+--------------------------------------------------------------------+
-| **B.A.**     | **Stanford University\                                             |
-|              | **2012-2016                                                        |
-+--------------+--------------------------------------------------------------------+
++-----------+--------------------------------------------------------------------+
+| **Ph.D.** | **Brown University\                                                |
+|           | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
+|           | 2018-2024 (expected)\                                              |
+|           | Advisor: Oriel FeldmanHall                                         |
++-----------+--------------------------------------------------------------------+
+| **Sc.M.** | **Brown University\                                                |
+|           | **Dept. of Cognitive, Linguistic, & Psychological Sciences (CLPS)\ |
+|           | 2023                                                               |
++-----------+--------------------------------------------------------------------+
+| **B.A.**  | **Stanford University\                                             |
+|           | **2012-2016                                                        |
++-----------+--------------------------------------------------------------------+
 
 ### Employment
 
