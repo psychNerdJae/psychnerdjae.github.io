@@ -29,6 +29,8 @@ To this end, this page provides a structured directory of tutorials I've written
 
 ## HDDM (Python)
 
+Note: HDDM has been superseded by [HSSM](https://lnccbrown.github.io/HSSM/), which includes excellent tutorials in its documentation. The tutorial materials linked below are, therefore, archival.
+
 -   [HDDM self-teaching materials](https://github.com/psychNerdJae/hddm_tutorial)
 
 ## PsychToolbox (Matlab)

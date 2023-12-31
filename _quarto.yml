@@ -8,9 +8,9 @@ website:
   title: "Jae-Young Son"
   navbar:
     left:
-      - about.qmd
       - text: CV
-        href: cv.qmd
+        href: cv.pdf
+        target: _blank
       - publications.qmd
       - tutorials.qmd
       - blog.qmd
