@@ -1,0 +1,25 @@
+---
+title: "Hark! A Dissertation!"
+---
+
+Hello, friend! After six long years, I will be defending my PhD on August 1, 2024 from 1-3pm.
+
+If you'd like to attend in-person, the defense will take place in Friedman Auditorium, located in the Metcalf Research Building at 190 Thayer St., Providence, RI.
+
+If you'd like to join remotely, we will also be streaming the defense on Zoom; please email me directly at jae (at) brown (dot) edu if you're interested.
+
+![](./files/images/phd_announcement.png){fig-alt="A goofy, badly-photoshopped image of Jae wearing Brown's PhD regalia." fig-align="center" width="800"}
+
+# A hitchhiker's guide to my PhD work
+
+Humans have an amazing capacity to create mental maps. To illustrate: tell me how many windows there are inside your childhood home. If you're like most people, what you're doing right now is "looking" around a room inside your mind's eye, and actually counting the windows as if you were physically there. After you're done with that room, you might "walk" down the hallway to another room to count other windows.
+
+In psychology, we call these "cognitive maps." The human ability to represent sophisticated cognitive maps is one that's been known since ancient times. Before epic poems were written down, Greek storytellers used to memorize long stories by imagining themselves walking down a long, familiar road, and associating different parts of the story with landmarks they'd see along the way.
+
+Cognitive maps are powerful because they allow us to extrapolate beyond our direct experiences. For example, while commuting to work, our usual route might get blocked by construction. When this happens, we can often guess how to navigate around the roadblock, even if it requires taking a detour that we've never taken before. In psychology, we call this "inference" or "generalization."
+
+Historically, cognitive maps have mostly been studied in the context of spatial navigation through physical space. More recently, research in psychology, computer science, and cognitive neuroscience has begun to explore how people build cognitive maps of more abstract, conceptual spaces. Drawing on these kinds of ideas, my PhD research has tried to understand how humans build mental maps of social networks, and how we use these cognitive maps to make social decisions.
+
+We can, for example, use cognitive maps to quickly infer whether (and how) two people might be connected to each other: as the great American poet Taylor Swift writes, it's a common occurrence that "You go talk to your friends, \[who\] talk to my friends, \[who\] talk to me," resulting in gossip spreading to places it's not meant to.
+
+Of course, my PhD work covers more ground than what I've written here, but hopefully this gives you an intuition for the kinds of questions I've been tackling in my research!
