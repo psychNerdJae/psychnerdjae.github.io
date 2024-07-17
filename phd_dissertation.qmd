@@ -2,11 +2,11 @@
 title: "Hark! A Dissertation!"
 ---
 
-Hello, friend! After six long years, I will be defending my PhD on August 1, 2024 from 1-3pm.
+Hello, friend! After six long years, I will be defending my PhD on **August 1**, 2024 from **1-3pm** (Eastern Time).
 
 If you'd like to attend in-person, the defense will take place in Friedman Auditorium, located in the Metcalf Research Building at 190 Thayer St., Providence, RI.
 
-If you'd like to join remotely, we will also be streaming the defense on Zoom; please email me directly at jae (at) brown (dot) edu if you're interested.
+If you'd like to join remotely, we will also be streaming the defense on Zoom at this link: <https://brown.zoom.us/j/98723377994>.
 
 ![](./files/images/phd_announcement.png){fig-alt="A goofy, badly-photoshopped image of Jae wearing Brown's PhD regalia." fig-align="center" width="800"}
 
