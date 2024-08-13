@@ -11,7 +11,7 @@ An index of my publications can also be found on [**Google Scholar**](https://sc
 
 **Son, J.\***, Vives, M-L.\*, Bhandari, A., & FeldmanHall, O. (2023). Replay shapes abstract cognitive maps for efficient social navigation. *bioRxiv.*\
 \* *Equal contribution.*\
-[**Online**](https://www.biorxiv.org/content/10.1101/2023.12.19.572418v1) \| [**Data & Code**](https://github.com/feldmanhalllab/network-navigation-replay)
+[**Online**](https://www.biorxiv.org/content/10.1101/2023.12.19.572418v2) \| [**Data & Code**](https://github.com/feldmanhalllab/network-navigation-replay)
 :::
 
 ## Published work
