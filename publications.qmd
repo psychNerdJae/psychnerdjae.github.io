@@ -4,17 +4,15 @@ title: "Publications"
 
 An index of my publications can also be found on [**Google Scholar**](https://scholar.google.com/citations?user=JPPuzI8AAAAJ).
 
-## Preprints
+## Published work
 
 ::: {layout="[1, 3]" layout-valign="center"}
 ![](./files/papers/Preprint_NavigationReplay.png){fig-alt="Decorative image" width="150px"}
 
-**Son, J.\***, Vives, M-L.\*, Bhandari, A., & FeldmanHall, O. (2023). Replay shapes abstract cognitive maps for efficient social navigation. *bioRxiv.*\
+**Son, J.\***, Vives, M-L.\*, Bhandari, A., & FeldmanHall, O. (in press). Replay shapes abstract cognitive maps for efficient social navigation. *Nature Human Behaviour.*\
 \* *Equal contribution.*\
-[**Online**](https://www.biorxiv.org/content/10.1101/2023.12.19.572418v2) \| [**Data & Code**](https://github.com/feldmanhalllab/network-navigation-replay)
+[**Online (bioRxiv preprint)**](https://www.biorxiv.org/content/10.1101/2023.12.19.572418v2) \| [**Data & Code**](https://github.com/feldmanhalllab/network-navigation-replay)
 :::
-
-## Published work
 
 ::: {layout="[1, 3]" layout-valign="center"}
 ![](./files/papers/2023_PNAS_MultistepAbstraction.png){fig-alt="Decorative image" width="150px"}
@@ -51,10 +49,6 @@ FeldmanHall, O., **Son, J.**, & Heffner, J. (2018). Norms and the flexibility of
 [**Online (Open Access)**](https://www.cambridge.org/core/journals/personality-neuroscience/article/norms-and-the-flexibility-of-moral-action/A8A5140A517ECEE314A21FF9FE0E9EED) \| [**PDF**](/files/papers/2018_PN_NormsMoralAction.pdf)
 :::
 
-::: {style="font-size: 80%; font-style: italic"}
-Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes in which they are published. Access to these articles is provided to facilitate timely distribution of scientific knowledge, and is therefore intended for your personal use only. No commercial use may be made of these articles, nor is mass production of these articles permitted.
-:::
-
 ## Unpublished work
 
 ::: {layout="[1, 3]" layout-valign="center"}
@@ -62,4 +56,8 @@ Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes 
 
 Williams, W.C., Leong, Y.C., Collier, E.A., Nook, E.C., **Son, J.**, & Zaki, J. (preprint). Communicating emotion through facial expressions: Social consequences and neural correlates. *PsyArXiv.*\
 [**Online (preprint)**](https://psyarxiv.com/4zpfk/)
+:::
+
+::: {style="font-size: 80%; font-style: italic"}
+Disclaimer: The PDFs provided may be copyrighted by the journals/edited volumes in which they are published. Access to these articles is provided to facilitate timely distribution of scientific knowledge, and is therefore intended for your personal use only. No commercial use may be made of these articles, nor is mass production of these articles permitted.
 :::
