@@ -2,7 +2,8 @@
 title: "Jae-Young Son"
 image: ./files/images/home_photo.jpg
 about:
-  template: jolla
+  template: trestles
+  image-width: "200px"
   image-shape: round
   links:
     - icon: mortarboard
@@ -16,4 +17,9 @@ about:
       href: https://github.com/psychNerdJae/
 ---
 
-I study how we navigate the great blooming buzzing confusion of the social world.
+I am a **social** and **cognitive** neuroscientist with interconnected interests in
+
+- how people make decisions in a complex social world
+- how the brain represents memories of networks, and also networks of memories
+
+I am currently a postdoctoral researcher working with [Serra Favila](https://sites.brown.edu/favila-lab/) at Brown University. Formerly, I worked with [Oriel FeldmanHall](https://www.feldmanhalllab.com/) as a PhD student.

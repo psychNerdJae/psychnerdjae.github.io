@@ -1,0 +1,57 @@
+---
+title: "Untitled"
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+#| fig-alt: "A network diagram. The network structure is designed so that the sentence can either read: 'I am a social neuroscientist interested in how we navigate the great blooming buzzing confusion of social networks', or else 'I am a cognitive neuroscientist interested in how the brain represents memories of networks, and also networks of memories'"
+
+library(tidyverse)
+library(tidygraph)
+library(ggraph)
+
+nodes <- tribble(
+  ~name, ~text,
+  1, "I am a",
+  2, "social",
+  3, "cognitive",
+  4, "neuroscientist interested in how",
+  5, "we navigate the great blooming buzzing confusion of social networks",
+  6, "the brain represents memories of networks, and also networks of memories"
+) %>%
+  mutate(text = str_wrap(text, 20))
+
+edges <- tribble(
+  ~from, ~to,
+  1, 2,
+  1, 3,
+  2, 4,
+  3, 4,
+  4, 5,
+  4, 6
+)
+
+tbl_graph(nodes=nodes, edges=edges, directed=TRUE) %>%
+  create_layout(
+    "manual",
+    x = c(0, -1, 1, 0, -1, 1),
+    y = c(0, -1, -1, -2, -4, -4)
+  ) %>%
+  ggraph() +
+  geom_edge_link(
+    aes(
+      start_cap = label_rect(node1.text, padding = margin(3, 3, 3, 3, "mm")),
+      end_cap = label_rect(node2.text, padding = margin(3, 3, 3, 3, "mm"))), 
+    arrow = arrow(length = unit(4, "mm")
+    )
+  ) +
+  geom_node_text(aes(label = text), size = 4.5) +
+  scale_x_continuous(expand = expansion(mult = 0.5)) +
+  scale_y_continuous(expand = expansion(mult = 0.25)) +
+  theme(panel.background = element_blank())
+```
